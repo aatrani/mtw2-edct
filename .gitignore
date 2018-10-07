@@ -1,0 +1,12 @@
+*.bak1
+*.bak2
+*.bak3
+*.bak4
+*.bak5
+*~
+ATVTW/
+__pycache__
+examp.py
+examp2.py
+gui.py
+traitedit.output
