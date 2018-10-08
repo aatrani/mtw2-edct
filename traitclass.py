@@ -15,10 +15,14 @@ class strlist(list):
     def __repr__(self):
         return "\n".join(map(repr, self))
 
-    def get_names(self):
-        #for x in self:
-        #    print(x.name)
-        return [x.name for x in self]
+    def update_names(self):
+        self.names = [x.name for x in self]
+        self.N = len(self.names)
+        
+    def __init__(self, *args):
+        list.__init__(self, *args)
+        self.names = []
+        self.N = len(self.names)
         
 class EDCT():
     EDCT_fname = "export_descr_character_traits.txt"
@@ -29,15 +33,22 @@ class EDCT():
         self.Ntraits = 0
         self.traits = strlist()
         self.triggers = strlist()
+        self.current_view = None
+        self.edct_file = None
         
     @recursive_repr()
     def __repr__(self):
         return "Traits: {:g} \n".format(self.Ntraits) + "\n".join(map(repr, self.traits)) + "Triggers: {:g} \n".format(self.Ntriggers) + "\n".join(map(repr, self.triggers))
     
+    def update_names(self):
+        self.traits.update_names()
+        self.triggers.update_names()
+        
     def parse_edct(self, folder):
         self.__init__()
         
-        edct = open(os.path.join(folder, self.EDCT_fname), "r",   encoding="utf8")
+        self.edct_file = folder
+        edct = open(folder, "r",   encoding="utf8")
         parseTrait = False
         parseTrigg = False
         for l in edct:
@@ -123,6 +134,7 @@ class EDCT():
                     if(not trait_re.match(l)):
                         raise ValueError(l+" not recognized by the parser")
         
+        self.update_names()
         print("-- Lines skipped: {:g}".format(self.Nskipped))
         print("-- Traits recorded: {:g}".format(self.Ntraits))
         print("-- Triggers recorded: {:g}".format(self.Ntriggers))
@@ -162,6 +174,22 @@ class EDCT():
                         affected.setdefault(lcond[1], []).append(trig.name)
         return affected
             
+    def get_trait(self, name):
+        try:
+            it = self.traits.names.index(name)
+            return self.traits[it]
+        except ValueError:
+            print("ERROR: not present")
+
+    def reload(self):
+        if(not self.edct_file):
+            print("ERROR: file not specified")
+            return
+        if(not os.path.isfile(self.edct_file)):
+            print("ERROR: file not found")
+            return
+        self.parse_edct(self.edct_file)
+
 class Trait():
     def __init__(self, name):
         self.name = name            # required
@@ -273,6 +301,6 @@ class TriggerAffect():
 
 if __name__ == "__main__":
     edcteb2 = EDCT()
-    edcteb2.parse_edct(".")
+    edcteb2.parse_edct(edcteb2.EDCT_fname)
     print(edcteb2.traits)
     print(edcteb2.traits[0].as_string())

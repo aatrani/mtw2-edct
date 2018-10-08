@@ -6,9 +6,11 @@
 #    Oct 07, 2018 08:48:37 PM JST  platform: Windows NT
 #    Oct 07, 2018 11:29:04 PM JST  platform: Windows NT
 #    Oct 07, 2018 11:52:37 PM JST  platform: Windows NT
+#    Oct 08, 2018 10:34:34 PM JST  platform: Windows NT
 
 import traitclass
 import sys
+from tkinter.filedialog import askopenfilename
 
 try:
     from Tkinter import *
@@ -22,7 +24,7 @@ except ImportError:
     import tkinter.ttk as ttk
     py3 = True
 
-
+    
 def set_Tk_var():
     global TraitList
     TraitList = StringVar()
@@ -30,6 +32,8 @@ def set_Tk_var():
     traitsearched = StringVar()
     global triggersearched
     triggersearched = StringVar()
+    global TriggerList
+    TriggerList = StringVar()
 
 def QueryTrait():
     print('traitedit_support.QueryTrait')
@@ -57,11 +61,17 @@ def GoToTrait():
 
 def OpenFile():
     print('traitedit_support.OpenFile')
-    traitmod.parse_edct(".")
-    TraitList.set(traitmod.traits.get_names())
+    filename = askopenfilename()
+    traitmod.parse_edct(filename)
+    TraitList.set(traitmod.traits.names)
+    TriggerList.set(traitmod.triggers.names)
+    w.Viewer.delete('1.0', END)
     sys.stdout.flush()
     
-    w.Viewer.insert(INSERT, traitmod.traits[0].as_string())
+    # Viewer
+    #w.Viewer.insert(INSERT, traitmod.traits[0].as_string())
+    #traitmod.current_view = traitmod.traits[0].name
+    #w.Viewer.edit_modified(False)
 
 def Quit():
     print('traitedit_support.Quit')
@@ -71,7 +81,16 @@ def Quit():
 def ReloadFile():
     print('traitedit_support.ReloadFile')
     sys.stdout.flush()
+    traitmod.reload()
+    TraitList.set(traitmod.traits.names)
+    TriggerList.set(traitmod.triggers.names)
+    w.Viewer.delete('1.0', END)
 
+    # Viewer
+    #w.Viewer.insert(INSERT, traitmod.traits[0].as_string())
+    #traitmod.current_view = traitmod.traits[0].name
+    #w.Viewer.edit_modified(False)
+    
 def SaveAs():
     print('traitedit_support.SaveAs')
     sys.stdout.flush()
@@ -89,6 +108,7 @@ def init(top, gui, *args, **kwargs):
     w = gui
     top_level = top
     root = top
+    w.TraitListt.bind('<Double-1>', lambda x: select_trait())
 
 def destroy_window():
     # Function which closes the window.
@@ -99,9 +119,28 @@ def destroy_window():
 global traitmod
 traitmod = traitclass.EDCT()
 
+def select_trait():
+    sel = w.TraitListt.curselection()
+    print("sel:", sel)
+    trat = w.TraitListt.get(sel)
+    print("trait:", trat)
+    if(traitmod.current_view):
+        # Viewer
+        print("check if text was modified")
+        print(w.Viewer.edit_modified())
+        w.Viewer.delete('1.0', END)
+    seltrait = traitmod.get_trait(trat)
+    w.Viewer.insert(INSERT, seltrait.as_string())
+    traitmod.current_view = seltrait.name
+    w.Viewer.edit_modified(False)
+
+
 if __name__ == '__main__':
     import traitedit
     traitedit.vp_start_gui()
+
+
+
 
 
 
