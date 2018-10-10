@@ -9,8 +9,10 @@
 #    Oct 08, 2018 10:34:34 PM JST  platform: Windows NT
 
 import traitclass
+import os
 import sys
 from tkinter.filedialog import askopenfilename
+from tkinter import messagebox
 
 try:
     from Tkinter import *
@@ -62,10 +64,17 @@ def GoToTrait():
 def OpenFile():
     print('traitedit_support.OpenFile')
     filename = askopenfilename()
+    if(not filename):
+        print("ERROR: please choose a file")
+        return
+    if(not os.path.isfile(filename)):
+        print("ERROR: file not found")
+        return
     traitmod.parse_edct(filename)
     TraitList.set(traitmod.traits.names)
     TriggerList.set(traitmod.triggers.names)
     w.Viewer.delete('1.0', END)
+    afterparse()
     sys.stdout.flush()
     
     # Viewer
@@ -80,12 +89,12 @@ def Quit():
 
 def ReloadFile():
     print('traitedit_support.ReloadFile')
-    sys.stdout.flush()
     traitmod.reload()
     TraitList.set(traitmod.traits.names)
     TriggerList.set(traitmod.triggers.names)
     w.Viewer.delete('1.0', END)
-
+    afterparse()
+    sys.stdout.flush()
     # Viewer
     #w.Viewer.insert(INSERT, traitmod.traits[0].as_string())
     #traitmod.current_view = traitmod.traits[0].name
@@ -134,6 +143,12 @@ def select_trait():
     traitmod.current_view = seltrait.name
     w.Viewer.edit_modified(False)
 
+def afterparse():
+    if(not (traitmod.traits.N + traitmod.triggers.N)):
+        messagebox.showwarning("Warning", "No triggers or traits found\n\nCheck the file {:s}".format(os.path.basename(traitmod.edct_file)))
+    else:
+        messagebox.showinfo("File loaded: {:s}".format(os.path.basename(traitmod.edct_file)), "Found:\n  {:d} traits\n  {:d} triggers".format(traitmod.traits.N, traitmod.triggers.N))
+    
 
 if __name__ == '__main__':
     import traitedit
