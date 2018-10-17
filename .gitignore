@@ -4,6 +4,7 @@
 *.bak4
 *.bak5
 *~
+*pyc
 ATVTW/
 __pycache__
 examp.py

@@ -7,6 +7,7 @@
 #    Oct 07, 2018 11:29:04 PM JST  platform: Windows NT
 #    Oct 07, 2018 11:52:37 PM JST  platform: Windows NT
 #    Oct 08, 2018 10:34:34 PM JST  platform: Windows NT
+#    Oct 11, 2018 10:55:51 PM JST  platform: Linux
 
 import traitclass
 import os
@@ -37,8 +38,8 @@ def set_Tk_var():
     global TriggerList
     TriggerList = StringVar()
 
-def QueryTrait():
-    print('traitedit_support.QueryTrait')
+def FilterWin():
+    print('traitedit_support.FilterWin')
     sys.stdout.flush()
 
 def ReloadEdit():
@@ -118,6 +119,8 @@ def init(top, gui, *args, **kwargs):
     top_level = top
     root = top
     w.TraitListt.bind('<Double-1>', lambda x: select_trait())
+    w.TraitListt.config(selectmode=EXTENDED)
+    w.Viewer.config(undo=True)
 
 def destroy_window():
     # Function which closes the window.
@@ -135,24 +138,54 @@ def select_trait():
     print("trait:", trat)
     if(traitmod.current_view):
         # Viewer
-        print("check if text was modified")
-        print(w.Viewer.edit_modified())
+        print("was text modified?", w.Viewer.edit_modified())
+        if(w.Viewer.edit_modified()):
+            savebol=messagebox.askyesnocancel("Save view?", "Save changes before changing view?", default=messagebox.CANCEL)
+            if(savebol==True): save_view()
+            elif(savebol==False): pass
+            else: return
         w.Viewer.delete('1.0', END)
     seltrait = traitmod.get_trait(trat)
     w.Viewer.insert(INSERT, seltrait.as_string())
     traitmod.current_view = seltrait.name
     w.Viewer.edit_modified(False)
+    w.Viewer.edit_reset()
 
+def add_trait():
+    sel = w.TraitListt.curselection()
+    print("sel:", sel)
+    trat = w.TraitListt.get(sel)
+    print("trait:", trat)
+    if(traitmod.current_view):
+        # Viewer
+        print("was text modified?", w.Viewer.edit_modified())
+        w.Viewer.delete('1.0', END)
+    seltrait = traitmod.get_trait(trat)
+    w.Viewer.insert(INSERT, seltrait.as_string())
+    traitmod.current_view = seltrait.name
+    w.Viewer.edit_modified(False)
+    w.Viewer.edit_reset()
+
+def save_view():
+    print('saving view')
+    sys.stdout.flush()
+    
+def changeview():
+    messagebox.askyesnocancel("Save view?", "Save changes before changing view?", default=messagebox.CANCEL)
+    
 def afterparse():
     if(not (traitmod.traits.N + traitmod.triggers.N)):
-        messagebox.showwarning("Warning", "No triggers or traits found\n\nCheck the file {:s}".format(os.path.basename(traitmod.edct_file)))
+        messagebox.showwarning("Parsing completed", "No triggers or traits found\n\n Please check your file\n({:s})".format(os.path.basename(traitmod.edct_file)))
     else:
-        messagebox.showinfo("File loaded: {:s}".format(os.path.basename(traitmod.edct_file)), "Found:\n  {:d} traits\n  {:d} triggers".format(traitmod.traits.N, traitmod.triggers.N))
+        messagebox.showinfo("Parsing completed", "File: {:s}\nFound:\n  {:d} traits\n  {:d} triggers".format(os.path.basename(traitmod.edct_file), traitmod.traits.N, traitmod.triggers.N))
     
 
 if __name__ == '__main__':
     import traitedit
     traitedit.vp_start_gui()
+
+
+
 
 
 
