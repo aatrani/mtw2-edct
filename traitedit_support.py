@@ -44,6 +44,9 @@ def FilterWin():
 
 def ReloadEdit():
     print('traitedit_support.ReloadEdit')
+    print(w.style.theme_names())
+    print(w.style.theme_use())
+    #w.style.theme_use('clam')
     sys.stdout.flush()
 
 def SaveEdit():
