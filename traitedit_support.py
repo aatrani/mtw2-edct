@@ -44,8 +44,8 @@ def FilterWin():
 
 def ReloadEdit():
     print('traitedit_support.ReloadEdit')
-    print(w.style.theme_names())
-    print(w.style.theme_use())
+    #print(w.style.theme_names())
+    #print(w.style.theme_use())
     #w.style.theme_use('clam')
     sys.stdout.flush()
 
@@ -121,6 +121,9 @@ def init(top, gui, *args, **kwargs):
     w = gui
     top_level = top
     root = top
+    
+    if sys.platform == "win32":
+        w.style.theme_use('vista')
     w.TraitListt.bind('<Double-1>', lambda x: select_trait())
     w.TraitListt.config(selectmode=EXTENDED)
     w.Viewer.config(undo=True)
