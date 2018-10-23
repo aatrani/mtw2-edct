@@ -37,7 +37,7 @@ class EDCT():
     EDCT_fname = "export_descr_character_traits.txt"
 
     comment_re = re.compile("^\s*;|^\s*$")
-    incom_re = re.compile('[^^](;+.*)')
+    incom_re = re.compile('[^;\.]*(;+.*)')
     fulcom_re = re.compile('^\s*;.*')
     whitel_re = re.compile('^\s*$')
 
@@ -81,6 +81,12 @@ class EDCT():
                 fulcom = fulcom + l
                 self.Nfulcom+=1
                 continue
+            else:
+                incom_ma = self.incom_re.match(l) 
+                if(incom_ma):
+                    print(l)
+                    print(incom_ma.group(1))
+                
             l = strip_comments(l)
             #print(l,  end='')
             
@@ -312,8 +318,10 @@ class TraitLevel():
             base = base + "        Epithet " + self.epith + "\n"
         base = base + "        Threshold {:d}".format(self.threshold) + "\n"
         
-        for eff in self.effects:
-            base = base + eff.as_string()
+        if(self.effects):
+            base = base + "\n"
+            for eff in self.effects:
+                base = base + eff.as_string()
         return base
     
 class TraitLevelEffect():
@@ -332,7 +340,7 @@ class Trigger():
         self.name = name         
         self.when = None            # required
         self.conditions = []        
-        self.affects = strlist()    # required ?
+        self.affects = strlist()    # required (only in edct)
         
         self.comment_head = ''
         self.comment_trait = ''
@@ -395,13 +403,13 @@ if __name__ == "__main__":
     edcteb2 = EDCT()
     edcteb2.parse_edct(edcteb2.EDCT_fname)
     #print(edcteb2.traits[0].comment_head)
-    for tt in edcteb2.traits:
-        print(tt.comment_head)
-        print(tt.as_string())
-    for tt in edcteb2.triggers:
-        #print(tt.name)
-        print(tt.comment_head)
-        print(tt.as_string())
+    #for tt in edcteb2.traits:
+    #    print(tt.comment_head)
+    #    print(tt.as_string())
+    #for tt in edcteb2.triggers:
+    #    #print(tt.name)
+    #    print(tt.comment_head)
+    #    print(tt.as_string())
 
         #print(edcteb2.traits)
     #print(edcteb2.triggers[0]) #.as_string())
