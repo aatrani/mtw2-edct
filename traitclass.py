@@ -2,23 +2,6 @@ import re
 import os
 from reprlib import recursive_repr
 
-def strip_comments(line):
-    #code = str(code)
-    return re.sub(';.*', '', line)
-    
-def get_inline_comments(line):
-    incom_ma = incom_re.search(line)
-    if(incom_ma):
-    #    print(line)
-    #    print(incom_ma.group(1))
-        return incom_ma.group(1)
-    else: return ''
-    
-def get_fullline_comments(line):
-    incom_ma = incom_re.search(line)
-    if(incom_ma):
-        print(line)
-
 class strlist(list):
     @recursive_repr()
     def __repr__(self):
@@ -49,6 +32,8 @@ class EDCT():
         self.Ntriggers = 0
         self.Ntraits = 0
         self.Nfulcom = 0
+        self.Nincom = 0
+        self.Ntot = 0
         self.traits = strlist()
         self.triggers = strlist()
         self.current_view = None
@@ -71,7 +56,7 @@ class EDCT():
         parseTrigg = False
         fulcom = ''
         for l in edct:
-            #get_inline_comments(l)
+            self.Ntot+=1
             if(self.whitel_re.match(l)):
                 # skip whitelines
                 self.Nwhite+=1
@@ -82,12 +67,17 @@ class EDCT():
                 self.Nfulcom+=1
                 continue
             else:
+                #if we are here it's not a full line comment
+                # simplify in 3.8 with assignment expression
                 incom_ma = self.incom_re.match(l) 
                 if(incom_ma):
-                    print(l)
-                    print(incom_ma.group(1))
-                
-            l = strip_comments(l)
+                    #print(l)
+                    #print(incom_ma.group(1))
+                    incom = incom_ma.group(1) 
+                    self.Nincom+=1
+                    l = re.sub(';.*', '', l)
+                else:
+                    incom = None
             #print(l,  end='')
             
             trait_ma = self.trait_re.match(l)
@@ -98,7 +88,7 @@ class EDCT():
                 self.Ntraits+=1
                 #if(self.Ntraits>10):
                     #break
-                newtrait = Trait(trait_ma.group(1))
+                newtrait = Trait(trait_ma.group(1), incom)
                 if(fulcom):
                     newtrait.comment_head = fulcom
                     fulcom = ''
@@ -106,7 +96,7 @@ class EDCT():
                 continue
                 
             if(parseTrait):
-                newtrait.parse_line(l)
+                newtrait.parse_line(l, incom)
             
             trigg_ma = self.trigg_re.match(l)
             if(trigg_ma):
@@ -125,12 +115,15 @@ class EDCT():
                 newtrigg.parse_line(l)
         
         self.update_names()
-        print("-- White lines skipped: {:g}".format(self.Nwhite))
-        print("-- Full line comments found: {:g}".format(self.Nfulcom))
-        print("-- Traits recorded: {:g}".format(self.Ntraits))
-        print("-- Triggers recorded: {:g}".format(self.Ntriggers))
+        print("-- Total lines {:d}".format(self.Ntot))
+        print("-- White lines skipped: {:d}".format(self.Nwhite))
+        print("-- Full line comments found: {:d}".format(self.Nfulcom))
+        print("-- Inline comments found: {:d}".format(self.Nincom))
+        print("-- Traits recorded: {:d}".format(self.Ntraits))
+        print("-- Triggers recorded: {:d}".format(self.Ntriggers))
         edct.close()
 
+    ### Filters    
     def affects(self, trait):
         if((not self.Ntraits) or (not self.Ntriggers)):
             return {}
@@ -182,7 +175,7 @@ class EDCT():
         self.parse_edct(self.edct_file)
 
 class Trait():
-    def __init__(self, name):
+    def __init__(self, name, incom=None):
         self.name = name            # required
         self.characters = []        # required
         self.hidden = False
@@ -192,64 +185,76 @@ class Trait():
         self.levels = strlist()     # required, min 1 max 9
         
         self.comment_head = ''
-        self.comment_trait = ''
         self.comment_dict = {}
+        if(incom): self.comment_dict["Trait"] = incom
 
-    def parse_line(self, l):                
+    def parse_line(self, l, incom=None):                
         ltrait = l.replace(",", "").split() 
         if(ltrait[0] == "Characters"):
             for charac in ltrait[1:]:
                 self.characters.append(charac)
+            if(incom): self.comment_dict["Characters"] = incom
         elif(ltrait[0] == "ExcludeCultures"):
             for exclu in ltrait[1:]:
                 self.exclude.append(exclu)
+            if(incom): self.comment_dict["ExcludeCultures"] = incom
         elif(ltrait[0] == "AntiTraits"):
             for ant in ltrait[1:]:
                 self.anti.append(ant)
+            if(incom): self.comment_dict["AntiTraits"] = incom
         elif(ltrait[0] == "NoGoingBackLevel"):
             self.nogoingback = int(ltrait[1])
+            if(incom): self.comment_dict["NoGoingBackLevel"] = incom
         elif(ltrait[0] == "Hidden"):
             self.hidden = True
+            if(incom): self.comment_dict["Hidden"] = incom
             
         elif(ltrait[0] == "Level"):
             # Level gets appended to list. when finding level attributes, we look for
             # the last level in the trait level list. if level list is empty, it's an error
             self.levels.append(TraitLevel(ltrait[1]))
+            if(incom): self.levels[-1].comment_dict["Level"] = incom
         elif(ltrait[0] == "Description"):
             if(not self.levels): 
                 print("ERROR: found level attribute {:s}, but level entry not found".format(ltrait[0]))
                 return
             self.levels[-1].description = ltrait[1]
+            if(incom): self.levels[-1].comment_dict["Description"] = incom
         elif(ltrait[0] == "EffectsDescription"):
             if(not self.levels): 
                 print("ERROR: found level attribute {:s}, but level entry not found".format(ltrait[0]))
                 return
             self.levels[-1].effdecription = ltrait[1]
+            if(incom): self.levels[-1].comment_dict["EffectsDescription"] = incom
         elif(ltrait[0] == "GainMessage"):
             if(not self.levels): 
                 print("ERROR: found level attribute {:s}, but level entry not found".format(ltrait[0]))
                 return
             self.levels[-1].gainmessage = ltrait[1]
+            if(incom): self.levels[-1].comment_dict["GainMessage"] = incom
         elif(ltrait[0] == "LoseMessage"):
             if(not self.levels): 
                 print("ERROR: found level attribute {:s}, but level entry not found".format(ltrait[0]))
                 return
             self.levels[-1].losemessage = ltrait[1]
+            if(incom): self.levels[-1].comment_dict["LoseMessage"] = incom
         elif(ltrait[0] == "Epithet"):
             if(not self.levels): 
                 print("ERROR: found level attribute {:s}, but level entry not found".format(ltrait[0]))
                 return
             self.levels[-1].epith = ltrait[1]
+            if(incom): self.levels[-1].comment_dict["Epithet"] = incom
         elif(ltrait[0] == "Threshold"):
             if(not self.levels): 
                 print("ERROR: found level attribute {:s}, but level entry not found".format(ltrait[0]))
                 return
             self.levels[-1].threshold = int(ltrait[1])
+            if(incom): self.levels[-1].comment_dict["Threshold"] = incom
         elif(ltrait[0] == "Effect"):
             if(not self.levels): 
                 print("ERROR: found level attribute {:s}, but level entry not found".format(ltrait[0]))
                 return
-            neweff = TraitLevelEffect(ltrait[1], int(ltrait[2]))
+            neweff = TraitLevelEffect(ltrait[1], int(ltrait[2]), incom)
             self.levels[-1].effects.append(neweff)
         else:
             # if it's not any of those, return False
@@ -297,6 +302,7 @@ class TraitLevel():
         self.losemessage = None
         self.epith = None
         self.effects = strlist()
+        self.comment_dict = {}
     
     @recursive_repr()
     def __repr__(self):
@@ -325,10 +331,11 @@ class TraitLevel():
         return base
     
 class TraitLevelEffect():
-    def __init__(self, eff, numb):
+    def __init__(self, eff, numb, incom=None):
         self.eff = eff
         self.val = int(numb)
-    
+        if(incom): self.inline_comment = incom
+        else: self.inline_comment = ''
     def __repr__(self):
         return "\t\t{:s} {:g}\n".format(self.eff, self.val)
     
