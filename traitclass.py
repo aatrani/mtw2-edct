@@ -157,6 +157,17 @@ class EDCT():
             return
         self.parse_edct(self.edct_file)
 
+    def save(self, fname):
+        f = open(fname, "w")
+        for tt in edcteb2.traits:
+            f.write(tt.comment_head)
+            f.write(tt.as_string())
+        for tt in edcteb2.triggers:
+            f.write(tt.comment_head)
+            f.write(tt.as_string())
+        f.close()
+            
+        
 class Trait():
     def __init__(self, name, incom=None):
         self.name = name            # required
@@ -282,7 +293,7 @@ class Trait():
         
         for lev in self.levels:
             base = base +"\n"+ lev.as_string()
-        return base
+        return base + "\n"
     
 class TraitLevel():
     def __init__(self, name):
@@ -400,7 +411,7 @@ class Trigger():
             base = base + "\n"
         for aff in self.affects:
             base = base + aff.as_string()
-        return base
+        return base + "\n"
 
 class TriggerAffect():
     def __init__(self, aff, numb, chanc, incom=None):
@@ -420,13 +431,13 @@ if __name__ == "__main__":
     edcteb2 = EDCT()
     edcteb2.parse_edct(edcteb2.EDCT_fname)
     #print(edcteb2.traits[0].comment_head)
-    for tt in edcteb2.traits:
-        print(tt.comment_head, end='')
-        print(tt.as_string())
-    for tt in edcteb2.triggers:
+    #for tt in edcteb2.traits:
+    #    print(tt.comment_head, end='')
+    #    print(tt.as_string())
+    #for tt in edcteb2.triggers:
         #print(tt.name)
-        print(tt.comment_head, end='')
-        print(tt.as_string())
-
+    #    print(tt.comment_head, end='')
+    #    print(tt.as_string())
+    edcteb2.save("test.txt")
         #print(edcteb2.traits)
     #print(edcteb2.triggers[0]) #.as_string())

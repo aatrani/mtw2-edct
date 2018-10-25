@@ -1,2006 +1,2000 @@
-0a1,5
-> -- Total lines 115937
-> -- White lines skipped: 25127
-> -- Full line comments found: 12290
-> -- Traits recorded: 1778
-> -- Triggers recorded: 6263
-7653d7629
+7653d7624
 <         ;;GainMessage Spoils_Manager_gain_desc
-7658a7635
+7658a7630
 >         ;;GainMessage Spoils_Manager_gain_desc
-7670d7645
+7670d7640
 <         ;;GainMessage Spoils_Scrooge_gain_desc
-7675a7651
+7675a7646
 >         ;;GainMessage Spoils_Scrooge_gain_desc
-7688d7662
+7688d7657
 <         ;;GainMessage Spoils_Popular_gain_desc
-7693a7668
+7693a7663
 >         ;;GainMessage Spoils_Popular_gain_desc
-7705d7678
+7705d7673
 <         ;;GainMessage Spoils_Populist_gain_desc
-7710a7684
+7710a7679
 >         ;;GainMessage Spoils_Populist_gain_desc
-9082d9048
+9082d9043
 < 	;AntiTraits Noctophilia, NightBattleCapable
-9106a9073
+9106a9068
 >     ;AntiTraits Noctophilia, NightBattleCapable
-9111d9077
+9111d9072
 < 	;AntiTraits Noctophobia
-9134a9101
+9134a9096
 >     ;AntiTraits Noctophobia
-9139d9105
+9139d9100
 < 	;AntiTraits Noctophobia
-9147a9114
+9147a9109
 >     ;AntiTraits Noctophobia
-9152d9118
+9152d9113
 < 	;AntiTraits Ignorance
-9177a9144
+9177a9139
 >     ;AntiTraits Ignorance
-9960d9926
+9960d9921
 < ;   Hidden
-9983a9950
+9983a9945
 > ;   Hidden
-9987d9953
+9987d9948
 < ;   Hidden
-10010a9977
+10010a9972
 > ;   Hidden
-10235d10201
+10235d10196
 < 	;AntiTraits Unjust, HarshRuler, KindRuler
-10259a10226
+10259a10221
 >     ;AntiTraits Unjust, HarshRuler, KindRuler
-10264d10230
+10264d10225
 < 	;AntiTraits Just, HarshRuler, KindRuler
-10289a10256
+10289a10251
 >     ;AntiTraits Just, HarshRuler, KindRuler
-10294d10260
+10294d10255
 <     ;AntiTraits Just, Unjust, KindRuler
-10321a10288
+10321a10283
 >     ;AntiTraits Just, Unjust, KindRuler
-10326d10292
+10326d10287
 <     ;AntiTraits Just, Unjust, HarshRuler
-10354a10321
+10354a10316
 >     ;AntiTraits Just, Unjust, HarshRuler
-10359d10325
+10359d10320
 < 	;AntiTraits BadAdministrator
-10384a10351
+10384a10346
 >     ;AntiTraits BadAdministrator
-10389d10355
+10389d10350
 < 	;AntiTraits GoodAdministrator
-10414a10381
+10414a10376
 >     ;AntiTraits GoodAdministrator
-10419d10385
+10419d10380
 < 	;AntiTraits BadTrader, Ignorance
-10441a10408
+10441a10403
 >     ;AntiTraits BadTrader, Ignorance
-10446d10412
+10446d10407
 < 	;AntiTraits GoodTrader
-10468a10435
+10468a10430
 >     ;AntiTraits GoodTrader
-10473d10439
+10473d10434
 < 	;AntiTraits BadBuilder, Ignorance
-10499a10466
+10499a10461
 >     ;AntiTraits BadBuilder, Ignorance
-10504d10470
+10504d10465
 < 	;AntiTraits GoodBuilder
-10529a10496
+10529a10491
 >     ;AntiTraits GoodBuilder
-10589d10555
+10589d10550
 < 	;AntiTraits Lenient
-10618a10585
+10618a10580
 >     ;AntiTraits Lenient
-10623d10589
+10623d10584
 < 	;AntiTraits BadMiner, Ignorance
-10645a10612
+10645a10607
 >     ;AntiTraits BadMiner, Ignorance
-10650d10616
+10650d10611
 < 	;AntiTraits GoodMiner
-10672a10639
+10672a10634
 >     ;AntiTraits GoodMiner
-10691d10657
+10691d10652
 < 	;AntiTraits Unschooled
-10723a10690
+10723a10685
 >     ;AntiTraits Unschooled
-10728d10694
+10728d10689
 < 	;AntiTraits Scholarly
-10744a10711
+10744a10706
 >     ;AntiTraits Scholarly
-10783d10748
+10783d10743
 < 	;AntiTraits Upright
-10816a10782
+10816a10777
 >     ;AntiTraits Upright
-10827d10791
+10827d10786
 < 	;AntiTraits Austere, Stoic, Cheapskate
-10853a10818
+10853a10813
 >     ;AntiTraits Austere, Stoic, Cheapskate
-10858d10822
+10858d10817
 < 	;AntiTraits Cheapskate, Austere, Continentia
-10885a10850
+10885a10845
 >     ;AntiTraits Cheapskate, Austere, Continentia
-10896d10859
+10896d10854
 < 	;AntiTraits Stoic, Austere
-10921a10885
+10921a10880
 >     ;AntiTraits Stoic, Austere
-10932d10894
+10932d10889
 < 	;AntiTraits Upright
-10968a10931
+10968a10926
 >     ;AntiTraits Upright
-10978d10939
+10978d10934
 < 	;AntiTraits Corrupt, Liar, Gambling, DeceiverVirtue
-11006a10968
+11006a10963
 >     ;AntiTraits Corrupt, Liar, Gambling, DeceiverVirtue
-11016d10976
+11016d10971
 < 	;AntiTraits Epicurean, Aesthetic, Excited
-11040a11001
+11040a10996
 >     ;AntiTraits Epicurean, Aesthetic, Excited
-11050d11009
+11050d11004
 < 	;AntiTraits ExpensiveTastes, Aesthetic, Epicurean
-11077a11037
+11077a11032
 >     ;AntiTraits ExpensiveTastes, Aesthetic, Epicurean
-11110d11069
+11110d11064
 < 	;AntiTraits StrategicSkill, GoodTrader, GoodBuilder, PoliticsSkill, PhilosophySkill, MathematicsSkill, InspiringSpeaker, PoeticSkill
-11132a11092
+11132a11087
 >     ;AntiTraits StrategicSkill, GoodTrader, GoodBuilder, PoliticsSkill, PhilosophySkill, MathematicsSkill, InspiringSpeaker, PoeticSkill
-11142d11100
+11142d11095
 < 	;AntiTraits ExpensiveTastes, Aesthetic, Generous
-11172a11131
+11172a11126
 >     ;AntiTraits ExpensiveTastes, Aesthetic, Generous
-11234d11190
+11234d11185
 < 	;AntiTraits Cheapskate
-11263a11220
+11263a11215
 >     ;AntiTraits Cheapskate
-11274d11229
+11274d11224
 < 	;AntiTraits Gregarious, Xenophilia
-11303a11259
+11303a11254
 >     ;AntiTraits Gregarious, Xenophilia
-11312d11266
+11312d11261
 < 	;AntiTraits Reclusive, Xenophobia
-11327a11282
+11327a11277
 >     ;AntiTraits Reclusive, Xenophobia
-11350d11303
+11350d11298
 < 	;AntiTraits HaleAndHearty
-11372a11326
+11372a11321
 >     ;AntiTraits HaleAndHearty
-11382d11334
+11382d11329
 < 	;AntiTraits Hypochondriac
-11404a11357
+11404a11352
 >     ;AntiTraits Hypochondriac
-11441d11392
+11441d11387
 < 	;AntiTraits HighPersonalSecurity, Paranoia
-11463a11415
+11463a11410
 >     ;AntiTraits HighPersonalSecurity, Paranoia
-11473d11423
+11473d11418
 < 	;AntiTraits LaxPersonalSecurity, Trusting
-11495a11446
+11495a11441
 >     ;AntiTraits LaxPersonalSecurity, Trusting
-11505d11454
+11505d11449
 < 	;AntiTraits Paranoia, HighPersonalSecurity
-11529a11479
+11529a11474
 >     ;AntiTraits Paranoia, HighPersonalSecurity
-11540d11488
+11540d11483
 < 	;AntiTraits Trusting, LaxPersonalSecurity
-11573a11522
+11573a11517
 >     ;AntiTraits Trusting, LaxPersonalSecurity
-11583d11530
+11583d11525
 < 	;AntiTraits Xenophilia
-11605a11553
+11605a11548
 >     ;AntiTraits Xenophilia
-11615d11561
+11615d11556
 < 	;AntiTraits Xenophobia
-11637a11584
+11637a11579
 >     ;AntiTraits Xenophobia
-11772d11713
+11772d11708
 < 	;AntiTraits Upright
-11787a11729
+11787a11724
 >     ;AntiTraits Upright
-11797d11737
+11797d11732
 < 	;AntiTraits Upright
-11821a11762
+11821a11757
 >     ;AntiTraits Upright
-11855d11795
+11855d11790
 < 	;AntiTraits Pious, ReligiousMania, PublicFaith, Superstitious
-11880a11821
+11880a11816
 >     ;AntiTraits Pious, ReligiousMania, PublicFaith, Superstitious
-11891d11830
+11891d11825
 < 	;AntiTraits Sane, Sacrilegious, PublicAtheism, Pragmatic
-11927a11867
+11927a11862
 >     ;AntiTraits Sane, Sacrilegious, PublicAtheism, Pragmatic
-11953d11890
+11953d11885
 < 	;AntiTraits PublicFaith, ReligiousMania, Pious, Superstitious
-11982a11920
+11982a11915
 >     ;AntiTraits PublicFaith, ReligiousMania, Pious, Superstitious
-11993d11929
+11993d11924
 < 	;AntiTraits PublicAtheism, Sacrilegious, Pragmatic
-12023a11960
+12023a11955
 >     ;AntiTraits PublicAtheism, Sacrilegious, Pragmatic
-12123d12058
+12123d12053
 < 	;AntiTraits Ignorance
-12148a12084
+12148a12079
 >     ;AntiTraits Ignorance
-12157d12091
+12157d12086
 < 	;ExcludeCultures cul_5, cul_6, cul_7
-12159d12092
+12159d12087
 < 	;AntiTraits Ignorance
-12185a12119,12120
+12185a12114,12115
 >     ;ExcludeCultures cul_5, cul_6, cul_7
 >     ;AntiTraits Ignorance
-12195d12128
+12195d12123
 < 	;AntiTraits Ignorance
-12223a12157
+12223a12152
 >     ;AntiTraits Ignorance
-12228d12161
+12228d12156
 < 	;AntiTraits BoringSpeaker, Ignorance
-12253a12187
+12253a12182
 >     ;AntiTraits BoringSpeaker, Ignorance
-12258d12191
+12258d12186
 < 	;AntiTraits InspiringSpeaker, PoeticSkill
-12283a12217
+12283a12212
 >     ;AntiTraits InspiringSpeaker, PoeticSkill
-12293d12225
+12293d12220
 < 	;AntiTraits Ignorance, BoringSpeaker, Anaisthetos
-12315a12248
+12315a12243
 >     ;AntiTraits Ignorance, BoringSpeaker, Anaisthetos
-12320d12252
+12320d12247
 < 	;AntiTraits PoeticSkill, InspiringSpeaker
-12343a12276
+12343a12271
 >     ;AntiTraits PoeticSkill, InspiringSpeaker
-12356d12287
+12356d12282
 < 	;AntiTraits Sobriety
-12408a12340
+12408a12335
 >     ;AntiTraits Sobriety
-12413d12344
+12413d12339
 < 	;AntiTraits Drink
-12438a12370
+12438a12365
 >     ;AntiTraits Drink
-13349d13274
+13349d13269
 < 	;AntiTraits GamesHaterRomanVice
-13374a13300
+13374a13295
 >     ;AntiTraits GamesHaterRomanVice
-13385d13309
+13385d13304
 < 	;AntiTraits GamesFanRomanVice, Bloodthirsty
-13407a13332
+13407a13327
 >     ;AntiTraits GamesFanRomanVice, Bloodthirsty
-13413d13337
+13413d13332
 <     ;AntiTraits RacesHaterRomanVice
-13437a13362
+13437a13357
 >     ;AntiTraits RacesHaterRomanVice
-13443d13367
+13443d13362
 <     ;AntiTraits RacesFanRomanVice
-13467c13391
+13467c13386
 <
 ---
 >     ;AntiTraits RacesFanRomanVice
-13478d13400
+13478d13395
 < 	;AntiTraits Continentia, Stoic, Austere
-13501a13424
+13501a13419
 >     ;AntiTraits Continentia, Stoic, Austere
-13581d13502
+13581d13497
 < 	;AntiTraits Cheapskate, Austere, Stoic, Continentia
-13607c13528
+13607c13523
 <
 ---
 >     ;AntiTraits Cheapskate, Austere, Stoic, Continentia
-13618d13537
+13618d13532
 < 	;AntiTraits KindRuler
-13644c13563
+13644c13558
 <
 ---
 >     ;AntiTraits KindRuler
-13655d13572
+13655d13567
 < 	;AntiTraits Upright
-13680c13597
+13680c13592
 <
 ---
 >     ;AntiTraits Upright
-13691d13606
+13691d13601
 < 	;AntiTraits Modestus
-13713a13629
+13713a13624
 >     ;AntiTraits Modestus
-13719d13634
+13719d13629
 < 	;AntiTraits IndecisiveAttacker
-13745a13661
+13745a13656
 >     ;AntiTraits IndecisiveAttacker
-13813d13727
+13813d13722
 < 	;AntiTraits Superbus
-13839a13754
+13839a13749
 >     ;AntiTraits Superbus
-13850d13763
+13850d13758
 < 	;AntiTraits ExpensiveTastes, Epicurean, ApicianRomanVice, Indulgens
-13876a13790
+13876a13785
 >     ;AntiTraits ExpensiveTastes, Epicurean, ApicianRomanVice, Indulgens
-14158d14067
+14158d14062
 < 	;AntiTraits WeakTribune
-14189a14099
+14189a14094
 >     ;AntiTraits WeakTribune
-14199d14107
+14199d14102
 < 	;AntiTraits AggressiveTribune
-14230a14139
+14230a14134
 >     ;AntiTraits AggressiveTribune
-14445d14352
+14445d14347
 < 	;AntiTraits Popularis
-14453a14361
+14453a14356
 >     ;AntiTraits Popularis
-14461d14367
+14461d14362
 < 	;AntiTraits Optimate
-14469a14376
+14469a14371
 >     ;AntiTraits Optimate
-14513d14418
+14513d14413
 < 	;AntiTraits Augustus
-14523a14429
+14523a14424
 >     ;AntiTraits Augustus
-14910d14798
+14910d14793
 < 	;AntiTraits KleronomosBasileios, Koiranides
-14922a14811
+14922a14806
 >     ;AntiTraits KleronomosBasileios, Koiranides
-14929d14816
+14929d14811
 < 	;AntiTraits Basileus, ExKleronomosBasileios
-14938a14826
+14938a14821
 >     ;AntiTraits Basileus, ExKleronomosBasileios
-14943d14830
+14943d14825
 < 	;AntiTraits KleronomosBasileios
-14949a14837
+14949a14832
 >     ;AntiTraits KleronomosBasileios
-15140d15027
+15140d15022
 < 	;AntiTraits NotEligibleForOlympics
-15146a15034
+15146a15029
 >     ;AntiTraits NotEligibleForOlympics
-15151d15038
+15151d15033
 < 	;AntiTraits EligibleForOlympics
-15157a15045
+15157a15040
 >     ;AntiTraits EligibleForOlympics
-15165d15051
+15165d15046
 < 	;AntiTraits FormerOlympicCompetitor, CaughtCheating
-15174a15061
+15174a15056
 >     ;AntiTraits FormerOlympicCompetitor, CaughtCheating
-15185d15070
+15185d15065
 < 	;AntiTraits OlympicCompetitor
-15206a15092
+15206a15087
 >     ;AntiTraits OlympicCompetitor
-15214d15098
+15214d15093
 < 	;AntiTraits OlympicCompetitor
-15223a15108
+15223a15103
 >     ;AntiTraits OlympicCompetitor
-15228d15112
+15228d15107
 < 	;AntiTraits FormerBaktriaOlympicCompetitor, CaughtCheating, BaktriaOlympicVictor
-15237a15122
+15237a15117
 >     ;AntiTraits FormerBaktriaOlympicCompetitor, CaughtCheating, BaktriaOlympicVictor
-15243d15127
+15243d15122
 < 	;AntiTraits BaktriaOlympicCompetitor
-15263a15148
+15263a15143
 >     ;AntiTraits BaktriaOlympicCompetitor
-15268d15152
+15268d15147
 < 	;AntiTraits BaktriaOlympicCompetitor
-15278a15163
+15278a15158
 >     ;AntiTraits BaktriaOlympicCompetitor
-15283d15167
+15283d15162
 < 	;AntiTraits FormerEpeirosOlympicCompetitor, CaughtCheating, EpeirosOlympicVictor
-15292a15177
+15292a15172
 >     ;AntiTraits FormerEpeirosOlympicCompetitor, CaughtCheating, EpeirosOlympicVictor
-15298d15182
+15298d15177
 < 	;AntiTraits EpeirosOlympicCompetitor
-15318a15203
+15318a15198
 >     ;AntiTraits EpeirosOlympicCompetitor
-15323d15207
+15323d15202
 < 	;AntiTraits EpeirosOlympicCompetitor
-15333a15218
+15333a15213
 >     ;AntiTraits EpeirosOlympicCompetitor
-15338d15222
+15338d15217
 < 	;AntiTraits FormerKoinonHellenonOlympicCompetitor, CaughtCheating, KoinonHellenonOlympicVictor
-15347a15232
+15347a15227
 >     ;AntiTraits FormerKoinonHellenonOlympicCompetitor, CaughtCheating, KoinonHellenonOlympicVictor
-15353d15237
+15353d15232
 < 	;AntiTraits KoinonHellenonOlympicCompetitor
-15373a15258
+15373a15253
 >     ;AntiTraits KoinonHellenonOlympicCompetitor
-15378d15262
+15378d15257
 < 	;AntiTraits KoinonHellenonOlympicCompetitor
-15388a15273
+15388a15268
 >     ;AntiTraits KoinonHellenonOlympicCompetitor
-15393d15277
+15393d15272
 < 	;AntiTraits FormerMakedoniaOlympicCompetitor, CaughtCheating, MakedoniaOlympicVictor
-15402a15287
+15402a15282
 >     ;AntiTraits FormerMakedoniaOlympicCompetitor, CaughtCheating, MakedoniaOlympicVictor
-15408d15292
+15408d15287
 < 	;AntiTraits MakedoniaOlympicCompetitor
-15428a15313
+15428a15308
 >     ;AntiTraits MakedoniaOlympicCompetitor
-15433d15317
+15433d15312
 < 	;AntiTraits MakedoniaOlympicCompetitor
-15443a15328
+15443a15323
 >     ;AntiTraits MakedoniaOlympicCompetitor
-15448d15332
+15448d15327
 < 	;AntiTraits FormerPtolemaioiOlympicCompetitor, CaughtCheating, PtolemaioiOlympicVictor
-15457a15342
+15457a15337
 >     ;AntiTraits FormerPtolemaioiOlympicCompetitor, CaughtCheating, PtolemaioiOlympicVictor
-15463d15347
+15463d15342
 < 	;AntiTraits PtolemaioiOlympicCompetitor
-15483a15368
+15483a15363
 >     ;AntiTraits PtolemaioiOlympicCompetitor
-15488d15372
+15488d15367
 < 	;AntiTraits PtolemaioiOlympicCompetitor
-15498a15383
+15498a15378
 >     ;AntiTraits PtolemaioiOlympicCompetitor
-15503d15387
+15503d15382
 < 	;AntiTraits FormerSeleukidOlympicCompetitor, CaughtCheating, SeleukidOlympicVictor
-15512a15397
+15512a15392
 >     ;AntiTraits FormerSeleukidOlympicCompetitor, CaughtCheating, SeleukidOlympicVictor
-15518d15402
+15518d15397
 < 	;AntiTraits SeleukidOlympicCompetitor
-15538a15423
+15538a15418
 >     ;AntiTraits SeleukidOlympicCompetitor
-15543d15427
+15543d15422
 < 	;AntiTraits SeleukidOlympicCompetitor
-15553a15438
+15553a15433
 >     ;AntiTraits SeleukidOlympicCompetitor
-15559d15443
+15559d15438
 < 	;AntiTraits OlympicCompetitor, BaktriaOlympicCompetitor, EpeirosOlympicCompetitor, KoinonHellenonOlympicCompetitor, MakedoniaOlympicCompetitor, PtolemaioiOlympicCompetitor, SeleukidOlympicCompetitor
-15578a15463
+15578a15458
 >     ;AntiTraits OlympicCompetitor, BaktriaOlympicCompetitor, EpeirosOlympicCompetitor, KoinonHellenonOlympicCompetitor, MakedoniaOlympicCompetitor, PtolemaioiOlympicCompetitor, SeleukidOlympicCompetitor
-15604d15486
+15604d15481
 < 	;AntiTraits ProxenosBad
-15614a15497
+15614a15492
 >     ;AntiTraits ProxenosBad
-15622d15503
+15622d15498
 < 	;AntiTraits Proxenos
-15632c15513
+15632c15508
 <
 ---
 >     ;AntiTraits Proxenos
-15834d15702
+15834d15697
 < 	;AntiTraits Upright, Sane
-15849a15718
+15849a15713
 >     ;AntiTraits Upright, Sane
-16142d16003
+16142d15998
 < 	;AntiTraits PoeticSkill, InspiringSpeaker
-16167a16029
+16167a16024
 >     ;AntiTraits PoeticSkill, InspiringSpeaker
-16201d16062
+16201d16057
 < 	;AntiTraits Generous, ExpensiveTastes, Aesthetic
-16228c16089
+16228c16084
 <
 ---
 >     ;AntiTraits Generous, ExpensiveTastes, Aesthetic
-16238d16097
+16238d16092
 < 	;AntiTraits Upright
-16261c16120
+16261c16115
 <
 ---
 >     ;AntiTraits Upright
-16266d16124
+16266d16119
 < 	;AntiTraits Selflessness
-16291c16149
+16291c16144
 <
 ---
 >     ;AntiTraits Selflessness
-16296d16153
+16296d16148
 < 	;AntiTraits Pragmatic
-16319a16177
+16319a16172
 >     ;AntiTraits Pragmatic
-16706d16552
+16706d16547
 < 	;AntiTraits MakedonianPhilellen
-16712a16559
+16712a16554
 >     ;AntiTraits MakedonianPhilellen
-16718d16564
+16718d16559
 < 	;AntiTraits MakedonianOinostyges
-16737a16584
+16737a16579
 >     ;AntiTraits MakedonianOinostyges
-16743d16589
+16743d16584
 < 	;AntiTraits MakedonianHypermethyskos
-16771a16618
+16771a16613
 >     ;AntiTraits MakedonianHypermethyskos
-16819d16665
+16819d16660
 < 	;AntiTraits KleronomosArches
-16831a16678
+16831a16673
 >     ;AntiTraits KleronomosArches
-16838d16683
+16838d16678
 < 	;AntiTraits ExKleronomosArches
-16847a16693
+16847a16688
 >     ;AntiTraits ExKleronomosArches
-16852d16697
+16852d16692
 < 	;AntiTraits KleronomosArches
-16858a16704
+16858a16699
 >     ;AntiTraits KleronomosArches
-17301d17145
+17301d17140
 < 	;AntiTraits ReverseBeatenByCats
-17307a17152
+17307a17147
 >     ;AntiTraits ReverseBeatenByCats
-17312d17156
+17312d17151
 < 	;AntiTraits BeatenByCats
-17318a17163
+17318a17158
 >     ;AntiTraits BeatenByCats
-17325d17168
+17325d17163
 < 	;AntiTraits SeleukidsDevelopCats
-17336a17180
+17336a17175
 >     ;AntiTraits SeleukidsDevelopCats
-17345d17187
+17345d17182
 < 	;AntiTraits ImpressedByCats
-17351a17194
+17351a17189
 >     ;AntiTraits ImpressedByCats
-17486d17328
+17486d17323
 < 	;AntiTraits PublicAtheism, Pragmatic
-17505a17348
+17505a17343
 >     ;AntiTraits PublicAtheism, Pragmatic
-17834d17676
+17834d17671
 < 	;AntiTraits KleronomosBasileios
-17846a17689
+17846a17684
 >     ;AntiTraits KleronomosBasileios
-17854d17695
+17854d17690
 < 	;AntiTraits UpperAigyptos
-17863a17705
+17863a17700
 >     ;AntiTraits UpperAigyptos
-17871d17711
+17871d17706
 < 	;AntiTraits LowerAigyptos
-17880a17721
+17880a17716
 >     ;AntiTraits LowerAigyptos
-17903d17741
+17903d17736
 < 	;AntiTraits Sane
-17912a17751
+17912a17746
 >     ;AntiTraits Sane
-17917d17755
+17917d17750
 < 	;AntiTraits Sane
-17926a17765
+17926a17760
 >     ;AntiTraits Sane
-17952d17790
+17952d17785
 < 	;AntiTraits RevPriestOfAlexandros
-17970a17809
+17970a17804
 >     ;AntiTraits RevPriestOfAlexandros
-17998d17835
+17998d17830
 < 	;AntiTraits StrategosAutokrator
-18024a17862
+18024a17857
 >     ;AntiTraits StrategosAutokrator
-18039d17876
+18039d17871
 < 	;AntiTraits NomeStrategos
-18052c17889
+18052c17884
 <
 ---
 >     ;AntiTraits NomeStrategos
-18556d18387
+18556d18382
 < ;	;AntiTraits ExAvagSepuh
-18565a18397
+18565a18392
 > ;    ;AntiTraits ExAvagSepuh
-18586d18416
+18586d18411
 < 	;AntiTraits AntiRoyalEye
-18606a18437
+18606a18432
 >     ;AntiTraits AntiRoyalEye
-18614,18615d18443
+18614,18615d18438
 < 	;AntiTraits RoyalEye
 <
-18621a18450
+18621a18445
 >     ;AntiTraits RoyalEye
-18662d18488
+18662d18483
 < 	;AntiTraits ExKoiranides
-18672c18498
+18672c18493
 <
 ---
 >     ;AntiTraits ExKoiranides
-18677d18502
+18677d18497
 < 	;AntiTraits Koiranides
-18684c18509
+18684c18504
 <
 ---
 >     ;AntiTraits Koiranides
-18944d18768
+18944d18763
 < 	;AntiTraits CelticSobriety
-18976a18801
+18976a18796
 >     ;AntiTraits CelticSobriety
-19736d19559
+19736d19554
 < 	;AntiTraits Remos
-19748a19572
+19748a19567
 >     ;AntiTraits Remos
-19756d19578
+19756d19573
 < 	;AntiTraits ExRemos
-19766a19589
+19766a19584
 >     ;AntiTraits ExRemos
-19771d19593
+19771d19588
 < 	;AntiTraits Remos
-19777a19600
+19777a19595
 >     ;AntiTraits Remos
-19838d19660
+19838d19655
 < 	;AntiTraits Orbanos
-19850a19673
+19850a19668
 >     ;AntiTraits Orbanos
-19858d19679
+19858d19674
 < 	;AntiTraits ExOrbanos
-19868a19690
+19868a19685
 >     ;AntiTraits ExOrbanos
-19873d19694
+19873d19689
 < 	;AntiTraits Orbanos
-19879a19701
+19879a19696
 >     ;AntiTraits Orbanos
-19939d19760
+19939d19755
 < 	;AntiTraits Magalos
-19951a19773
+19951a19768
 >     ;AntiTraits Magalos
-19959d19779
+19959d19774
 < 	;AntiTraits ExMagalos
-19969a19790
+19969a19785
 >     ;AntiTraits ExMagalos
-19976d19796
+19976d19791
 < 	;AntiTraits Magalos
-19982a19803
+19982a19798
 >     ;AntiTraits Magalos
-20617d20437
+20617d20432
 < 	;AntiTraits OrboUeldo
-20628a20449
+20628a20444
 >     ;AntiTraits OrboUeldo
-20636d20455
+20636d20450
 < 	;AntiTraits ExOrboUeldo
-20646a20466
+20646a20461
 >     ;AntiTraits ExOrboUeldo
-20651d20470
+20651d20465
 < 	;AntiTraits OrboUeldo
-20657a20477
+20657a20472
 >     ;AntiTraits OrboUeldo
-20704d20522
+20704d20517
 < 	;AntiTraits ExTuaznisezios
-20714a20533
+20714a20528
 >     ;AntiTraits ExTuaznisezios
-20719d20537
+20719d20532
 < 	;AntiTraits Tuaznisezios
-20725a20544
+20725a20539
 >     ;AntiTraits Tuaznisezios
-21269d21087
+21269d21082
 < 	;AntiTraits GermanNoble
-21282a21101
+21282a21096
 >     ;AntiTraits GermanNoble
-21289d21107
+21289d21102
 < 	;AntiTraits Naisamannaz, GermanicKuningaz
-21322a21141
+21322a21136
 >     ;AntiTraits Naisamannaz, GermanicKuningaz
-21375d21193
+21375d21188
 < 	;AntiTraits ExTheudanaz
-21385a21204
+21385a21199
 >     ;AntiTraits ExTheudanaz
-21390d21208
+21390d21203
 < 	;AntiTraits Theudanaz
-21396a21215
+21396a21210
 >     ;AntiTraits Theudanaz
-21416d21233
+21416d21228
 < 	;AntiTraits GermanNoble, CasseArgas
-21424a21242
+21424a21237
 >     ;AntiTraits GermanNoble, CasseArgas
-21484d21298
+21484d21293
 < 	;AntiTraits NotHairaskapizAllaStamnoz
-21507a21322
+21507a21317
 >     ;AntiTraits NotHairaskapizAllaStamnoz
-21513d21327
+21513d21322
 < 	;AntiTraits HairaskapizAllaStamnoz
-21519a21334
+21519a21329
 >     ;AntiTraits HairaskapizAllaStamnoz
-21604d21416
+21604d21411
 < 	;AntiTraits Coward, Haemophobic
-21619a21432
+21619a21427
 >     ;AntiTraits Coward, Haemophobic
-21704d21516
+21704d21511
 < 	;AntiTraits ExHarjanaz
-21717a21530
+21717a21525
 >     ;AntiTraits ExHarjanaz
-21722d21534
+21722d21529
 < 	;AntiTraits Harjanaz
-21732a21545
+21732a21540
 >     ;AntiTraits Harjanaz
-21750d21562
+21750d21557
 < 	;AntiTraits Haemophobic
-21769a21582
+21769a21577
 >     ;AntiTraits Haemophobic
-22088d21899
+22088d21894
 < 	;AntiTraits ExZelmarazas
-22098a21910
+22098a21905
 >     ;AntiTraits ExZelmarazas
-22103d21914
+22103d21909
 < 	;AntiTraits Zelmarazas
-22109a21921
+22109a21916
 >     ;AntiTraits Zelmarazas
-22555d22361
+22555d22356
 < 	;AntiTraits GetaiForeignerHeathen
-22566a22373
+22566a22368
 >     ;AntiTraits GetaiForeignerHeathen
-22573d22378
+22573d22373
 < 	;AntiTraits Orthotheosebes
-22593a22399
+22593a22394
 >     ;AntiTraits Orthotheosebes
-22661d22464
+22661d22459
 < 	;AntiTraits NotPavelter
-22684a22488
+22684a22483
 >     ;AntiTraits NotPavelter
-22690d22493
+22690d22488
 < 	;AntiTraits Pavelter
-22696a22500
+22696a22495
 >     ;AntiTraits Pavelter
-22809d22612
+22809d22607
 < 	;AntiTraits Prince
-22822a22626
+22822a22621
 >     ;AntiTraits Prince
-22826d22629
+22826d22624
 < 	;AntiTraits Prince
-22839a22643
+22839a22638
 >     ;AntiTraits Prince
-22843d22646
+22843d22641
 < 	;AntiTraits Prince
-22855a22659
+22855a22654
 >     ;AntiTraits Prince
-22862d22664
+22862d22659
 < 	;AntiTraits ExPrince
-22872a22675
+22872a22670
 >     ;AntiTraits ExPrince
-22877d22679
+22877d22674
 < 	;AntiTraits Prince
-22883a22686
+22883a22681
 >     ;AntiTraits Prince
-22920d22721
+22920d22716
 < 	;AntiTraits ExRaudaekae
-22929a22731
+22929a22726
 >     ;AntiTraits ExRaudaekae
-22934d22735
+22934d22730
 < 	;AntiTraits Raudaekae
-22940a22742
+22940a22737
 >     ;AntiTraits Raudaekae
-22966d22767
+22966d22762
 < 	;AntiTraits SakaRider
-22976a22778
+22976a22773
 >     ;AntiTraits SakaRider
-22981d22782
+22981d22777
 < 	;AntiTraits PoorSakaRider
-22999a22801
+22999a22796
 >     ;AntiTraits PoorSakaRider
-23007d22807
+23007d22802
 < 	;AntiTraits HanPuppet, HanReturnEnvoys, DismissedHanEnvoys, ExecutedHanEnvoys
-23021a22822
+23021a22817
 >     ;AntiTraits HanPuppet, HanReturnEnvoys, DismissedHanEnvoys, ExecutedHanEnvoys
-23121d22921
+23121d22916
 < 	;AntiTraits HanPuppet, HanReturnEnvoys, DismissedHanEnvoys, ExecutedHanEnvoys
-23132a22933
+23132a22928
 >     ;AntiTraits HanPuppet, HanReturnEnvoys, DismissedHanEnvoys, ExecutedHanEnvoys
-23195d22994
+23195d22989
 < 	;AntiTraits Coward
-23204a23004
+23204a22999
 >     ;AntiTraits Coward
-23982d23781
+23982d23776
 < 	;AntiTraits ShophetHeir
-23987d23785
+23987d23780
 < 		;Epithet Shophet_epithet_desc
-23993a23792,23793
+23993a23787,23788
 >     ;AntiTraits ShophetHeir
 >         ;Epithet Shophet_epithet_desc
-23998d23797
+23998d23792
 < 	;AntiTraits ExShophetHeir
-24003d23801
+24003d23796
 < 		;Epithet ShophetHeir_epithet_desc
-24009a23808,23809
+24009a23803,23804
 >     ;AntiTraits ExShophetHeir
 >         ;Epithet ShophetHeir_epithet_desc
-24014d23813
+24014d23808
 < 	;AntiTraits TsorimShophet, ShophetHeir
-24020a23820
+24020a23815
 >     ;AntiTraits TsorimShophet, ShophetHeir
-24027d23825
+24027d23820
 < 	;AntiTraits AntiBarcid
-24035a23834
+24035a23829
 >     ;AntiTraits AntiBarcid
-24042d23839
+24042d23834
 < 	;AntiTraits Barcid
-24050a23848
+24050a23843
 >     ;AntiTraits Barcid
-24514d24310
+24514d24305
 < 	;AntiTraits ExAmir
-24524a24321
+24524a24316
 >     ;AntiTraits ExAmir
-24529d24325
+24529d24320
 < 	;AntiTraits Amir
-24535a24332
+24535a24327
 >     ;AntiTraits Amir
-24540d24336
+24540d24331
 < 	;AntiTraits Sobriety, CelticSobriety
-24565a24362,24363
+24565a24357,24358
 >
 >     ;AntiTraits Sobriety, CelticSobriety
-24572d24369
+24572d24364
 < 	;AntiTraits Bikr
-24584a24382
+24584a24377
 >     ;AntiTraits Bikr
-24588d24385
+24588d24380
 < 	;AntiTraits Mar
-24598a24396
+24598a24391
 >     ;AntiTraits Mar
-24676d24472
+24676d24467
 < ; o Taksashila_PM : <Authority> 2, <Influence> 1, <Law> 1, <PersonalSecurity> 1, <Construction> 5, <TaxCollection> 5
-24691a24488
+24691a24483
 > ; o Taksashila_PM : <Authority> 2, <Influence> 1, <Law> 1, <PersonalSecurity> 1, <Construction> 5, <TaxCollection> 5
-24711d24507
+24711d24502
 < ; o Taksashila_DIO : <Authority> 1, <Influence> 1, <Law> 2
-24723a24520
+24723a24515
 > ; o Taksashila_DIO : <Authority> 1, <Influence> 1, <Law> 2
-24874d24669
+24874d24664
 < 	;AntiTraits ExAtemaglos
-24884a24680
+24884a24675
 >     ;AntiTraits ExAtemaglos
-24889d24684
+24889d24679
 < 	;AntiTraits Atemaglos
-24895a24691
+24895a24686
 >     ;AntiTraits Atemaglos
-25065d24860
+25065d24855
 < 	;AntiTraits ExAtemaglos
-25074a24870
+25074a24865
 >     ;AntiTraits ExAtemaglos
-25079d24874
+25079d24869
 < 	;AntiTraits Amekkasu
-25085a24881
+25085a24876
 >     ;AntiTraits Amekkasu
-26008d25802
+26008d25797
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGod, WorshipsFertilityGod, WorshipsForgeGod, WorshipsFunGod, WorshipsGovernorsGod
-26014a25809
+26014a25804
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGod, WorshipsFertilityGod, WorshipsForgeGod, WorshipsFunGod, WorshipsGovernorsGod
-26019d25813
+26019d25808
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGod, WorshipsFertilityGod, WorshipsForgeGod, WorshipsFunGod, WorshipsGovernorsGod
-26025a25820
+26025a25815
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGod, WorshipsFertilityGod, WorshipsForgeGod, WorshipsFunGod, WorshipsGovernorsGod
-26030d25824
+26030d25819
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGod, WorshipsFarmingGod, WorshipsForgeGod, WorshipsFunGod, WorshipsGovernorsGod
-26036a25831
+26036a25826
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGod, WorshipsFarmingGod, WorshipsForgeGod, WorshipsFunGod, WorshipsGovernorsGod
-26041d25835
+26041d25830
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGod, WorshipsFarmingGod, WorshipsFertilityGod, WorshipsFunGod, WorshipsGovernorsGod
-26047a25842
+26047a25837
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGod, WorshipsFarmingGod, WorshipsFertilityGod, WorshipsFunGod, WorshipsGovernorsGod
-26052d25846
+26052d25841
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGod, WorshipsFarmingGod, WorshipsFertilityGod, WorshipsForgeGod, WorshipsGovernorsGod
-26057a25852,25853
+26057a25847,25848
 >
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGod, WorshipsFarmingGod, WorshipsFertilityGod, WorshipsForgeGod, WorshipsGovernorsGod
-26062d25857
+26062d25852
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGod, WorshipsFarmingGod, WorshipsFertilityGod, WorshipsForgeGod, WorshipsFunGod
-26068a25864
+26068a25859
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGod, WorshipsFarmingGod, WorshipsFertilityGod, WorshipsForgeGod, WorshipsFunGod
-26072d25867
+26072d25862
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodRome, WorshipsFertilityGodRome, WorshipsForgeGodRome, WorshipsFunGodRome, WorshipsGovernorsGodRome
-26079a25875
+26079a25870
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodRome, WorshipsFertilityGodRome, WorshipsForgeGodRome, WorshipsFunGodRome, WorshipsGovernorsGodRome
-26083d25878
+26083d25873
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodRome, WorshipsFertilityGodRome, WorshipsForgeGodRome, WorshipsFunGodRome, WorshipsGovernorsGodRome
-26090a25886
+26090a25881
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodRome, WorshipsFertilityGodRome, WorshipsForgeGodRome, WorshipsFunGodRome, WorshipsGovernorsGodRome
-26094d25889
+26094d25884
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodRome, WorshipsFarmingGodRome, WorshipsForgeGodRome, WorshipsFunGodRome, WorshipsGovernorsGodRome
-26101a25897
+26101a25892
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodRome, WorshipsFarmingGodRome, WorshipsForgeGodRome, WorshipsFunGodRome, WorshipsGovernorsGodRome
-26105d25900
+26105d25895
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodRome, WorshipsFarmingGodRome, WorshipsFertilityGodRome, WorshipsFunGodRome, WorshipsGovernorsGodRome
-26112a25908
+26112a25903
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodRome, WorshipsFarmingGodRome, WorshipsFertilityGodRome, WorshipsFunGodRome, WorshipsGovernorsGodRome
-26116d25911
+26116d25906
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodRome, WorshipsFarmingGodRome, WorshipsFertilityGodRome, WorshipsForgeGodRome, WorshipsGovernorsGodRome
-26123a25919
+26123a25914
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodRome, WorshipsFarmingGodRome, WorshipsFertilityGodRome, WorshipsForgeGodRome, WorshipsGovernorsGodRome
-26127d25922
+26127d25917
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodRome, WorshipsFarmingGodRome, WorshipsFertilityGodRome, WorshipsForgeGodRome, WorshipsFunGodRome
-26134a25930
+26134a25925
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodRome, WorshipsFarmingGodRome, WorshipsFertilityGodRome, WorshipsForgeGodRome, WorshipsFunGodRome
-26138d25933
+26138d25928
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodCarthage, WorshipsFertilityGodCarthage, WorshipsForgeGodCarthage, WorshipsFunGodCarthage, WorshipsGovernorsGodCarthage
-26145a25941
+26145a25936
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodCarthage, WorshipsFertilityGodCarthage, WorshipsForgeGodCarthage, WorshipsFunGodCarthage, WorshipsGovernorsGodCarthage
-26149d25944
+26149d25939
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodCarthage, WorshipsFertilityGodCarthage, WorshipsForgeGodCarthage, WorshipsFunGodCarthage, WorshipsGovernorsGodCarthage
-26156a25952
+26156a25947
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodCarthage, WorshipsFertilityGodCarthage, WorshipsForgeGodCarthage, WorshipsFunGodCarthage, WorshipsGovernorsGodCarthage
-26160d25955
+26160d25950
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodCarthage, WorshipsFarmingGodCarthage, WorshipsForgeGodCarthage, WorshipsFunGodCarthage, WorshipsGovernorsGodCarthage
-26167a25963
+26167a25958
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodCarthage, WorshipsFarmingGodCarthage, WorshipsForgeGodCarthage, WorshipsFunGodCarthage, WorshipsGovernorsGodCarthage
-26171d25966
+26171d25961
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodCarthage, WorshipsFarmingGodCarthage, WorshipsFertilityGodCarthage, WorshipsFunGodCarthage, WorshipsGovernorsGodCarthage
-26178a25974
+26178a25969
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodCarthage, WorshipsFarmingGodCarthage, WorshipsFertilityGodCarthage, WorshipsFunGodCarthage, WorshipsGovernorsGodCarthage
-26182d25977
+26182d25972
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodCarthage, WorshipsFarmingGodCarthage, WorshipsFertilityGodCarthage, WorshipsForgeGodCarthage, WorshipsGovernorsGodCarthage
-26189a25985
+26189a25980
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodCarthage, WorshipsFarmingGodCarthage, WorshipsFertilityGodCarthage, WorshipsForgeGodCarthage, WorshipsGovernorsGodCarthage
-26193d25988
+26193d25983
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodCarthage, WorshipsFarmingGodCarthage, WorshipsFertilityGodCarthage, WorshipsForgeGodCarthage, WorshipsFunGodCarthage
-26200a25996
+26200a25991
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodCarthage, WorshipsFarmingGodCarthage, WorshipsFertilityGodCarthage, WorshipsForgeGodCarthage, WorshipsFunGodCarthage
-26204d25999
+26204d25994
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodMakedonia, WorshipsFertilityGodMakedonia, WorshipsForgeGodMakedonia, WorshipsFunGodMakedonia, WorshipsGovernorsGodMakedonia
-26211a26007
+26211a26002
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodMakedonia, WorshipsFertilityGodMakedonia, WorshipsForgeGodMakedonia, WorshipsFunGodMakedonia, WorshipsGovernorsGodMakedonia
-26215d26010
+26215d26005
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodMakedonia, WorshipsFertilityGodMakedonia, WorshipsForgeGodMakedonia, WorshipsFunGodMakedonia, WorshipsGovernorsGodMakedonia
-26222a26018
+26222a26013
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodMakedonia, WorshipsFertilityGodMakedonia, WorshipsForgeGodMakedonia, WorshipsFunGodMakedonia, WorshipsGovernorsGodMakedonia
-26226d26021
+26226d26016
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodMakedonia, WorshipsFarmingGodMakedonia, WorshipsForgeGodMakedonia, WorshipsFunGodMakedonia, WorshipsGovernorsGodMakedonia
-26233a26029
+26233a26024
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodMakedonia, WorshipsFarmingGodMakedonia, WorshipsForgeGodMakedonia, WorshipsFunGodMakedonia, WorshipsGovernorsGodMakedonia
-26237d26032
+26237d26027
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodMakedonia, WorshipsFarmingGodMakedonia, WorshipsFertilityGodMakedonia, WorshipsFunGodMakedonia, WorshipsGovernorsGodMakedonia
-26244a26040
+26244a26035
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodMakedonia, WorshipsFarmingGodMakedonia, WorshipsFertilityGodMakedonia, WorshipsFunGodMakedonia, WorshipsGovernorsGodMakedonia
-26248d26043
+26248d26038
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodMakedonia, WorshipsFarmingGodMakedonia, WorshipsFertilityGodMakedonia, WorshipsForgeGodMakedonia, WorshipsGovernorsGodMakedonia
-26255a26051
+26255a26046
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodMakedonia, WorshipsFarmingGodMakedonia, WorshipsFertilityGodMakedonia, WorshipsForgeGodMakedonia, WorshipsGovernorsGodMakedonia
-26259d26054
+26259d26049
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodMakedonia, WorshipsFarmingGodMakedonia, WorshipsFertilityGodMakedonia, WorshipsForgeGodMakedonia, WorshipsFunGodMakedonia
-26266a26062
+26266a26057
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodMakedonia, WorshipsFarmingGodMakedonia, WorshipsFertilityGodMakedonia, WorshipsForgeGodMakedonia, WorshipsFunGodMakedonia
-26270d26065
+26270d26060
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodApeiros, WorshipsFertilityGodApeiros, WorshipsForgeGodApeiros, WorshipsFunGodApeiros, WorshipsGovernorsGodApeiros
-26277a26073
+26277a26068
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodApeiros, WorshipsFertilityGodApeiros, WorshipsForgeGodApeiros, WorshipsFunGodApeiros, WorshipsGovernorsGodApeiros
-26281d26076
+26281d26071
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodApeiros, WorshipsFertilityGodApeiros, WorshipsForgeGodApeiros, WorshipsFunGodApeiros, WorshipsGovernorsGodApeiros
-26288a26084
+26288a26079
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodApeiros, WorshipsFertilityGodApeiros, WorshipsForgeGodApeiros, WorshipsFunGodApeiros, WorshipsGovernorsGodApeiros
-26292d26087
+26292d26082
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodApeiros, WorshipsFarmingGodApeiros, WorshipsForgeGodApeiros, WorshipsFunGodApeiros, WorshipsGovernorsGodApeiros
-26299a26095
+26299a26090
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodApeiros, WorshipsFarmingGodApeiros, WorshipsForgeGodApeiros, WorshipsFunGodApeiros, WorshipsGovernorsGodApeiros
-26303d26098
+26303d26093
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodApeiros, WorshipsFarmingGodApeiros, WorshipsFertilityGodApeiros, WorshipsFunGodApeiros, WorshipsGovernorsGodApeiros
-26310a26106
+26310a26101
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodApeiros, WorshipsFarmingGodApeiros, WorshipsFertilityGodApeiros, WorshipsFunGodApeiros, WorshipsGovernorsGodApeiros
-26314d26109
+26314d26104
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodApeiros, WorshipsFarmingGodApeiros, WorshipsFertilityGodApeiros, WorshipsForgeGodApeiros, WorshipsGovernorsGodApeiros
-26321a26117
+26321a26112
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodApeiros, WorshipsFarmingGodApeiros, WorshipsFertilityGodApeiros, WorshipsForgeGodApeiros, WorshipsGovernorsGodApeiros
-26325d26120
+26325d26115
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodApeiros, WorshipsFarmingGodApeiros, WorshipsFertilityGodApeiros, WorshipsForgeGodApeiros, WorshipsFunGodApeiros
-26332a26128
+26332a26123
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodApeiros, WorshipsFarmingGodApeiros, WorshipsFertilityGodApeiros, WorshipsForgeGodApeiros, WorshipsFunGodApeiros
-26336d26131
+26336d26126
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodKH, WorshipsFertilityGodKH, WorshipsForgeGodKH, WorshipsFunGodKH, WorshipsGovernorsGodKH
-26343a26139
+26343a26134
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodKH, WorshipsFertilityGodKH, WorshipsForgeGodKH, WorshipsFunGodKH, WorshipsGovernorsGodKH
-26347d26142
+26347d26137
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodKH, WorshipsFertilityGodKH, WorshipsForgeGodKH, WorshipsFunGodKH, WorshipsGovernorsGodKH
-26354a26150
+26354a26145
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodKH, WorshipsFertilityGodKH, WorshipsForgeGodKH, WorshipsFunGodKH, WorshipsGovernorsGodKH
-26358d26153
+26358d26148
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodKH, WorshipsFarmingGodKH, WorshipsForgeGodKH, WorshipsFunGodKH, WorshipsGovernorsGodKH
-26365a26161
+26365a26156
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodKH, WorshipsFarmingGodKH, WorshipsForgeGodKH, WorshipsFunGodKH, WorshipsGovernorsGodKH
-26369d26164
+26369d26159
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodKH, WorshipsFarmingGodKH, WorshipsFertilityGodKH, WorshipsFunGodKH, WorshipsGovernorsGodKH
-26376a26172
+26376a26167
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodKH, WorshipsFarmingGodKH, WorshipsFertilityGodKH, WorshipsFunGodKH, WorshipsGovernorsGodKH
-26380d26175
+26380d26170
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodKH, WorshipsFarmingGodKH, WorshipsFertilityGodKH, WorshipsForgeGodKH, WorshipsGovernorsGodKH
-26387a26183
+26387a26178
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodKH, WorshipsFarmingGodKH, WorshipsFertilityGodKH, WorshipsForgeGodKH, WorshipsGovernorsGodKH
-26391d26186
+26391d26181
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodKH, WorshipsFarmingGodKH, WorshipsFertilityGodKH, WorshipsForgeGodKH, WorshipsFunGodKH
-26398a26194
+26398a26189
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodKH, WorshipsFarmingGodKH, WorshipsFertilityGodKH, WorshipsForgeGodKH, WorshipsFunGodKH
-26402d26197
+26402d26192
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodSeleukeia, WorshipsFertilityGodSeleukeia, WorshipsForgeGodSeleukeia, WorshipsFunGodSeleukeia, WorshipsGovernorsGodSeleukeia
-26409a26205
+26409a26200
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodSeleukeia, WorshipsFertilityGodSeleukeia, WorshipsForgeGodSeleukeia, WorshipsFunGodSeleukeia, WorshipsGovernorsGodSeleukeia
-26413d26208
+26413d26203
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSeleukeia, WorshipsFertilityGodSeleukeia, WorshipsForgeGodSeleukeia, WorshipsFunGodSeleukeia, WorshipsGovernorsGodSeleukeia
-26420a26216
+26420a26211
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSeleukeia, WorshipsFertilityGodSeleukeia, WorshipsForgeGodSeleukeia, WorshipsFunGodSeleukeia, WorshipsGovernorsGodSeleukeia
-26424d26219
+26424d26214
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSeleukeia, WorshipsFarmingGodSeleukeia, WorshipsForgeGodSeleukeia, WorshipsFunGodSeleukeia, WorshipsGovernorsGodSeleukeia
-26431a26227
+26431a26222
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSeleukeia, WorshipsFarmingGodSeleukeia, WorshipsForgeGodSeleukeia, WorshipsFunGodSeleukeia, WorshipsGovernorsGodSeleukeia
-26435d26230
+26435d26225
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSeleukeia, WorshipsFarmingGodSeleukeia, WorshipsFertilityGodSeleukeia, WorshipsFunGodSeleukeia, WorshipsGovernorsGodSeleukeia
-26442a26238
+26442a26233
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSeleukeia, WorshipsFarmingGodSeleukeia, WorshipsFertilityGodSeleukeia, WorshipsFunGodSeleukeia, WorshipsGovernorsGodSeleukeia
-26446d26241
+26446d26236
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSeleukeia, WorshipsFarmingGodSeleukeia, WorshipsFertilityGodSeleukeia, WorshipsForgeGodSeleukeia, WorshipsGovernorsGodSeleukeia
-26453a26249
+26453a26244
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSeleukeia, WorshipsFarmingGodSeleukeia, WorshipsFertilityGodSeleukeia, WorshipsForgeGodSeleukeia, WorshipsGovernorsGodSeleukeia
-26457d26252
+26457d26247
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSeleukeia, WorshipsFarmingGodSeleukeia, WorshipsFertilityGodSeleukeia, WorshipsForgeGodSeleukeia, WorshipsFunGodSeleukeia
-26464a26260
+26464a26255
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSeleukeia, WorshipsFarmingGodSeleukeia, WorshipsFertilityGodSeleukeia, WorshipsForgeGodSeleukeia, WorshipsFunGodSeleukeia
-26468d26263
+26468d26258
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodPtolemaioi, WorshipsFertilityGodPtolemaioi, WorshipsForgeGodPtolemaioi, WorshipsFunGodPtolemaioi, WorshipsGovernorsGodPtolemaioi
-26475a26271
+26475a26266
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodPtolemaioi, WorshipsFertilityGodPtolemaioi, WorshipsForgeGodPtolemaioi, WorshipsFunGodPtolemaioi, WorshipsGovernorsGodPtolemaioi
-26479d26274
+26479d26269
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPtolemaioi, WorshipsFertilityGodPtolemaioi, WorshipsForgeGodPtolemaioi, WorshipsFunGodPtolemaioi, WorshipsGovernorsGodPtolemaioi
-26486a26282
+26486a26277
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPtolemaioi, WorshipsFertilityGodPtolemaioi, WorshipsForgeGodPtolemaioi, WorshipsFunGodPtolemaioi, WorshipsGovernorsGodPtolemaioi
-26490d26285
+26490d26280
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPtolemaioi, WorshipsFarmingGodPtolemaioi, WorshipsForgeGodPtolemaioi, WorshipsFunGodPtolemaioi, WorshipsGovernorsGodPtolemaioi
-26497a26293
+26497a26288
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPtolemaioi, WorshipsFarmingGodPtolemaioi, WorshipsForgeGodPtolemaioi, WorshipsFunGodPtolemaioi, WorshipsGovernorsGodPtolemaioi
-26501d26296
+26501d26291
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPtolemaioi, WorshipsFarmingGodPtolemaioi, WorshipsFertilityGodPtolemaioi, WorshipsFunGodPtolemaioi, WorshipsGovernorsGodPtolemaioi
-26508a26304
+26508a26299
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPtolemaioi, WorshipsFarmingGodPtolemaioi, WorshipsFertilityGodPtolemaioi, WorshipsFunGodPtolemaioi, WorshipsGovernorsGodPtolemaioi
-26512d26307
+26512d26302
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPtolemaioi, WorshipsFarmingGodPtolemaioi, WorshipsFertilityGodPtolemaioi, WorshipsForgeGodPtolemaioi, WorshipsGovernorsGodPtolemaioi
-26519a26315
+26519a26310
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPtolemaioi, WorshipsFarmingGodPtolemaioi, WorshipsFertilityGodPtolemaioi, WorshipsForgeGodPtolemaioi, WorshipsGovernorsGodPtolemaioi
-26523d26318
+26523d26313
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPtolemaioi, WorshipsFarmingGodPtolemaioi, WorshipsFertilityGodPtolemaioi, WorshipsForgeGodPtolemaioi, WorshipsFunGodPtolemaioi
-26530a26326
+26530a26321
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPtolemaioi, WorshipsFarmingGodPtolemaioi, WorshipsFertilityGodPtolemaioi, WorshipsForgeGodPtolemaioi, WorshipsFunGodPtolemaioi
-26534d26329
+26534d26324
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodBaktria, WorshipsFertilityGodBaktria, WorshipsForgeGodBaktria, WorshipsFunGodBaktria, WorshipsGovernorsGodBaktria
-26541a26337
+26541a26332
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodBaktria, WorshipsFertilityGodBaktria, WorshipsForgeGodBaktria, WorshipsFunGodBaktria, WorshipsGovernorsGodBaktria
-26545d26340
+26545d26335
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBaktria, WorshipsFertilityGodBaktria, WorshipsForgeGodBaktria, WorshipsFunGodBaktria, WorshipsGovernorsGodBaktria
-26552a26348
+26552a26343
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBaktria, WorshipsFertilityGodBaktria, WorshipsForgeGodBaktria, WorshipsFunGodBaktria, WorshipsGovernorsGodBaktria
-26556d26351
+26556d26346
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBaktria, WorshipsFarmingGodBaktria, WorshipsForgeGodBaktria, WorshipsFunGodBaktria, WorshipsGovernorsGodBaktria
-26563a26359
+26563a26354
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBaktria, WorshipsFarmingGodBaktria, WorshipsForgeGodBaktria, WorshipsFunGodBaktria, WorshipsGovernorsGodBaktria
-26567d26362
+26567d26357
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBaktria, WorshipsFarmingGodBaktria, WorshipsFertilityGodBaktria, WorshipsFunGodBaktria, WorshipsGovernorsGodBaktria
-26574a26370
+26574a26365
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBaktria, WorshipsFarmingGodBaktria, WorshipsFertilityGodBaktria, WorshipsFunGodBaktria, WorshipsGovernorsGodBaktria
-26578d26373
+26578d26368
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBaktria, WorshipsFarmingGodBaktria, WorshipsFertilityGodBaktria, WorshipsForgeGodBaktria, WorshipsGovernorsGodBaktria
-26585a26381
+26585a26376
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBaktria, WorshipsFarmingGodBaktria, WorshipsFertilityGodBaktria, WorshipsForgeGodBaktria, WorshipsGovernorsGodBaktria
-26589d26384
+26589d26379
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBaktria, WorshipsFarmingGodBaktria, WorshipsFertilityGodBaktria, WorshipsForgeGodBaktria, WorshipsFunGodBaktria
-26596a26392
+26596a26387
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBaktria, WorshipsFarmingGodBaktria, WorshipsFertilityGodBaktria, WorshipsForgeGodBaktria, WorshipsFunGodBaktria
-26600d26395
+26600d26390
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodHayasdan, WorshipsFertilityGodHayasdan, WorshipsForgeGodHayasdan, WorshipsFunGodHayasdan, WorshipsGovernorsGodHayasdan
-26607a26403
+26607a26398
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodHayasdan, WorshipsFertilityGodHayasdan, WorshipsForgeGodHayasdan, WorshipsFunGodHayasdan, WorshipsGovernorsGodHayasdan
-26611d26406
+26611d26401
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodHayasdan, WorshipsFertilityGodHayasdan, WorshipsForgeGodHayasdan, WorshipsFunGodHayasdan, WorshipsGovernorsGodHayasdan
-26618a26414
+26618a26409
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodHayasdan, WorshipsFertilityGodHayasdan, WorshipsForgeGodHayasdan, WorshipsFunGodHayasdan, WorshipsGovernorsGodHayasdan
-26622d26417
+26622d26412
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodHayasdan, WorshipsFarmingGodHayasdan, WorshipsForgeGodHayasdan, WorshipsFunGodHayasdan, WorshipsGovernorsGodHayasdan
-26629a26425
+26629a26420
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodHayasdan, WorshipsFarmingGodHayasdan, WorshipsForgeGodHayasdan, WorshipsFunGodHayasdan, WorshipsGovernorsGodHayasdan
-26633d26428
+26633d26423
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodHayasdan, WorshipsFarmingGodHayasdan, WorshipsFertilityGodHayasdan, WorshipsFunGodHayasdan, WorshipsGovernorsGodHayasdan
-26640a26436
+26640a26431
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodHayasdan, WorshipsFarmingGodHayasdan, WorshipsFertilityGodHayasdan, WorshipsFunGodHayasdan, WorshipsGovernorsGodHayasdan
-26644d26439
+26644d26434
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodHayasdan, WorshipsFarmingGodHayasdan, WorshipsFertilityGodHayasdan, WorshipsForgeGodHayasdan, WorshipsGovernorsGodHayasdan
-26651a26447
+26651a26442
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodHayasdan, WorshipsFarmingGodHayasdan, WorshipsFertilityGodHayasdan, WorshipsForgeGodHayasdan, WorshipsGovernorsGodHayasdan
-26655d26450
+26655d26445
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodHayasdan, WorshipsFarmingGodHayasdan, WorshipsFertilityGodHayasdan, WorshipsForgeGodHayasdan, WorshipsFunGodHayasdan
-26662a26458
+26662a26453
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodHayasdan, WorshipsFarmingGodHayasdan, WorshipsFertilityGodHayasdan, WorshipsForgeGodHayasdan, WorshipsFunGodHayasdan
-26666d26461
+26666d26456
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodPontos, WorshipsFertilityGodPontos, WorshipsForgeGodPontos, WorshipsFunGodPontos, WorshipsGovernorsGodPontos
-26673a26469
+26673a26464
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodPontos, WorshipsFertilityGodPontos, WorshipsForgeGodPontos, WorshipsFunGodPontos, WorshipsGovernorsGodPontos
-26677d26472
+26677d26467
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPontos, WorshipsFertilityGodPontos, WorshipsForgeGodPontos, WorshipsFunGodPontos, WorshipsGovernorsGodPontos
-26684a26480
+26684a26475
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPontos, WorshipsFertilityGodPontos, WorshipsForgeGodPontos, WorshipsFunGodPontos, WorshipsGovernorsGodPontos
-26688d26483
+26688d26478
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPontos, WorshipsFarmingGodPontos, WorshipsForgeGodPontos, WorshipsFunGodPontos, WorshipsGovernorsGodPontos
-26695a26491
+26695a26486
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPontos, WorshipsFarmingGodPontos, WorshipsForgeGodPontos, WorshipsFunGodPontos, WorshipsGovernorsGodPontos
-26699d26494
+26699d26489
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPontos, WorshipsFarmingGodPontos, WorshipsFertilityGodPontos, WorshipsFunGodPontos, WorshipsGovernorsGodPontos
-26706a26502
+26706a26497
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPontos, WorshipsFarmingGodPontos, WorshipsFertilityGodPontos, WorshipsFunGodPontos, WorshipsGovernorsGodPontos
-26710d26505
+26710d26500
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPontos, WorshipsFarmingGodPontos, WorshipsFertilityGodPontos, WorshipsForgeGodPontos, WorshipsGovernorsGodPontos
-26717a26513
+26717a26508
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPontos, WorshipsFarmingGodPontos, WorshipsFertilityGodPontos, WorshipsForgeGodPontos, WorshipsGovernorsGodPontos
-26721d26516
+26721d26511
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPontos, WorshipsFarmingGodPontos, WorshipsFertilityGodPontos, WorshipsForgeGodPontos, WorshipsFunGodPontos
-26728a26524
+26728a26519
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPontos, WorshipsFarmingGodPontos, WorshipsFertilityGodPontos, WorshipsForgeGodPontos, WorshipsFunGodPontos
-26732d26527
+26732d26522
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodParthia, WorshipsFertilityGodParthia, WorshipsForgeGodParthia, WorshipsFunGodParthia, WorshipsGovernorsGodParthia
-26739a26535
+26739a26530
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodParthia, WorshipsFertilityGodParthia, WorshipsForgeGodParthia, WorshipsFunGodParthia, WorshipsGovernorsGodParthia
-26743d26538
+26743d26533
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodParthia, WorshipsFertilityGodParthia, WorshipsForgeGodParthia, WorshipsFunGodParthia, WorshipsGovernorsGodParthia
-26750a26546
+26750a26541
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodParthia, WorshipsFertilityGodParthia, WorshipsForgeGodParthia, WorshipsFunGodParthia, WorshipsGovernorsGodParthia
-26754d26549
+26754d26544
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodParthia, WorshipsFarmingGodParthia, WorshipsForgeGodParthia, WorshipsFunGodParthia, WorshipsGovernorsGodParthia
-26761a26557
+26761a26552
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodParthia, WorshipsFarmingGodParthia, WorshipsForgeGodParthia, WorshipsFunGodParthia, WorshipsGovernorsGodParthia
-26765d26560
+26765d26555
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodParthia, WorshipsFarmingGodParthia, WorshipsFertilityGodParthia, WorshipsFunGodParthia, WorshipsGovernorsGodParthia
-26772a26568
+26772a26563
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodParthia, WorshipsFarmingGodParthia, WorshipsFertilityGodParthia, WorshipsFunGodParthia, WorshipsGovernorsGodParthia
-26776d26571
+26776d26566
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodParthia, WorshipsFarmingGodParthia, WorshipsFertilityGodParthia, WorshipsForgeGodParthia, WorshipsGovernorsGodParthia
-26783a26579
+26783a26574
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodParthia, WorshipsFarmingGodParthia, WorshipsFertilityGodParthia, WorshipsForgeGodParthia, WorshipsGovernorsGodParthia
-26787d26582
+26787d26577
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodParthia, WorshipsFarmingGodParthia, WorshipsFertilityGodParthia, WorshipsForgeGodParthia, WorshipsFunGodParthia
-26794a26590
+26794a26585
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodParthia, WorshipsFarmingGodParthia, WorshipsFertilityGodParthia, WorshipsForgeGodParthia, WorshipsFunGodParthia
-26798d26593
+26798d26588
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodAedui, WorshipsFertilityGodAedui, WorshipsForgeGodAedui, WorshipsFunGodAedui, WorshipsGovernorsGodAedui
-26805a26601
+26805a26596
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodAedui, WorshipsFertilityGodAedui, WorshipsForgeGodAedui, WorshipsFunGodAedui, WorshipsGovernorsGodAedui
-26809d26604
+26809d26599
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodAedui, WorshipsFertilityGodAedui, WorshipsForgeGodAedui, WorshipsFunGodAedui, WorshipsGovernorsGodAedui
-26816a26612
+26816a26607
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodAedui, WorshipsFertilityGodAedui, WorshipsForgeGodAedui, WorshipsFunGodAedui, WorshipsGovernorsGodAedui
-26820d26615
+26820d26610
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodAedui, WorshipsFarmingGodAedui, WorshipsForgeGodAedui, WorshipsFunGodAedui, WorshipsGovernorsGodAedui
-26827a26623
+26827a26618
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodAedui, WorshipsFarmingGodAedui, WorshipsForgeGodAedui, WorshipsFunGodAedui, WorshipsGovernorsGodAedui
-26831d26626
+26831d26621
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodAedui, WorshipsFarmingGodAedui, WorshipsFertilityGodAedui, WorshipsFunGodAedui, WorshipsGovernorsGodAedui
-26838a26634
+26838a26629
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodAedui, WorshipsFarmingGodAedui, WorshipsFertilityGodAedui, WorshipsFunGodAedui, WorshipsGovernorsGodAedui
-26842d26637
+26842d26632
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodAedui, WorshipsFarmingGodAedui, WorshipsFertilityGodAedui, WorshipsForgeGodAedui, WorshipsGovernorsGodAedui
-26849a26645
+26849a26640
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodAedui, WorshipsFarmingGodAedui, WorshipsFertilityGodAedui, WorshipsForgeGodAedui, WorshipsGovernorsGodAedui
-26853d26648
+26853d26643
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodAedui, WorshipsFarmingGodAedui, WorshipsFertilityGodAedui, WorshipsForgeGodAedui, WorshipsFunGodAedui
-26860a26656
+26860a26651
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodAedui, WorshipsFarmingGodAedui, WorshipsFertilityGodAedui, WorshipsForgeGodAedui, WorshipsFunGodAedui
-26864d26659
+26864d26654
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodArverni, WorshipsFertilityGodArverni, WorshipsForgeGodArverni, WorshipsFunGodArverni, WorshipsGovernorsGodArverni
-26871a26667
+26871a26662
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodArverni, WorshipsFertilityGodArverni, WorshipsForgeGodArverni, WorshipsFunGodArverni, WorshipsGovernorsGodArverni
-26875d26670
+26875d26665
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodArverni, WorshipsFertilityGodArverni, WorshipsForgeGodArverni, WorshipsFunGodArverni, WorshipsGovernorsGodArverni
-26882a26678
+26882a26673
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodArverni, WorshipsFertilityGodArverni, WorshipsForgeGodArverni, WorshipsFunGodArverni, WorshipsGovernorsGodArverni
-26886d26681
+26886d26676
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodArverni, WorshipsFarmingGodArverni, WorshipsForgeGodArverni, WorshipsFunGodArverni, WorshipsGovernorsGodArverni
-26893a26689
+26893a26684
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodArverni, WorshipsFarmingGodArverni, WorshipsForgeGodArverni, WorshipsFunGodArverni, WorshipsGovernorsGodArverni
-26897d26692
+26897d26687
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodArverni, WorshipsFarmingGodArverni, WorshipsFertilityGodArverni, WorshipsFunGodArverni, WorshipsGovernorsGodArverni
-26904a26700
+26904a26695
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodArverni, WorshipsFarmingGodArverni, WorshipsFertilityGodArverni, WorshipsFunGodArverni, WorshipsGovernorsGodArverni
-26908d26703
+26908d26698
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodArverni, WorshipsFarmingGodArverni, WorshipsFertilityGodArverni, WorshipsForgeGodArverni, WorshipsGovernorsGodArverni
-26915a26711
+26915a26706
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodArverni, WorshipsFarmingGodArverni, WorshipsFertilityGodArverni, WorshipsForgeGodArverni, WorshipsGovernorsGodArverni
-26919d26714
+26919d26709
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodArverni, WorshipsFarmingGodArverni, WorshipsFertilityGodArverni, WorshipsForgeGodArverni, WorshipsFunGodArverni
-26926a26722
+26926a26717
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodArverni, WorshipsFarmingGodArverni, WorshipsFertilityGodArverni, WorshipsForgeGodArverni, WorshipsFunGodArverni
-26930d26725
+26930d26720
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodPritanoi, WorshipsFertilityGodPritanoi, WorshipsForgeGodPritanoi, WorshipsFunGodPritanoi, WorshipsGovernorsGodPritanoi
-26937a26733
+26937a26728
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodPritanoi, WorshipsFertilityGodPritanoi, WorshipsForgeGodPritanoi, WorshipsFunGodPritanoi, WorshipsGovernorsGodPritanoi
-26941d26736
+26941d26731
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPritanoi, WorshipsFertilityGodPritanoi, WorshipsForgeGodPritanoi, WorshipsFunGodPritanoi, WorshipsGovernorsGodPritanoi
-26948a26744
+26948a26739
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPritanoi, WorshipsFertilityGodPritanoi, WorshipsForgeGodPritanoi, WorshipsFunGodPritanoi, WorshipsGovernorsGodPritanoi
-26952d26747
+26952d26742
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPritanoi, WorshipsFarmingGodPritanoi, WorshipsForgeGodPritanoi, WorshipsFunGodPritanoi, WorshipsGovernorsGodPritanoi
-26959a26755
+26959a26750
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPritanoi, WorshipsFarmingGodPritanoi, WorshipsForgeGodPritanoi, WorshipsFunGodPritanoi, WorshipsGovernorsGodPritanoi
-26963d26758
+26963d26753
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPritanoi, WorshipsFarmingGodPritanoi, WorshipsFertilityGodPritanoi, WorshipsFunGodPritanoi, WorshipsGovernorsGodPritanoi
-26970a26766
+26970a26761
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPritanoi, WorshipsFarmingGodPritanoi, WorshipsFertilityGodPritanoi, WorshipsFunGodPritanoi, WorshipsGovernorsGodPritanoi
-26974d26769
+26974d26764
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPritanoi, WorshipsFarmingGodPritanoi, WorshipsFertilityGodPritanoi, WorshipsForgeGodPritanoi, WorshipsGovernorsGodPritanoi
-26981a26777
+26981a26772
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPritanoi, WorshipsFarmingGodPritanoi, WorshipsFertilityGodPritanoi, WorshipsForgeGodPritanoi, WorshipsGovernorsGodPritanoi
-26985d26780
+26985d26775
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPritanoi, WorshipsFarmingGodPritanoi, WorshipsFertilityGodPritanoi, WorshipsForgeGodPritanoi, WorshipsFunGodPritanoi
-26992a26788
+26992a26783
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPritanoi, WorshipsFarmingGodPritanoi, WorshipsFertilityGodPritanoi, WorshipsForgeGodPritanoi, WorshipsFunGodPritanoi
-26996d26791
+26996d26786
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodLusotannan, WorshipsFertilityGodLusotannan, WorshipsForgeGodLusotannan, WorshipsFunGodLusotannan, WorshipsGovernorsGodLusotannan
-27003a26799
+27003a26794
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodLusotannan, WorshipsFertilityGodLusotannan, WorshipsForgeGodLusotannan, WorshipsFunGodLusotannan, WorshipsGovernorsGodLusotannan
-27007d26802
+27007d26797
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodLusotannan, WorshipsFertilityGodLusotannan, WorshipsForgeGodLusotannan, WorshipsFunGodLusotannan, WorshipsGovernorsGodLusotannan
-27014a26810
+27014a26805
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodLusotannan, WorshipsFertilityGodLusotannan, WorshipsForgeGodLusotannan, WorshipsFunGodLusotannan, WorshipsGovernorsGodLusotannan
-27018d26813
+27018d26808
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodLusotannan, WorshipsFarmingGodLusotannan, WorshipsForgeGodLusotannan, WorshipsFunGodLusotannan, WorshipsGovernorsGodLusotannan
-27025a26821
+27025a26816
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodLusotannan, WorshipsFarmingGodLusotannan, WorshipsForgeGodLusotannan, WorshipsFunGodLusotannan, WorshipsGovernorsGodLusotannan
-27029d26824
+27029d26819
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodLusotannan, WorshipsFarmingGodLusotannan, WorshipsFertilityGodLusotannan, WorshipsFunGodLusotannan, WorshipsGovernorsGodLusotannan
-27036a26832
+27036a26827
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodLusotannan, WorshipsFarmingGodLusotannan, WorshipsFertilityGodLusotannan, WorshipsFunGodLusotannan, WorshipsGovernorsGodLusotannan
-27040d26835
+27040d26830
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodLusotannan, WorshipsFarmingGodLusotannan, WorshipsFertilityGodLusotannan, WorshipsForgeGodLusotannan, WorshipsGovernorsGodLusotannan
-27047a26843
+27047a26838
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodLusotannan, WorshipsFarmingGodLusotannan, WorshipsFertilityGodLusotannan, WorshipsForgeGodLusotannan, WorshipsGovernorsGodLusotannan
-27051d26846
+27051d26841
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodLusotannan, WorshipsFarmingGodLusotannan, WorshipsFertilityGodLusotannan, WorshipsForgeGodLusotannan, WorshipsFunGodLusotannan
-27058a26854
+27058a26849
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodLusotannan, WorshipsFarmingGodLusotannan, WorshipsFertilityGodLusotannan, WorshipsForgeGodLusotannan, WorshipsFunGodLusotannan
-27062d26857
+27062d26852
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodSweboz, WorshipsFertilityGodSweboz, WorshipsForgeGodSweboz, WorshipsFunGodSweboz, WorshipsGovernorsGodSweboz
-27069a26865
+27069a26860
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodSweboz, WorshipsFertilityGodSweboz, WorshipsForgeGodSweboz, WorshipsFunGodSweboz, WorshipsGovernorsGodSweboz
-27073d26868
+27073d26863
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSweboz, WorshipsFertilityGodSweboz, WorshipsForgeGodSweboz, WorshipsFunGodSweboz, WorshipsGovernorsGodSweboz
-27080a26876
+27080a26871
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSweboz, WorshipsFertilityGodSweboz, WorshipsForgeGodSweboz, WorshipsFunGodSweboz, WorshipsGovernorsGodSweboz
-27084d26879
+27084d26874
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSweboz, WorshipsFarmingGodSweboz, WorshipsForgeGodSweboz, WorshipsFunGodSweboz, WorshipsGovernorsGodSweboz
-27091a26887
+27091a26882
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSweboz, WorshipsFarmingGodSweboz, WorshipsForgeGodSweboz, WorshipsFunGodSweboz, WorshipsGovernorsGodSweboz
-27095d26890
+27095d26885
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSweboz, WorshipsFarmingGodSweboz, WorshipsFertilityGodSweboz, WorshipsFunGodSweboz, WorshipsGovernorsGodSweboz
-27102a26898
+27102a26893
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSweboz, WorshipsFarmingGodSweboz, WorshipsFertilityGodSweboz, WorshipsFunGodSweboz, WorshipsGovernorsGodSweboz
-27106d26901
+27106d26896
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSweboz, WorshipsFarmingGodSweboz, WorshipsFertilityGodSweboz, WorshipsForgeGodSweboz, WorshipsGovernorsGodSweboz
-27113a26909
+27113a26904
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSweboz, WorshipsFarmingGodSweboz, WorshipsFertilityGodSweboz, WorshipsForgeGodSweboz, WorshipsGovernorsGodSweboz
-27117d26912
+27117d26907
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSweboz, WorshipsFarmingGodSweboz, WorshipsFertilityGodSweboz, WorshipsForgeGodSweboz, WorshipsFunGodSweboz
-27124a26920
+27124a26915
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSweboz, WorshipsFarmingGodSweboz, WorshipsFertilityGodSweboz, WorshipsForgeGodSweboz, WorshipsFunGodSweboz
-27128d26923
+27128d26918
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodGetai, WorshipsFertilityGodGetai, WorshipsForgeGodGetai, WorshipsFunGodGetai, WorshipsGovernorsGodGetai
-27135a26931
+27135a26926
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodGetai, WorshipsFertilityGodGetai, WorshipsForgeGodGetai, WorshipsFunGodGetai, WorshipsGovernorsGodGetai
-27139d26934
+27139d26929
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodGetai, WorshipsFertilityGodGetai, WorshipsForgeGodGetai, WorshipsFunGodGetai, WorshipsGovernorsGodGetai
-27146a26942
+27146a26937
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodGetai, WorshipsFertilityGodGetai, WorshipsForgeGodGetai, WorshipsFunGodGetai, WorshipsGovernorsGodGetai
-27150d26945
+27150d26940
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodGetai, WorshipsFarmingGodGetai, WorshipsForgeGodGetai, WorshipsFunGodGetai, WorshipsGovernorsGodGetai
-27157a26953
+27157a26948
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodGetai, WorshipsFarmingGodGetai, WorshipsForgeGodGetai, WorshipsFunGodGetai, WorshipsGovernorsGodGetai
-27161d26956
+27161d26951
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodGetai, WorshipsFarmingGodGetai, WorshipsFertilityGodGetai, WorshipsFunGodGetai, WorshipsGovernorsGodGetai
-27168a26964
+27168a26959
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodGetai, WorshipsFarmingGodGetai, WorshipsFertilityGodGetai, WorshipsFunGodGetai, WorshipsGovernorsGodGetai
-27172d26967
+27172d26962
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodGetai, WorshipsFarmingGodGetai, WorshipsFertilityGodGetai, WorshipsForgeGodGetai, WorshipsGovernorsGodGetai
-27179a26975
+27179a26970
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodGetai, WorshipsFarmingGodGetai, WorshipsFertilityGodGetai, WorshipsForgeGodGetai, WorshipsGovernorsGodGetai
-27183d26978
+27183d26973
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodGetai, WorshipsFarmingGodGetai, WorshipsFertilityGodGetai, WorshipsForgeGodGetai, WorshipsFunGodGetai
-27190a26986
+27190a26981
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodGetai, WorshipsFarmingGodGetai, WorshipsFertilityGodGetai, WorshipsForgeGodGetai, WorshipsFunGodGetai
-27194d26989
+27194d26984
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodSaba, WorshipsFertilityGodSaba, WorshipsForgeGodSaba, WorshipsFunGodSaba, WorshipsGovernorsGodSaba
-27201a26997
+27201a26992
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodSaba, WorshipsFertilityGodSaba, WorshipsForgeGodSaba, WorshipsFunGodSaba, WorshipsGovernorsGodSaba
-27205d27000
+27205d26995
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSaba, WorshipsFertilityGodSaba, WorshipsForgeGodSaba, WorshipsFunGodSaba, WorshipsGovernorsGodSaba
-27212a27008
+27212a27003
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSaba, WorshipsFertilityGodSaba, WorshipsForgeGodSaba, WorshipsFunGodSaba, WorshipsGovernorsGodSaba
-27216d27011
+27216d27006
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSaba, WorshipsFarmingGodSaba, WorshipsForgeGodSaba, WorshipsFunGodSaba, WorshipsGovernorsGodSaba
-27223a27019
+27223a27014
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSaba, WorshipsFarmingGodSaba, WorshipsForgeGodSaba, WorshipsFunGodSaba, WorshipsGovernorsGodSaba
-27227d27022
+27227d27017
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSaba, WorshipsFarmingGodSaba, WorshipsFertilityGodSaba, WorshipsFunGodSaba, WorshipsGovernorsGodSaba
-27234a27030
+27234a27025
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSaba, WorshipsFarmingGodSaba, WorshipsFertilityGodSaba, WorshipsFunGodSaba, WorshipsGovernorsGodSaba
-27238d27033
+27238d27028
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSaba, WorshipsFarmingGodSaba, WorshipsFertilityGodSaba, WorshipsForgeGodSaba, WorshipsGovernorsGodSaba
-27245a27041
+27245a27036
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSaba, WorshipsFarmingGodSaba, WorshipsFertilityGodSaba, WorshipsForgeGodSaba, WorshipsGovernorsGodSaba
-27249d27044
+27249d27039
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSaba, WorshipsFarmingGodSaba, WorshipsFertilityGodSaba, WorshipsForgeGodSaba, WorshipsFunGodSaba
-27256a27052
+27256a27047
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSaba, WorshipsFarmingGodSaba, WorshipsFertilityGodSaba, WorshipsForgeGodSaba, WorshipsFunGodSaba
-27260d27055
+27260d27050
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodSaka, WorshipsFertilityGodSaka, WorshipsForgeGodSaka, WorshipsFunGodSaka, WorshipsGovernorsGodSaka
-27267a27063
+27267a27058
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodSaka, WorshipsFertilityGodSaka, WorshipsForgeGodSaka, WorshipsFunGodSaka, WorshipsGovernorsGodSaka
-27271d27066
+27271d27061
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSaka, WorshipsFertilityGodSaka, WorshipsForgeGodSaka, WorshipsFunGodSaka, WorshipsGovernorsGodSaka
-27278a27074
+27278a27069
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSaka, WorshipsFertilityGodSaka, WorshipsForgeGodSaka, WorshipsFunGodSaka, WorshipsGovernorsGodSaka
-27282d27077
+27282d27072
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSaka, WorshipsFarmingGodSaka, WorshipsForgeGodSaka, WorshipsFunGodSaka, WorshipsGovernorsGodSaka
-27289a27085
+27289a27080
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSaka, WorshipsFarmingGodSaka, WorshipsForgeGodSaka, WorshipsFunGodSaka, WorshipsGovernorsGodSaka
-27293d27088
+27293d27083
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSaka, WorshipsFarmingGodSaka, WorshipsFertilityGodSaka, WorshipsFunGodSaka, WorshipsGovernorsGodSaka
-27300a27096
+27300a27091
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSaka, WorshipsFarmingGodSaka, WorshipsFertilityGodSaka, WorshipsFunGodSaka, WorshipsGovernorsGodSaka
-27304d27099
+27304d27094
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSaka, WorshipsFarmingGodSaka, WorshipsFertilityGodSaka, WorshipsForgeGodSaka, WorshipsGovernorsGodSaka
-27311a27107
+27311a27102
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSaka, WorshipsFarmingGodSaka, WorshipsFertilityGodSaka, WorshipsForgeGodSaka, WorshipsGovernorsGodSaka
-27315d27110
+27315d27105
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSaka, WorshipsFarmingGodSaka, WorshipsFertilityGodSaka, WorshipsForgeGodSaka, WorshipsFunGodSaka
-27322a27118
+27322a27113
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSaka, WorshipsFarmingGodSaka, WorshipsFertilityGodSaka, WorshipsForgeGodSaka, WorshipsFunGodSaka
-27326d27121
+27326d27116
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodSauromatae, WorshipsFertilityGodSauromatae, WorshipsForgeGodSauromatae, WorshipsFunGodSauromatae, WorshipsGovernorsGodSauromatae
-27333a27129
+27333a27124
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodSauromatae, WorshipsFertilityGodSauromatae, WorshipsForgeGodSauromatae, WorshipsFunGodSauromatae, WorshipsGovernorsGodSauromatae
-27337d27132
+27337d27127
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSauromatae, WorshipsFertilityGodSauromatae, WorshipsForgeGodSauromatae, WorshipsFunGodSauromatae, WorshipsGovernorsGodSauromatae
-27344a27140
+27344a27135
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSauromatae, WorshipsFertilityGodSauromatae, WorshipsForgeGodSauromatae, WorshipsFunGodSauromatae, WorshipsGovernorsGodSauromatae
-27348d27143
+27348d27138
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSauromatae, WorshipsFarmingGodSauromatae, WorshipsForgeGodSauromatae, WorshipsFunGodSauromatae, WorshipsGovernorsGodSauromatae
-27355a27151
+27355a27146
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSauromatae, WorshipsFarmingGodSauromatae, WorshipsForgeGodSauromatae, WorshipsFunGodSauromatae, WorshipsGovernorsGodSauromatae
-27359d27154
+27359d27149
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSauromatae, WorshipsFarmingGodSauromatae, WorshipsFertilityGodSauromatae, WorshipsFunGodSauromatae, WorshipsGovernorsGodSauromatae
-27366a27162
+27366a27157
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSauromatae, WorshipsFarmingGodSauromatae, WorshipsFertilityGodSauromatae, WorshipsFunGodSauromatae, WorshipsGovernorsGodSauromatae
-27370d27165
+27370d27160
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSauromatae, WorshipsFarmingGodSauromatae, WorshipsFertilityGodSauromatae, WorshipsForgeGodSauromatae, WorshipsGovernorsGodSauromatae
-27377a27173
+27377a27168
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSauromatae, WorshipsFarmingGodSauromatae, WorshipsFertilityGodSauromatae, WorshipsForgeGodSauromatae, WorshipsGovernorsGodSauromatae
-27381d27176
+27381d27171
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSauromatae, WorshipsFarmingGodSauromatae, WorshipsFertilityGodSauromatae, WorshipsForgeGodSauromatae, WorshipsFunGodSauromatae
-27388a27184
+27388a27179
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodSauromatae, WorshipsFarmingGodSauromatae, WorshipsFertilityGodSauromatae, WorshipsForgeGodSauromatae, WorshipsFunGodSauromatae
-27392d27187
+27392d27182
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodNumidia, WorshipsFertilityGodNumidia, WorshipsForgeGodNumidia, WorshipsFunGodNumidia, WorshipsGovernorsGodNumidia
-27399a27195
+27399a27190
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodNumidia, WorshipsFertilityGodNumidia, WorshipsForgeGodNumidia, WorshipsFunGodNumidia, WorshipsGovernorsGodNumidia
-27403d27198
+27403d27193
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodNumidia, WorshipsFertilityGodNumidia, WorshipsForgeGodNumidia, WorshipsFunGodNumidia, WorshipsGovernorsGodNumidia
-27410a27206
+27410a27201
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodNumidia, WorshipsFertilityGodNumidia, WorshipsForgeGodNumidia, WorshipsFunGodNumidia, WorshipsGovernorsGodNumidia
-27414d27209
+27414d27204
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodNumidia, WorshipsFarmingGodNumidia, WorshipsForgeGodNumidia, WorshipsFunGodNumidia, WorshipsGovernorsGodNumidia
-27421a27217
+27421a27212
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodNumidia, WorshipsFarmingGodNumidia, WorshipsForgeGodNumidia, WorshipsFunGodNumidia, WorshipsGovernorsGodNumidia
-27425d27220
+27425d27215
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodNumidia, WorshipsFarmingGodNumidia, WorshipsFertilityGodNumidia, WorshipsFunGodNumidia, WorshipsGovernorsGodNumidia
-27432a27228
+27432a27223
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodNumidia, WorshipsFarmingGodNumidia, WorshipsFertilityGodNumidia, WorshipsFunGodNumidia, WorshipsGovernorsGodNumidia
-27436d27231
+27436d27226
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodNumidia, WorshipsFarmingGodNumidia, WorshipsFertilityGodNumidia, WorshipsForgeGodNumidia, WorshipsGovernorsGodNumidia
-27443a27239
+27443a27234
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodNumidia, WorshipsFarmingGodNumidia, WorshipsFertilityGodNumidia, WorshipsForgeGodNumidia, WorshipsGovernorsGodNumidia
-27447d27242
+27447d27237
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodNumidia, WorshipsFarmingGodNumidia, WorshipsFertilityGodNumidia, WorshipsForgeGodNumidia, WorshipsFunGodNumidia
-27454a27250
+27454a27245
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodNumidia, WorshipsFarmingGodNumidia, WorshipsFertilityGodNumidia, WorshipsForgeGodNumidia, WorshipsFunGodNumidia
-27458d27253
+27458d27248
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodPergamon, WorshipsFertilityGodPergamon, WorshipsForgeGodPergamon, WorshipsFunGodPergamon, WorshipsGovernorsGodPergamon
-27465a27261
+27465a27256
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodPergamon, WorshipsFertilityGodPergamon, WorshipsForgeGodPergamon, WorshipsFunGodPergamon, WorshipsGovernorsGodPergamon
-27469d27264
+27469d27259
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPergamon, WorshipsFertilityGodPergamon, WorshipsForgeGodPergamon, WorshipsFunGodPergamon, WorshipsGovernorsGodPergamon
-27476a27272
+27476a27267
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPergamon, WorshipsFertilityGodPergamon, WorshipsForgeGodPergamon, WorshipsFunGodPergamon, WorshipsGovernorsGodPergamon
-27480d27275
+27480d27270
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPergamon, WorshipsFarmingGodPergamon, WorshipsForgeGodPergamon, WorshipsFunGodPergamon, WorshipsGovernorsGodPergamon
-27487a27283
+27487a27278
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPergamon, WorshipsFarmingGodPergamon, WorshipsForgeGodPergamon, WorshipsFunGodPergamon, WorshipsGovernorsGodPergamon
-27491d27286
+27491d27281
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPergamon, WorshipsFarmingGodPergamon, WorshipsFertilityGodPergamon, WorshipsFunGodPergamon, WorshipsGovernorsGodPergamon
-27498a27294
+27498a27289
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPergamon, WorshipsFarmingGodPergamon, WorshipsFertilityGodPergamon, WorshipsFunGodPergamon, WorshipsGovernorsGodPergamon
-27502d27297
+27502d27292
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPergamon, WorshipsFarmingGodPergamon, WorshipsFertilityGodPergamon, WorshipsForgeGodPergamon, WorshipsGovernorsGodPergamon
-27509a27305
+27509a27300
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPergamon, WorshipsFarmingGodPergamon, WorshipsFertilityGodPergamon, WorshipsForgeGodPergamon, WorshipsGovernorsGodPergamon
-27513d27308
+27513d27303
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPergamon, WorshipsFarmingGodPergamon, WorshipsFertilityGodPergamon, WorshipsForgeGodPergamon, WorshipsFunGodPergamon
-27520a27316
+27520a27311
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodPergamon, WorshipsFarmingGodPergamon, WorshipsFertilityGodPergamon, WorshipsForgeGodPergamon, WorshipsFunGodPergamon
-27524d27319
+27524d27314
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodGandhara, WorshipsFertilityGodGandhara, WorshipsForgeGodGandhara, WorshipsFunGodGandhara, WorshipsGovernorsGodGandhara
-27531a27327
+27531a27322
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodGandhara, WorshipsFertilityGodGandhara, WorshipsForgeGodGandhara, WorshipsFunGodGandhara, WorshipsGovernorsGodGandhara
-27535d27330
+27535d27325
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodGandhara, WorshipsFertilityGodGandhara, WorshipsForgeGodGandhara, WorshipsFunGodGandhara, WorshipsGovernorsGodGandhara
-27542a27338
+27542a27333
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodGandhara, WorshipsFertilityGodGandhara, WorshipsForgeGodGandhara, WorshipsFunGodGandhara, WorshipsGovernorsGodGandhara
-27546d27341
+27546d27336
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodGandhara, WorshipsFarmingGodGandhara, WorshipsForgeGodGandhara, WorshipsFunGodGandhara, WorshipsGovernorsGodGandhara
-27553a27349
+27553a27344
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodGandhara, WorshipsFarmingGodGandhara, WorshipsForgeGodGandhara, WorshipsFunGodGandhara, WorshipsGovernorsGodGandhara
-27557d27352
+27557d27347
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodGandhara, WorshipsFarmingGodGandhara, WorshipsFertilityGodGandhara, WorshipsFunGodGandhara, WorshipsGovernorsGodGandhara
-27564a27360
+27564a27355
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodGandhara, WorshipsFarmingGodGandhara, WorshipsFertilityGodGandhara, WorshipsFunGodGandhara, WorshipsGovernorsGodGandhara
-27568d27363
+27568d27358
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodGandhara, WorshipsFarmingGodGandhara, WorshipsFertilityGodGandhara, WorshipsForgeGodGandhara, WorshipsGovernorsGodGandhara
-27575a27371
+27575a27366
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodGandhara, WorshipsFarmingGodGandhara, WorshipsFertilityGodGandhara, WorshipsForgeGodGandhara, WorshipsGovernorsGodGandhara
-27579d27374
+27579d27369
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodGandhara, WorshipsFarmingGodGandhara, WorshipsFertilityGodGandhara, WorshipsForgeGodGandhara, WorshipsFunGodGandhara
-27586a27382
+27586a27377
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodGandhara, WorshipsFarmingGodGandhara, WorshipsFertilityGodGandhara, WorshipsForgeGodGandhara, WorshipsFunGodGandhara
-27590d27385
+27590d27380
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodLugia, WorshipsFertilityGodLugia, WorshipsForgeGodLugia, WorshipsFunGodLugia, WorshipsGovernorsGodLugia
-27597a27393
+27597a27388
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodLugia, WorshipsFertilityGodLugia, WorshipsForgeGodLugia, WorshipsFunGodLugia, WorshipsGovernorsGodLugia
-27601d27396
+27601d27391
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodLugia, WorshipsFertilityGodLugia, WorshipsForgeGodLugia, WorshipsFunGodLugia, WorshipsGovernorsGodLugia
-27608a27404
+27608a27399
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodLugia, WorshipsFertilityGodLugia, WorshipsForgeGodLugia, WorshipsFunGodLugia, WorshipsGovernorsGodLugia
-27612d27407
+27612d27402
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodLugia, WorshipsFarmingGodLugia, WorshipsForgeGodLugia, WorshipsFunGodLugia, WorshipsGovernorsGodLugia
-27619a27415
+27619a27410
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodLugia, WorshipsFarmingGodLugia, WorshipsForgeGodLugia, WorshipsFunGodLugia, WorshipsGovernorsGodLugia
-27623d27418
+27623d27413
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodLugia, WorshipsFarmingGodLugia, WorshipsFertilityGodLugia, WorshipsFunGodLugia, WorshipsGovernorsGodLugia
-27630a27426
+27630a27421
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodLugia, WorshipsFarmingGodLugia, WorshipsFertilityGodLugia, WorshipsFunGodLugia, WorshipsGovernorsGodLugia
-27634d27429
+27634d27424
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodLugia, WorshipsFarmingGodLugia, WorshipsFertilityGodLugia, WorshipsForgeGodLugia, WorshipsGovernorsGodLugia
-27641a27437
+27641a27432
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodLugia, WorshipsFarmingGodLugia, WorshipsFertilityGodLugia, WorshipsForgeGodLugia, WorshipsGovernorsGodLugia
-27645d27440
+27645d27435
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodLugia, WorshipsFarmingGodLugia, WorshipsFertilityGodLugia, WorshipsForgeGodLugia, WorshipsFunGodLugia
-27652a27448
+27652a27443
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodLugia, WorshipsFarmingGodLugia, WorshipsFertilityGodLugia, WorshipsForgeGodLugia, WorshipsFunGodLugia
-27656d27451
+27656d27446
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodBosporan, WorshipsFertilityGodBosporan, WorshipsForgeGodBosporan, WorshipsFunGodBosporan, WorshipsGovernorsGodBosporan
-27663a27459
+27663a27454
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodBosporan, WorshipsFertilityGodBosporan, WorshipsForgeGodBosporan, WorshipsFunGodBosporan, WorshipsGovernorsGodBosporan
-27667d27462
+27667d27457
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBosporan, WorshipsFertilityGodBosporan, WorshipsForgeGodBosporan, WorshipsFunGodBosporan, WorshipsGovernorsGodBosporan
-27674a27470
+27674a27465
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBosporan, WorshipsFertilityGodBosporan, WorshipsForgeGodBosporan, WorshipsFunGodBosporan, WorshipsGovernorsGodBosporan
-27678d27473
+27678d27468
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBosporan, WorshipsFarmingGodBosporan, WorshipsForgeGodBosporan, WorshipsFunGodBosporan, WorshipsGovernorsGodBosporan
-27685a27481
+27685a27476
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBosporan, WorshipsFarmingGodBosporan, WorshipsForgeGodBosporan, WorshipsFunGodBosporan, WorshipsGovernorsGodBosporan
-27689d27484
+27689d27479
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBosporan, WorshipsFarmingGodBosporan, WorshipsFertilityGodBosporan, WorshipsFunGodBosporan, WorshipsGovernorsGodBosporan
-27696a27492
+27696a27487
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBosporan, WorshipsFarmingGodBosporan, WorshipsFertilityGodBosporan, WorshipsFunGodBosporan, WorshipsGovernorsGodBosporan
-27700d27495
+27700d27490
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBosporan, WorshipsFarmingGodBosporan, WorshipsFertilityGodBosporan, WorshipsForgeGodBosporan, WorshipsGovernorsGodBosporan
-27707a27503
+27707a27498
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBosporan, WorshipsFarmingGodBosporan, WorshipsFertilityGodBosporan, WorshipsForgeGodBosporan, WorshipsGovernorsGodBosporan
-27711d27506
+27711d27501
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBosporan, WorshipsFarmingGodBosporan, WorshipsFertilityGodBosporan, WorshipsForgeGodBosporan, WorshipsFunGodBosporan
-27718a27514
+27718a27509
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBosporan, WorshipsFarmingGodBosporan, WorshipsFertilityGodBosporan, WorshipsForgeGodBosporan, WorshipsFunGodBosporan
-27722d27517
+27722d27512
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodArevaci, WorshipsFertilityGodArevaci, WorshipsForgeGodArevaci, WorshipsFunGodArevaci, WorshipsGovernorsGodArevaci
-27729a27525
+27729a27520
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodArevaci, WorshipsFertilityGodArevaci, WorshipsForgeGodArevaci, WorshipsFunGodArevaci, WorshipsGovernorsGodArevaci
-27733d27528
+27733d27523
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodArevaci, WorshipsFertilityGodArevaci, WorshipsForgeGodArevaci, WorshipsFunGodArevaci, WorshipsGovernorsGodArevaci
-27740a27536
+27740a27531
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodArevaci, WorshipsFertilityGodArevaci, WorshipsForgeGodArevaci, WorshipsFunGodArevaci, WorshipsGovernorsGodArevaci
-27744d27539
+27744d27534
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodArevaci, WorshipsFarmingGodArevaci, WorshipsForgeGodArevaci, WorshipsFunGodArevaci, WorshipsGovernorsGodArevaci
-27751a27547
+27751a27542
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodArevaci, WorshipsFarmingGodArevaci, WorshipsForgeGodArevaci, WorshipsFunGodArevaci, WorshipsGovernorsGodArevaci
-27755d27550
+27755d27545
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodArevaci, WorshipsFarmingGodArevaci, WorshipsFertilityGodArevaci, WorshipsFunGodArevaci, WorshipsGovernorsGodArevaci
-27762a27558
+27762a27553
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodArevaci, WorshipsFarmingGodArevaci, WorshipsFertilityGodArevaci, WorshipsFunGodArevaci, WorshipsGovernorsGodArevaci
-27766d27561
+27766d27556
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodArevaci, WorshipsFarmingGodArevaci, WorshipsFertilityGodArevaci, WorshipsForgeGodArevaci, WorshipsGovernorsGodArevaci
-27773a27569
+27773a27564
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodArevaci, WorshipsFarmingGodArevaci, WorshipsFertilityGodArevaci, WorshipsForgeGodArevaci, WorshipsGovernorsGodArevaci
-27777d27572
+27777d27567
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodArevaci, WorshipsFarmingGodArevaci, WorshipsFertilityGodArevaci, WorshipsForgeGodArevaci, WorshipsFunGodArevaci
-27784a27580
+27784a27575
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodArevaci, WorshipsFarmingGodArevaci, WorshipsFertilityGodArevaci, WorshipsForgeGodArevaci, WorshipsFunGodArevaci
-27788d27583
+27788d27578
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodBoii, WorshipsFertilityGodBoii, WorshipsForgeGodBoii, WorshipsFunGodBoii, WorshipsGovernorsGodBoii
-27795a27591
+27795a27586
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodBoii, WorshipsFertilityGodBoii, WorshipsForgeGodBoii, WorshipsFunGodBoii, WorshipsGovernorsGodBoii
-27799d27594
+27799d27589
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBoii, WorshipsFertilityGodBoii, WorshipsForgeGodBoii, WorshipsFunGodBoii, WorshipsGovernorsGodBoii
-27806a27602
+27806a27597
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBoii, WorshipsFertilityGodBoii, WorshipsForgeGodBoii, WorshipsFunGodBoii, WorshipsGovernorsGodBoii
-27810d27605
+27810d27600
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBoii, WorshipsFarmingGodBoii, WorshipsForgeGodBoii, WorshipsFunGodBoii, WorshipsGovernorsGodBoii
-27817a27613
+27817a27608
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBoii, WorshipsFarmingGodBoii, WorshipsForgeGodBoii, WorshipsFunGodBoii, WorshipsGovernorsGodBoii
-27821d27616
+27821d27611
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBoii, WorshipsFarmingGodBoii, WorshipsFertilityGodBoii, WorshipsFunGodBoii, WorshipsGovernorsGodBoii
-27828a27624
+27828a27619
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBoii, WorshipsFarmingGodBoii, WorshipsFertilityGodBoii, WorshipsFunGodBoii, WorshipsGovernorsGodBoii
-27832d27627
+27832d27622
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBoii, WorshipsFarmingGodBoii, WorshipsFertilityGodBoii, WorshipsForgeGodBoii, WorshipsGovernorsGodBoii
-27839a27635
+27839a27630
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBoii, WorshipsFarmingGodBoii, WorshipsFertilityGodBoii, WorshipsForgeGodBoii, WorshipsGovernorsGodBoii
-27843d27638
+27843d27633
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBoii, WorshipsFarmingGodBoii, WorshipsFertilityGodBoii, WorshipsForgeGodBoii, WorshipsFunGodBoii
-27850a27646
+27850a27641
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodBoii, WorshipsFarmingGodBoii, WorshipsFertilityGodBoii, WorshipsForgeGodBoii, WorshipsFunGodBoii
-27854d27649
+27854d27644
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodNabatu, WorshipsFertilityGodNabatu, WorshipsForgeGodNabatu, WorshipsFunGodNabatu, WorshipsGovernorsGodNabatu
-27861a27657
+27861a27652
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsFarmingGodNabatu, WorshipsFertilityGodNabatu, WorshipsForgeGodNabatu, WorshipsFunGodNabatu, WorshipsGovernorsGodNabatu
-27865d27660
+27865d27655
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodNabatu, WorshipsFertilityGodNabatu, WorshipsForgeGodNabatu, WorshipsFunGodNabatu, WorshipsGovernorsGodNabatu
-27872a27668
+27872a27663
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodNabatu, WorshipsFertilityGodNabatu, WorshipsForgeGodNabatu, WorshipsFunGodNabatu, WorshipsGovernorsGodNabatu
-27876d27671
+27876d27666
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodNabatu, WorshipsFarmingGodNabatu, WorshipsForgeGodNabatu, WorshipsFunGodNabatu, WorshipsGovernorsGodNabatu
-27883a27679
+27883a27674
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodNabatu, WorshipsFarmingGodNabatu, WorshipsForgeGodNabatu, WorshipsFunGodNabatu, WorshipsGovernorsGodNabatu
-27887d27682
+27887d27677
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodNabatu, WorshipsFarmingGodNabatu, WorshipsFertilityGodNabatu, WorshipsFunGodNabatu, WorshipsGovernorsGodNabatu
-27894a27690
+27894a27685
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodNabatu, WorshipsFarmingGodNabatu, WorshipsFertilityGodNabatu, WorshipsFunGodNabatu, WorshipsGovernorsGodNabatu
-27898d27693
+27898d27688
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodNabatu, WorshipsFarmingGodNabatu, WorshipsFertilityGodNabatu, WorshipsForgeGodNabatu, WorshipsGovernorsGodNabatu
-27905a27701
+27905a27696
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodNabatu, WorshipsFarmingGodNabatu, WorshipsFertilityGodNabatu, WorshipsForgeGodNabatu, WorshipsGovernorsGodNabatu
-27909d27704
+27909d27699
 < 	;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodNabatu, WorshipsFarmingGodNabatu, WorshipsFertilityGodNabatu, WorshipsForgeGodNabatu, WorshipsFunGodNabatu
-27916a27712
+27916a27707
 >     ;AntiTraits Sacrilegious, PublicAtheism, WorshipsBattleGodNabatu, WorshipsFarmingGodNabatu, WorshipsFertilityGodNabatu, WorshipsForgeGodNabatu, WorshipsFunGodNabatu
-27928d27723
+27928d27718
 < 	;AntiTraits HasCapturedAlliedCity
-27934a27730
+27934a27725
 >     ;AntiTraits HasCapturedAlliedCity
-27939d27734
+27939d27729
 < 	;AntiTraits JustCapturedAlliedCity
-27945a27741
+27945a27736
 >     ;AntiTraits JustCapturedAlliedCity
-28112d27907
+28112d27902
 <     ;AntiTraits RemPotentialSuccessor
-28123a27919
+28123a27914
 >     ;AntiTraits RemPotentialSuccessor
-30145,30146d29919
+30145,30146d29914
 < ;		 Effect Trading  50
 < ;         Effect Farming  2
-30158,30159d29930
+30158,30159d29925
 < ;		 Effect Trading  80
 < ;         Effect Farming  3
-30173,30174d29943
+30173,30174d29938
 < ;		 Effect Trading  100
 < ;         Effect Farming  4
-30177a29947,29952
+30177a29942,29947
 > ;         Effect Trading  50
 > ;         Effect Farming  2
 > ;         Effect Trading  80
 > ;         Effect Farming  3
 > ;         Effect Trading  100
 > ;         Effect Farming  4
-43054d42834
+43054d42829
 < 		  ;and RandomPercent < 100
-43066a42847
+43066a42842
 > 		  ;and RandomPercent < 100
-43189d42969
+43189d42964
 <         ;and RandomPercent < 100
-43201a42982
+43201a42977
 >         ;and RandomPercent < 100
-43324d43104
+43324d43099
 <         ;and RandomPercent < 100
-43336a43117
+43336a43112
 >         ;and RandomPercent < 100
-46373d46153
+46373d46148
 < 		  ;and RandomPercent < 100
-46385a46166
+46385a46161
 > 		  ;and RandomPercent < 100
-46960d46741
+46960d46736
 < 		  ;and RandomPercent < 100
-46971a46753
+46971a46748
 > 		  ;and RandomPercent < 100
-47985d47766
+47985d47761
 < 		  ;and RandomPercent < 100
-47997a47779
+47997a47774
 > 		  ;and RandomPercent < 100
-48163d47944
+48163d47939
 < 		  ;and RandomPercent < 100
-48175a47957
+48175a47952
 > 		  ;and RandomPercent < 100
-48341d48122
+48341d48117
 < 		  ;and RandomPercent < 100
-48353a48135
+48353a48130
 > 		  ;and RandomPercent < 100
-48614d48395
+48614d48390
 < 		  ;and RandomPercent < 100
-48626a48408
+48626a48403
 > 		  ;and RandomPercent < 100
-48710d48491
+48710d48486
 < 		  ;and RandomPercent < 100
-48721a48503
+48721a48498
 > 		  ;and RandomPercent < 100
-48805d48586
+48805d48581
 < 		  ;and RandomPercent < 100
-48816a48598
+48816a48593
 > 		  ;and RandomPercent < 100
-51662d51442
+51662d51437
 <   ;Affects JoinedSweboz  1  Chance  100
-51663a51444
+51663a51439
 >   ;Affects JoinedSweboz  1  Chance  100
-51672d51452
+51672d51447
 <   ;Affects JoinedSweboz  1  Chance  100
-51673a51454
+51673a51449
 >   ;Affects JoinedSweboz  1  Chance  100
-52555d52335
+52555d52330
 <         ;and RandomPercent < 100
-52566a52347
+52566a52342
 >         ;and RandomPercent < 100
-52974,52975d52754
+52974,52975d52749
 < 		  ;and I_SettlementOwner sett_077 = f_getai		;region Getia, settlement Buridava
 < 		  ;and RandomPercent < 100
-52987a52767,52768
+52987a52762,52763
 > 		  ;and I_SettlementOwner sett_077 = f_getai		;region Getia, settlement Buridava
 > 		  ;and RandomPercent < 100
-53185,53186d52965
+53185,53186d52960
 < 		  ;and I_SettlementOwner sett_077 = f_getai		;region Getia, settlement Buridava
 < 		  ;and RandomPercent < 100
-53198a52978,52979
+53198a52973,52974
 > 		  ;and I_SettlementOwner sett_077 = f_getai		;region Getia, settlement Buridava
 > 		  ;and RandomPercent < 100
-53396,53397d53176
+53396,53397d53171
 < 		  ;and I_SettlementOwner sett_077 = f_getai		;region Getia, settlement Buridava
 < 		  ;and RandomPercent < 100
-53409a53189,53190
+53409a53184,53185
 > 		  ;and I_SettlementOwner sett_077 = f_getai		;region Getia, settlement Buridava
 > 		  ;and RandomPercent < 100
-54023d53803
+54023d53798
 <         ;and RandomPercent < 100
-54033a53814
+54033a53809
 >         ;and RandomPercent < 100
-54171d53951
+54171d53946
 <         ;and RandomPercent < 100
-54181a53962
+54181a53957
 >         ;and RandomPercent < 100
-54319d54099
+54319d54094
 <         ;and RandomPercent < 100
-54329a54110
+54329a54105
 >         ;and RandomPercent < 100
-54569d54349
+54569d54344
 < 		  ;and RandomPercent < 100
-54577a54358
+54577a54353
 > 		  ;and RandomPercent < 100
-54694d54474
+54694d54469
 < 		  ;and RandomPercent < 100
-54702a54483
+54702a54478
 > 		  ;and RandomPercent < 100
-54819d54599
+54819d54594
 < 		  ;and RandomPercent < 100
-54827a54608
+54827a54603
 > 		  ;and RandomPercent < 100
-55136d54916
+55136d54911
 < 		  ;and RandomPercent < 17
-55140a54921
+55140a54916
 > 		  ;and RandomPercent < 17
-55147d54927
+55147d54922
 < 		  ;and RandomPercent < 20
-55151a54932
+55151a54927
 > 		  ;and RandomPercent < 20
-55158d54938
+55158d54933
 < 		  ;and RandomPercent < 33
-55167a54948
+55167a54943
 > 		  ;and RandomPercent < 33
-55190d54970
+55190d54965
 < 		  ;and RandomPercent < 100
-55197a54978
+55197a54973
 > 		  ;and RandomPercent < 100
-55223d55003
+55223d54998
 < 		  ;and RandomPercent < 12
-55231a55012
+55231a55007
 > 		  ;and RandomPercent < 12
-55238d55018
+55238d55013
 < 		  ;and RandomPercent < 17
-55242a55023
+55242a55018
 > 		  ;and RandomPercent < 17
-55249d55029
+55249d55024
 < 		  ;and RandomPercent < 20
-55253a55034
+55253a55029
 > 		  ;and RandomPercent < 20
-55260d55040
+55260d55035
 < 		  ;and RandomPercent < 33
-55269a55050
+55269a55045
 > 		  ;and RandomPercent < 33
-55292d55072
+55292d55067
 < 		  ;and RandomPercent < 100
-55299a55080
+55299a55075
 > 		  ;and RandomPercent < 100
-55524d55304
+55524d55299
 < 		  ;and RandomPercent < 100
-55535a55316
+55535a55311
 > 		  ;and RandomPercent < 100
-55644d55424
+55644d55419
 < 		  ;and RandomPercent < 100
-55655a55436
+55655a55431
 > 		  ;and RandomPercent < 100
-55765d55545
+55765d55540
 < 		  ;and RandomPercent < 100
-55774a55555
+55774a55550
 > 		  ;and RandomPercent < 100
-56118d55898
+56118d55893
 < 		;and RandomPercent < 100
-56127a55908
+56127a55903
 > 		;and RandomPercent < 100
-56200d55980
+56200d55975
 < 			;and RandomPercent < 100
-56211a55992
+56211a55987
 > 			;and RandomPercent < 100
-56336d56116
+56336d56111
 < 		;and RandomPercent < 100
-56345a56126
+56345a56121
 > 		;and RandomPercent < 100
-56418d56198
+56418d56193
 < 			;and RandomPercent < 100
-56429a56210
+56429a56205
 > 			;and RandomPercent < 100
-56554d56334
+56554d56329
 < 		;and RandomPercent < 100
-56563a56344
+56563a56339
 > 		;and RandomPercent < 100
-56636d56416
+56636d56411
 < 		;and RandomPercent < 100
-56647a56428
+56647a56423
 > 		;and RandomPercent < 100
-56858d56638
+56858d56633
 <         ;and RandomPercent < 100
-56868a56649
+56868a56644
 >         ;and RandomPercent < 100
-56962d56742
+56962d56737
 <         ;and RandomPercent < 100
-56972a56753
+56972a56748
 >         ;and RandomPercent < 100
-57066d56846
+57066d56841
 <         ;and RandomPercent < 100
-57076a56857
+57076a56852
 >         ;and RandomPercent < 100
-57261d57041
+57261d57036
 < ;        and RandomPercent < 100
-57270a57051
+57270a57046
 > ;        and RandomPercent < 100
-57345d57125
+57345d57120
 < ;        and RandomPercent < 100
-57357a57138
+57357a57133
 > ;        and RandomPercent < 100
-57432d57212
+57432d57207
 < ;        and RandomPercent < 100
-57444a57225
+57444a57220
 > ;        and RandomPercent < 100
-79621,79623d79361
+79621,79623d79356
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-79626d79363
+79626d79358
 < ;        and not Trait Hellenic_Euergetes > 0
-79632a79370,79373
+79632a79365,79368
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-79653,79655d79393
+79653,79655d79388
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-79658d79395
+79658d79390
 < ;        and not Trait Hellenic_Euergetes > 0
-79664a79402,79405
+79664a79397,79400
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-79685,79687d79425
+79685,79687d79420
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-79690d79427
+79690d79422
 < ;        and not Trait Hellenic_Euergetes > 0
-79696a79434,79437
+79696a79429,79432
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-79722,79724d79462
+79722,79724d79457
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-79727d79464
+79727d79459
 < ;        and not Trait Hellenic_Euergetes > 0
-79733a79471,79474
+79733a79466,79469
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-79759,79761d79499
+79759,79761d79494
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-79764d79501
+79764d79496
 < ;        and not Trait Hellenic_Euergetes > 0
-79770a79508,79511
+79770a79503,79506
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-79791,79793d79531
+79791,79793d79526
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-79796d79533
+79796d79528
 < ;        and not Trait Hellenic_Euergetes > 0
-79802a79540,79543
+79802a79535,79538
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-79823,79825d79563
+79823,79825d79558
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-79828d79565
+79828d79560
 < ;        and not Trait Hellenic_Euergetes > 0
-79834a79572,79575
+79834a79567,79570
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-79860,79862d79600
+79860,79862d79595
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-79865d79602
+79865d79597
 < ;        and not Trait Hellenic_Euergetes > 0
-79870a79608,79612
+79870a79603,79607
 >
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-79891,79893d79632
+79891,79893d79627
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-79896d79634
+79896d79629
 < ;        and not Trait Hellenic_Euergetes > 0
-79902a79641,79644
+79902a79636,79639
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-79928,79930d79669
+79928,79930d79664
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-79933d79671
+79933d79666
 < ;        and not Trait Hellenic_Euergetes > 0
-79939a79678,79681
+79939a79673,79676
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-79959,79961d79700
+79959,79961d79695
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-79964d79702
+79964d79697
 < ;        and not Trait Hellenic_Euergetes > 0
-79970a79709,79712
+79970a79704,79707
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-79995,79997d79737
+79995,79997d79732
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-80000d79739
+80000d79734
 < ;        and not Trait Hellenic_Euergetes > 0
-80006a79746,79749
+80006a79741,79744
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-80033,80035d79776
+80033,80035d79771
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-80038d79778
+80038d79773
 < ;        and not Trait Hellenic_Euergetes > 0
-80044a79785,79788
+80044a79780,79783
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-80065,80067d79809
+80065,80067d79804
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-80070d79811
+80070d79806
 < ;        and not Trait Hellenic_Euergetes > 0
-80076a79818,79821
+80076a79813,79816
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-80103,80105d79848
+80103,80105d79843
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-80108d79850
+80108d79845
 < ;        and not Trait Hellenic_Euergetes > 0
-80114a79857,79860
+80114a79852,79855
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-80124,80125d79870
+80124,80125d79865
 < ;        and BattleOdds < 0.75            ; may be added in later
 < ;        and not BattleOdds < 0.2         ; may be added in later
-80141,80143d79885
+80141,80143d79880
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-80146d79887
+80146d79882
 < ;        and not Trait Hellenic_Euergetes > 0
-80152a79894,79899
+80152a79889,79894
 > ;        and BattleOdds < 0.75            ; may be added in later
 > ;        and not BattleOdds < 0.2         ; may be added in later
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-80179,80181d79926
+80179,80181d79921
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-80184d79928
+80184d79923
 < ;        and not Trait Hellenic_Euergetes > 0
-80190a79935,79938
+80190a79930,79933
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-80211,80213d79959
+80211,80213d79954
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-80216d79961
+80216d79956
 < ;        and not Trait Hellenic_Euergetes > 0
-80222a79968,79971
+80222a79963,79966
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-80243,80245d79992
+80243,80245d79987
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-80248d79994
+80248d79989
 < ;        and not Trait Hellenic_Euergetes > 0
-80254a80001,80004
+80254a79996,79999
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-80276,80278d80026
+80276,80278d80021
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-80281d80028
+80281d80023
 < ;        and not Trait Hellenic_Euergetes > 0
-80287a80035,80038
+80287a80030,80033
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-80307,80309d80058
+80307,80309d80053
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-80312d80060
+80312d80055
 < ;        and not Trait Hellenic_Euergetes > 0
-80318a80067,80070
+80318a80062,80065
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-80338,80340d80090
+80338,80340d80085
 < ;        and not Trait Hellenic_Eupator > 0
 < ;        and not Trait Hellenic_Keraunos > 0
 < ;        and not Trait Hellenic_Tryphon > 0
-80343d80092
+80343d80087
 < ;        and not Trait Hellenic_Euergetes > 0
-80349a80099,80102
+80349a80094,80097
 > ;        and not Trait Hellenic_Eupator > 0
 > ;        and not Trait Hellenic_Keraunos > 0
 > ;        and not Trait Hellenic_Tryphon > 0
 > ;        and not Trait Hellenic_Euergetes > 0
-82767d82519
+82767d82514
 < 		  ;and RandomPercent < 100
-82771a82524
+82771a82519
 > 		  ;and RandomPercent < 100
-100331d100082
+100331d100077
 < ;		and CharacterAge < 20
-100335a100087
+100335a100082
 > ;		and CharacterAge < 20
-115932,115936d115790
+115932,115936d115785
 <
 < ;------------------------------------------------------------------------------------------------------------------------------
 < ; Section 10.0 - EDCT Trunk
