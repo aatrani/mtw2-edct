@@ -24,8 +24,8 @@ class EDCT():
     fulcom_re = re.compile('^\s*;.*')
     whitel_re = re.compile('^\s*$')
 
-    trait_re = re.compile("^\s*Trait\s+(\S+)(\s*;?[^$]*)") #re.compile("^\s*Trait\s+(\S+)")
-    trigg_re = re.compile("^\s*Trigger\s+(\S+)(\s*;?.*)$")    
+    trait_re = re.compile("^\s*Trait\s+(\S+)([ \t]*;?.*)") #re.compile("^\s*Trait\s+(\S+)")
+    trigg_re = re.compile("^\s*Trigger\s+(\S+)([ \t]*;?.*)")    
     
     def __init__(self):
         self.Nwhite = 0
@@ -57,6 +57,8 @@ class EDCT():
 
         for l in edct:
             self.Ntot+=1
+            if(self.fulcom_re.match(l)):
+                self.Nfulcom+=1
             if(self.whitel_re.match(l)):
                 # skip whitelines
                 self.Nwhite+=1
@@ -66,7 +68,6 @@ class EDCT():
                 if(self.fulcom_re.match(l)):
                     # add full lines to fulcom
                     self.comment_header = self.comment_header + l
-                    self.Nfulcom+=1
                     continue
             
             trait_ma = EDCT.trait_re.match(l)
@@ -75,11 +76,7 @@ class EDCT():
                 parseTrait = True
                 parseTrigg = False
                 self.Ntraits+=1
-                print(repr(trait_ma.group(2)), repr(trait_ma.group(1)))
                 newtrait = Trait(trait_ma.group(1), trait_ma.group(2))
-                #if(fulcom):
-                    #newtrait.comment_head = fulcom.replace("\t", "    ")
-                    #fulcom = ''
                 self.traits.append(newtrait)
                 continue
                 
@@ -94,9 +91,6 @@ class EDCT():
                 self.Ntriggers+=1
                 #if(self.Ntriggers >1): print(newtrigg)
                 newtrigg = Trigger(trigg_ma.group(1), trigg_ma.group(2))
-                #if(fulcom):
-                    #newtrigg.comment_head = fulcom
-                    #fulcom = ''
                 self.triggers.append(newtrigg)
                 continue
                 
@@ -187,7 +181,6 @@ class Trait():
         self.anti = []
         self.levels = strlist()     # required, min 1 max 9
         
-        self.comment_head = ''
         self.comment_dict = {}
         if(incom): self.comment_dict["Trait"] = incom
         self.commflag = "aTrait"
@@ -229,47 +222,35 @@ class Trait():
         if(ltrait[0] == "Characters"):
             for charac in ltrait[1:]:
                 self.characters.append(charac) 
-            #if(incom): self.comment_dict["Characters"] = incom
         elif(ltrait[0] == "ExcludeCultures"):
             for exclu in ltrait[1:]:
                 self.exclude.append(exclu)
-            #if(incom): self.comment_dict["ExcludeCultures"] = incom
         elif(ltrait[0] == "AntiTraits"):
             for ant in ltrait[1:]:
                 self.anti.append(ant)
-            #if(incom): self.comment_dict["AntiTraits"] = incom
         elif(ltrait[0] == "NoGoingBackLevel"):
             self.nogoingback = int(ltrait[1])
-            #if(incom): self.comment_dict["NoGoingBackLevel"] = incom
         elif(ltrait[0] == "Hidden"):
             self.hidden = True
-            #if(incom): self.comment_dict["Hidden"] = incom
             
         elif(ltrait[0] == "Level"):
             # Level gets appended to list. when finding level attributes, we look for the last level in the trait level list
             self.levels.append(TraitLevel(ltrait[1], incom))
-            #if(incom): self.levels[-1].comment_dict["Level"] = incom
                         
         elif(self.levels):
             toadd_inline = self.levels[-1]
             if(ltrait[0] == "Description"):
                 self.levels[-1].description = ltrait[1]
-                #if(incom): self.levels[-1].comment_dict["Description"] = incom
             elif(ltrait[0] == "EffectsDescription"):
                 self.levels[-1].effdecription = ltrait[1]
-                #if(incom): self.levels[-1].comment_dict["EffectsDescription"] = incom
             elif(ltrait[0] == "GainMessage"):
                 self.levels[-1].gainmessage = ltrait[1]
-                #if(incom): self.levels[-1].comment_dict["GainMessage"] = incom
             elif(ltrait[0] == "LoseMessage"):
                 self.levels[-1].losemessage = ltrait[1]
-                #if(incom): self.levels[-1].comment_dict["LoseMessage"] = incom
             elif(ltrait[0] == "Epithet"):
                 self.levels[-1].epith = ltrait[1]
-                #if(incom): self.levels[-1].comment_dict["Epithet"] = incom
             elif(ltrait[0] == "Threshold"):
                 self.levels[-1].threshold = int(ltrait[1])
-                #if(incom): self.levels[-1].comment_dict["Threshold"] = incom
             elif(ltrait[0] == "Effect"):
                 neweff = TraitLevelEffect(ltrait[1], int(ltrait[2]), incom)
                 self.levels[-1].effects.append(neweff)
@@ -281,6 +262,7 @@ class Trait():
                 
         # set inline comment
         if(incom):
+            # Effect inline comments get stored in Effect object itself 
             if(ltrait[0] != "Effect"):
                 toadd_inline.comment_dict[ltrait[0]] = incom
         # set full comment flag
@@ -337,6 +319,7 @@ class TraitLevel():
 
         self.comment_dict = {}
         if(incom): self.comment_dict["Level"] = incom
+        self.commflag = "aTrigger"
 
     @recursive_repr()
     def __repr__(self):
@@ -391,7 +374,7 @@ class Trigger():
     def __init__(self, name, incom=None):
         self.name = name         
         self.when = None            # required
-        self.conditions = []        
+        self.conditions = strlist()         
         self.affects = strlist()    # required (only in edct)
         
         self.comment_head = ''
@@ -400,38 +383,54 @@ class Trigger():
        
     def parse_line(self, l):
         if(EDCT.fulcom_re.match(l)):
-                # add full lines to fulcom
-                #fulcom = fulcom + l
-                #self.Nfulcom+=1
+            # add full lines to fulcom
+            if((self.commflag == "aCondition") or (self.commflag == "aand")):
+                # trigger condition comment
+                self.conditions[-1].fullline_comment = self.conditions[-1].fullline_comment + l.replace("\t", "    ")
+                return True
+            elif(self.commflag == "aAffects"):
+                # trigger affects comment
+                self.affects[-1].fullline_comment = self.affects[-1].fullline_comment + l.replace("\t", "    ")
+                return True
+            else:
+                # main trigger comment
+                fcom = self.comment_dict.get(self.commflag, "")
+                fcom = fcom + l.replace("\t", "    ")
+                self.comment_dict[self.commflag] = fcom
                 return True
         else:
             #if we are here it's not a full line comment
             # simplify in 3.8 with assignment expression
             incom_ma = EDCT.incom_re.match(l) 
             if(incom_ma):
-                incom = "    " + incom_ma.group(1)
+                incom = "    " + incom_ma.group(1) 
                 l = re.sub(';.*', '', l)
             else:
                 incom = None
-        
-        ltrigg = l.replace(",", "").split() 
+
+        ltrigg = l.replace(",", "").split()
         if(ltrigg[0] == "WhenToTest"):
             self.when = ltrigg[1]
             if(incom): self.comment_dict["WhenToTest"] = incom
+
         elif(ltrigg[0] == "Condition"):
-            self.conditions.append(" ".join(ltrigg[1:]))
-            if(incom): self.comment_dict["Condition"] = [incom]
-            else: self.comment_dict["Condition"] = [""]
-        elif(ltrigg[0] == "and"):
-            self.conditions.append(" ".join(ltrigg[1:]))
-            if(incom): self.comment_dict["Condition"].append(incom)
-            else: self.comment_dict["Condition"].append("")
+            newcond = TriggerCondition(" ".join(ltrigg[1:]), incom)
+            self.conditions.append(newcond)
+        elif(self.conditions and (ltrigg[0] == "and")):
+            newcond = TriggerCondition(" ".join(ltrigg[1:]), incom)
+            self.conditions.append(newcond)
+
         elif(ltrigg[0] == "Affects"):
             newaff = TriggerAffect(ltrigg[1], int(ltrigg[2]), int(ltrigg[4]), incom)
-            self.affects.append(newaff)             
+            self.affects.append(newaff)
         else:
             # if it's not any of those, return False
+            if(not EDCT.trait_re.match(l)):
+                print("ERROR: can't parse line\n{:s}".format(l))
             return False
+        # set full comment flag
+        self.commflag = "a" + ltrigg[0]
+
         # if we are here we parsed successfully, return True
         return True
 
@@ -452,15 +451,35 @@ class Trigger():
         base = base + "    WhenToTest {:s}".format(self.when) + "\n\n"
         
         if(self.conditions):
-            base = base + "    {:>9s} {:s}".format("Condition", self.conditions[0]) + self.comment_dict["Condition"][0] + "\n"
-            if(self.conditions[1:]):
-                for cond, condcomm in zip(self.conditions[1:], self.comment_dict["Condition"][1:]):
-                    base = base + "    {:>9s} {:s}".format("and", cond) + condcomm + "\n"
+            base = base + self.conditions[0].as_string(first=True)
+            for cond in self.conditions[1:]:
+                base = base + cond.as_string(first=False)
             base = base + "\n"
         for aff in self.affects:
             base = base + aff.as_string()
         return base + "\n"
 
+class TriggerCondition():
+    def __init__(self, cond, incom=None):
+        self.cond = cond
+        if(incom): self.inline_comment = incom
+        else: self.inline_comment = ""
+        self.fullline_comment = ""
+
+    def __repr__(self):
+        return "\tCondition {:s}".format("Condition", self.cond) + "\n"
+    
+    def as_string(self, first):
+        if(first):
+            base = "    {:>9s} {:s}".format("Condition", self.cond) + self.inline_comment + "\n"
+        else:
+            base = "    {:>9s} {:s}".format("and", self.cond) + self.inline_comment + "\n"
+        base = base + self.fullline_comment 
+        return base
+
+    def evaluate(self, something):
+        pass
+        
 class TriggerAffect():
     def __init__(self, aff, numb, chanc, incom=None):
         self.aff = aff
@@ -468,18 +487,21 @@ class TriggerAffect():
         self.chance = int(chanc)
         if(incom): self.inline_comment = incom
         else: self.inline_comment = ''
-        
+        self.fullline_comment = ""
+
     def __repr__(self):
         return "\tAffects {:s} {:g} Chance {:g}\n".format(self.aff, self.val, self.chance)
     
     def as_string(self):
-        return "    Affects {:s}  {:d}  Chance  {:d}".format(self.aff, self.val, self.chance) + self.inline_comment + "\n"
+        base = "    Affects {:s}  {:d}  Chance  {:d}".format(self.aff, self.val, self.chance) + self.inline_comment + "\n"
+        base = base + self.fullline_comment
+        return base
         
 if __name__ == "__main__":
     edcteb2 = EDCT()
     edcteb2.parse_edct(edcteb2.EDCT_fname)
     #print(edcteb2.traits[0].comment_head)
-    for tt in edcteb2.traits:
+    for tt in edcteb2.triggers:
         for x in tt.comment_dict.items():
             if(x[0].startswith("a")):
                 #print(x)
