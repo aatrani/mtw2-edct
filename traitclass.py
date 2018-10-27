@@ -375,7 +375,7 @@ class Trigger():
         self.name = name         
         self.when = None            # required
         self.conditions = strlist()         
-        self.affects = strlist()    # required (only in edct)
+        self.affects = strlist()    # required (only in edct), maximum 9
         
         self.comment_head = ''
         self.comment_dict = {}        
@@ -448,7 +448,7 @@ class Trigger():
     
     def as_string(self):
         base = "Trigger {:s}".format(self.name) + self.comment_dict.get("Trigger", "")  + "\n"
-        base = base + "    WhenToTest {:s}".format(self.when) + "\n\n"
+        base = base + "  WhenToTest {:s}".format(self.when) + "\n\n"
         
         if(self.conditions):
             base = base + self.conditions[0].as_string(first=True)
@@ -471,9 +471,9 @@ class TriggerCondition():
     
     def as_string(self, first):
         if(first):
-            base = "    {:>9s} {:s}".format("Condition", self.cond) + self.inline_comment + "\n"
+            base = "  {:>9s} {:s}".format("Condition", self.cond) + self.inline_comment + "\n"
         else:
-            base = "    {:>9s} {:s}".format("and", self.cond) + self.inline_comment + "\n"
+            base = "  {:>9s} {:s}".format("and", self.cond) + self.inline_comment + "\n"
         base = base + self.fullline_comment 
         return base
 
@@ -493,7 +493,7 @@ class TriggerAffect():
         return "\tAffects {:s} {:g} Chance {:g}\n".format(self.aff, self.val, self.chance)
     
     def as_string(self):
-        base = "    Affects {:s}  {:d}  Chance  {:d}".format(self.aff, self.val, self.chance) + self.inline_comment + "\n"
+        base = "  Affects {:s}  {:d}  Chance  {:d}".format(self.aff, self.val, self.chance) + self.inline_comment + "\n"
         base = base + self.fullline_comment
         return base
         
