@@ -111,7 +111,7 @@ class EDCT():
         edct.close()
 
     ### Filters    
-    def affects(self, trait):
+    def affects_traits(self, trait):
         if((not self.Ntraits) or (not self.Ntriggers)):
             return {}
         affects = {}
@@ -127,7 +127,7 @@ class EDCT():
                     affects.setdefault(aff.aff, []).append(trig.name)
         return affects
         
-    def is_affected(self, trait):
+    def is_affected_traits(self, trait):
         if((not self.Ntraits) or (not self.Ntriggers)):
             return {}
         affected = {}

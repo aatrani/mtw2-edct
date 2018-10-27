@@ -1,0 +1,5 @@
++ All comments preceeding Trait/Trigger entry are associated with the previous Trait/Trigger
+
++ To compare files:
+     	     diff -w -E -b -B -t --ignore-all-space --strip-trailing-cr   --tabsize=4 export_descr_character_traits.txt test.txt  > diff.txt
+
