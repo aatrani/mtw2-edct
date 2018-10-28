@@ -8,6 +8,7 @@
 #    Oct 07, 2018 11:52:37 PM JST  platform: Windows NT
 #    Oct 08, 2018 10:34:34 PM JST  platform: Windows NT
 #    Oct 11, 2018 10:55:51 PM JST  platform: Linux
+#    Oct 28, 2018 07:42:28 PM JST  platform: Windows NT
 
 import traitclass
 import os
@@ -26,7 +27,6 @@ try:
 except ImportError:
     import tkinter.ttk as ttk
     py3 = True
-
     
 def set_Tk_var():
     global TraitList
@@ -37,33 +37,6 @@ def set_Tk_var():
     triggersearched = StringVar()
     global TriggerList
     TriggerList = StringVar()
-
-def FilterWin():
-    print('traitedit_support.FilterWin')
-    sys.stdout.flush()
-
-def ReloadEdit():
-    print('traitedit_support.ReloadEdit')
-    #print(w.style.theme_names())
-    #print(w.style.theme_use())
-    #w.style.theme_use('clam')
-    sys.stdout.flush()
-
-def SaveEdit():
-    print('traitedit_support.SaveEdit')
-    sys.stdout.flush()
-
-def ValidEdit():
-    print('traitedit_support.ValidEdit')
-    sys.stdout.flush()
-
-def FilterTrait():
-    print('traitedit_support.FilterTrait')
-    sys.stdout.flush()
-
-def GoToTrait():
-    print('traitedit_support.GoToTrait')
-    sys.stdout.flush()
 
 def OpenFile():
     print('traitedit_support.OpenFile')
@@ -80,11 +53,22 @@ def OpenFile():
     w.Viewer.delete('1.0', END)
     afterparse()
     sys.stdout.flush()
-    
-    # Viewer
-    #w.Viewer.insert(INSERT, traitmod.traits[0].as_string())
-    #traitmod.current_view = traitmod.traits[0].name
-    #w.Viewer.edit_modified(False)
+
+def SaveFile():
+    print('traitedit_support.SaveFile')
+    sys.stdout.flush()
+
+def SaveFileAs():
+    print('traitedit_support.SaveFileAs')
+    sys.stdout.flush()
+
+def FilterWin():
+    print('traitedit_support.FilterWin')
+    sys.stdout.flush()
+
+def ValidateFile():
+    print('traitedit_support.ValidateFile')
+    sys.stdout.flush()
 
 def Quit():
     print('traitedit_support.Quit')
@@ -99,21 +83,36 @@ def ReloadFile():
     w.Viewer.delete('1.0', END)
     afterparse()
     sys.stdout.flush()
-    # Viewer
-    #w.Viewer.insert(INSERT, traitmod.traits[0].as_string())
-    #traitmod.current_view = traitmod.traits[0].name
-    #w.Viewer.edit_modified(False)
-    
-def SaveAs():
-    print('traitedit_support.SaveAs')
+
+def AddTrait():
+    print('traitedit_support.AddTrait')
     sys.stdout.flush()
 
-def Valid():
-    print('traitedit_support.Valid')
+def FindAllTraits():
+    print('traitedit_support.FindAllTraits')
     sys.stdout.flush()
 
-def ViewTrait():
-    print('traitedit_support.ViewTrait')
+def HideTrait():
+    print('traitedit_support.HideTrait')
+    sys.stdout.flush()
+
+def ReloadTraitList():
+    print('traitedit_support.ReloadTraitList')
+    sys.stdout.flush()
+
+def ReloadEdit():
+    print('traitedit_support.ReloadEdit')
+    #print(w.style.theme_names())
+    #print(w.style.theme_use())
+    #w.style.theme_use('clam')
+    sys.stdout.flush()
+
+def SaveEdit():
+    print('traitedit_support.SaveEdit')
+    sys.stdout.flush()
+
+def ValidEdit():
+    print('traitedit_support.ValidEdit')
     sys.stdout.flush()
 
 def init(top, gui, *args, **kwargs):
@@ -146,7 +145,7 @@ def select_trait():
         # Viewer
         print("was text modified?", w.Viewer.edit_modified())
         if(w.Viewer.edit_modified()):
-            savebol=messagebox.askyesnocancel("Save view?", "Save changes before changing view?", default=messagebox.CANCEL)
+            savebol=messagebox.askyesnocancel("Save workspace?", "Save changes before changing workspace?", default=messagebox.CANCEL)
             if(savebol==True): save_view()
             elif(savebol==False): pass
             else: return
@@ -177,7 +176,7 @@ def save_view():
     sys.stdout.flush()
     
 def changeview():
-    messagebox.askyesnocancel("Save view?", "Save changes before changing view?", default=messagebox.CANCEL)
+    messagebox.askyesnocancel("Save workspace?", "Save changes before changing workspace?", default=messagebox.CANCEL)
     
 def afterparse():
     if(not (traitmod.traits.N + traitmod.triggers.N)):
@@ -189,6 +188,9 @@ def afterparse():
 if __name__ == '__main__':
     import traitedit
     traitedit.vp_start_gui()
+
+
+
 
 
 
