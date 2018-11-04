@@ -10,7 +10,7 @@
 #    Oct 11, 2018 10:55:51 PM JST  platform: Linux
 #    Oct 28, 2018 07:42:28 PM JST  platform: Windows NT
 
-import traitclass
+import edctclass
 import os
 import sys
 from tkinter.filedialog import askopenfilename
@@ -47,9 +47,9 @@ def OpenFile():
     if(not os.path.isfile(filename)):
         print("ERROR: file not found")
         return
-    traitmod.parse_edct(filename)
-    TraitList.set(traitmod.traits.names)
-    TriggerList.set(traitmod.triggers.names)
+    alcib.parse_edct(filename)
+    TraitList.set(alcib.traits.names)
+    TriggerList.set(alcib.triggers.names)
     w.Viewer.delete('1.0', END)
     afterparse()
     sys.stdout.flush()
@@ -77,9 +77,9 @@ def Quit():
 
 def ReloadFile():
     print('traitedit_support.ReloadFile')
-    traitmod.reload()
-    TraitList.set(traitmod.traits.names)
-    TriggerList.set(traitmod.triggers.names)
+    alcib.reload()
+    TraitList.set(alcib.traits.names)
+    TriggerList.set(alcib.triggers.names)
     w.Viewer.delete('1.0', END)
     afterparse()
     sys.stdout.flush()
@@ -133,15 +133,15 @@ def destroy_window():
     top_level.destroy()
     top_level = None
 
-global traitmod
-traitmod = traitclass.EDCT()
+global alcib
+alcib = edctclass.EDCT()
 
 def select_trait():
     sel = w.TraitListt.curselection()
     print("sel:", sel)
     trat = w.TraitListt.get(sel)
     print("trait:", trat)
-    if(traitmod.current_view):
+    if(alcib.current_view):
         # Viewer
         print("was text modified?", w.Viewer.edit_modified())
         if(w.Viewer.edit_modified()):
@@ -150,9 +150,9 @@ def select_trait():
             elif(savebol==False): pass
             else: return
         w.Viewer.delete('1.0', END)
-    seltrait = traitmod.get_trait(trat)
+    seltrait = alcib.get_trait(trat)
     w.Viewer.insert(INSERT, seltrait.as_string())
-    traitmod.current_view = seltrait.name
+    alcib.current_view = seltrait.name
     w.Viewer.edit_modified(False)
     w.Viewer.edit_reset()
 
@@ -161,13 +161,13 @@ def add_trait():
     print("sel:", sel)
     trat = w.TraitListt.get(sel)
     print("trait:", trat)
-    if(traitmod.current_view):
+    if(alcib.current_view):
         # Viewer
         print("was text modified?", w.Viewer.edit_modified())
         w.Viewer.delete('1.0', END)
-    seltrait = traitmod.get_trait(trat)
+    seltrait = alcib.get_trait(trat)
     w.Viewer.insert(INSERT, seltrait.as_string())
-    traitmod.current_view = seltrait.name
+    alcib.current_view = seltrait.name
     w.Viewer.edit_modified(False)
     w.Viewer.edit_reset()
 
@@ -179,10 +179,10 @@ def changeview():
     messagebox.askyesnocancel("Save workspace?", "Save changes before changing workspace?", default=messagebox.CANCEL)
     
 def afterparse():
-    if(not (traitmod.traits.N + traitmod.triggers.N)):
-        messagebox.showwarning("Parsing completed", "No triggers or traits found\n\n Please check your file\n({:s})".format(os.path.basename(traitmod.edct_file)))
+    if(not (alcib.traits.N + alcib.triggers.N)):
+        messagebox.showwarning("Parsing completed", "No triggers or traits found\n\n Please check your file\n({:s})".format(os.path.basename(alcib.edct_file)))
     else:
-        messagebox.showinfo("Parsing completed", "File: {:s}\nFound:\n  {:d} traits\n  {:d} triggers".format(os.path.basename(traitmod.edct_file), traitmod.traits.N, traitmod.triggers.N))
+        messagebox.showinfo("Parsing completed", "File: {:s}\nFound:\n  {:d} traits\n  {:d} triggers".format(os.path.basename(alcib.edct_file), alcib.traits.N, alcib.triggers.N))
     
 
 if __name__ == '__main__':
