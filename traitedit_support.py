@@ -9,8 +9,10 @@
 #    Oct 08, 2018 10:34:34 PM JST  platform: Windows NT
 #    Oct 11, 2018 10:55:51 PM JST  platform: Linux
 #    Oct 28, 2018 07:42:28 PM JST  platform: Windows NT
+#    Nov 06, 2018 08:30:39 PM JST  platform: Windows NT
 
 import edctclass
+from utils import strlist
 import os
 import sys
 from tkinter.filedialog import askopenfilename
@@ -86,6 +88,7 @@ def ReloadFile():
 
 def AddTrait():
     print('traitedit_support.AddTrait')
+    add_traits(clear=False)
     sys.stdout.flush()
 
 def FindAllTraits():
@@ -102,9 +105,6 @@ def ReloadTraitList():
 
 def ReloadEdit():
     print('traitedit_support.ReloadEdit')
-    #print(w.style.theme_names())
-    #print(w.style.theme_use())
-    #w.style.theme_use('clam')
     sys.stdout.flush()
 
 def SaveEdit():
@@ -115,6 +115,29 @@ def ValidEdit():
     print('traitedit_support.ValidEdit')
     sys.stdout.flush()
 
+def ClearEdit():
+    print('traitedit_support.ClearEdit')
+    print("was text modified?", w.Viewer.edit_modified())
+    if(w.Viewer.edit_modified()):
+        savebol=messagebox.askyesnocancel("Save workspace?", "Save changes before changing workspace?", default=messagebox.CANCEL)
+        if(savebol==True): save_view()
+        elif(savebol==False): pass
+
+    w.Viewer.delete('1.0', END)
+    alcib.current_view = strlist()
+    w.Viewer.edit_modified(False)
+    w.Viewer.edit_reset()
+    
+    sys.stdout.flush()
+
+def ExportEdit():
+    print('traitedit_support.ExportEdit')
+    sys.stdout.flush()
+
+def ImportEdit():
+    print('traitedit_support.ImportEdit')
+    sys.stdout.flush()
+
 def init(top, gui, *args, **kwargs):
     global w, top_level, root
     w = gui
@@ -123,7 +146,7 @@ def init(top, gui, *args, **kwargs):
     
     if sys.platform == "win32":
         w.style.theme_use('vista')
-    w.TraitListt.bind('<Double-1>', lambda x: select_trait())
+    w.TraitListt.bind('<Double-1>', lambda x: add_traits(clear=False))
     w.TraitListt.config(selectmode=EXTENDED)
     w.Viewer.config(undo=True)
 
@@ -136,38 +159,24 @@ def destroy_window():
 global alcib
 alcib = edctclass.EDCT()
 
-def select_trait():
+def add_traits(clear = True):
     sel = w.TraitListt.curselection()
-    print("sel:", sel)
-    trat = w.TraitListt.get(sel)
-    print("trait:", trat)
-    if(alcib.current_view):
-        # Viewer
-        print("was text modified?", w.Viewer.edit_modified())
-        if(w.Viewer.edit_modified()):
-            savebol=messagebox.askyesnocancel("Save workspace?", "Save changes before changing workspace?", default=messagebox.CANCEL)
-            if(savebol==True): save_view()
-            elif(savebol==False): pass
-            else: return
-        w.Viewer.delete('1.0', END)
-    seltrait = alcib.get_trait(trat)
-    w.Viewer.insert(INSERT, seltrait.as_string())
-    alcib.current_view = seltrait.name
-    w.Viewer.edit_modified(False)
-    w.Viewer.edit_reset()
-
-def add_trait():
-    sel = w.TraitListt.curselection()
-    print("sel:", sel)
-    trat = w.TraitListt.get(sel)
-    print("trait:", trat)
-    if(alcib.current_view):
-        # Viewer
-        print("was text modified?", w.Viewer.edit_modified())
-        w.Viewer.delete('1.0', END)
-    seltrait = alcib.get_trait(trat)
-    w.Viewer.insert(INSERT, seltrait.as_string())
-    alcib.current_view = seltrait.name
+    print("selection:", sel)
+    strat = [w.TraitListt.get(s) for s in sel]
+    print("traits:", strat)
+    if(clear):
+        # Clear Workspace
+        ClearEdit()
+    
+    #alcib.current_view = strlist()    
+    for tt in strat:
+        seltrait = alcib.get_trait(tt)
+        if(seltrait in alcib.current_view):
+            print("WARN: Trait {:s} already present".format(seltrait.name))
+            continue
+        w.Viewer.insert(END, seltrait.as_string())
+        alcib.current_view.append(seltrait)
+        
     w.Viewer.edit_modified(False)
     w.Viewer.edit_reset()
 
@@ -188,6 +197,9 @@ def afterparse():
 if __name__ == '__main__':
     import traitedit
     traitedit.vp_start_gui()
+
+
+
 
 
 

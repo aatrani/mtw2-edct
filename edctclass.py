@@ -15,7 +15,7 @@ class EDCT():
         self.Ntot = 0
         self.traits = strlist()
         self.triggers = strlist()
-        self.current_view = None
+        self.current_view = strlist()
         self.edct_file = None
         self.comment_header = ""
         
