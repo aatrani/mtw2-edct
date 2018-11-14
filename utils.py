@@ -20,3 +20,12 @@ class strlist(list):
         list.__init__(self, *args)
         self.names = []
         self.N = len(self.names)
+
+def remove_from_list(list_in, indices):
+    result = []
+    i = 0
+    for j in indices:
+        result += list_in[i:j]
+        i = j + 1
+    result += list_in[i:]
+    return result

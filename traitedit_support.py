@@ -6,7 +6,7 @@
 #    Oct 07, 2018 08:48:37 PM JST  platform: Windows NT
 
 import edctclass
-from utils import strlist
+from utils import strlist, remove_from_list
 import os
 import sys
 from tkinter.filedialog import askopenfilename
@@ -35,12 +35,12 @@ def set_Tk_var():
     global TriggerList
     TriggerList = StringVar()
 
-def OpenFile():
-    print('traitedit_support.OpenFile')
-    filename = askopenfilename()
+def OpenFile(filename=None):
     if(not filename):
-        print("ERROR: please choose a file")
-        return
+        filename = askopenfilename()
+        if(not filename):
+            print("ERROR: please choose a file")
+            return
     if(not os.path.isfile(filename)):
         print("ERROR: file not found")
         return
@@ -92,10 +92,15 @@ def FindAllTraits():
 
 def HideTrait():
     print('traitedit_support.HideTrait')
+    sel = w.TraitListt.curselection()
+    clist = list(w.TraitListt.get(0, END))
+    nlist = remove_from_list(clist, sel)
+    TraitList.set(nlist)
     sys.stdout.flush()
 
 def ReloadTraitList():
     print('traitedit_support.ReloadTraitList')
+    TraitList.set(alcib.traits.names)
     sys.stdout.flush()
 
 def ReloadEdit():
@@ -141,14 +146,18 @@ def init(top, gui, *args, **kwargs):
     
     if sys.platform == "win32":
         w.style.theme_use('vista')
-    w.TraitListt.bind('<Double-1>', lambda x: add_traits(clear=False))
+    w.TraitListt.bind('<Double-1>', lambda x: add_traits(clear=True))
     w.TraitListt.config(selectmode=EXTENDED)
     w.Viewer.config(undo=True)
+    
     TResize = Resizer(w.TraitButtonFrame, w.TraitListt, top)
     TResize.resize()
     EResize = Resizer(w.EditButtonFrame, w.Viewer, top)
     EResize.resize()
 
+    ### OPEN IMMEDIATELY FOR TESTING ###
+    filename = "export_descr_character_traits.txt"
+    OpenFile(filename)
     
 def destroy_window():
     # Function which closes the window.
