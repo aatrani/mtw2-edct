@@ -11,6 +11,7 @@ import os
 import sys
 from tkinter.filedialog import askopenfilename
 from tkinter import messagebox
+from overrides import Resizer
 
 try:
     from Tkinter import *
@@ -35,15 +36,6 @@ def set_Tk_var():
     TriggerList = StringVar()
 
 def OpenFile():
-    wfix(w.TraitSearchEntry)
-    wfix(w.TraitGoToPrev)
-    wfix(w.TraitGoToNext)
-    wfix(w.AddTrait)
-    wfix(w.HideTrait)
-    wfix(w.FindAllTrait)
-    wfix(w.ReloadTraitList)
-    w.TraitListt.place(anchor=N)
-    
     print('traitedit_support.OpenFile')
     filename = askopenfilename()
     if(not filename):
@@ -116,15 +108,6 @@ def SaveEdit():
 
 def ValidEdit():
     print('traitedit_support.ValidEdit')
-    print(w.TraitSearchEntry.place_info())
-    #w.TraitSearchEntry.place_forget()
-    #w.TraitSearchEntry.place(x=5, y=50, height=26, width=162, bordermode='ignore')
-    wfix(w.TraitSearchEntry)
-    print(w.TraitSearchEntry.winfo_x())
-    print(w.TraitSearchEntry.winfo_y())
-    print(w.TraitSearchEntry.winfo_width())
-    print(w.TraitSearchEntry.winfo_height())
-    print(w.TraitSearchEntry.place_info())
     sys.stdout.flush()
 
 def ClearEdit():
@@ -161,7 +144,12 @@ def init(top, gui, *args, **kwargs):
     w.TraitListt.bind('<Double-1>', lambda x: add_traits(clear=False))
     w.TraitListt.config(selectmode=EXTENDED)
     w.Viewer.config(undo=True)
-              
+    TResize = Resizer(w.TraitButtonFrame, w.TraitListt, top)
+    TResize.resize()
+    EResize = Resizer(w.EditButtonFrame, w.Viewer, top)
+    EResize.resize()
+
+    
 def destroy_window():
     # Function which closes the window.
     global top_level
@@ -200,15 +188,6 @@ def afterparse():
         messagebox.showwarning("Parsing completed", "No triggers or traits found\n\n Please check your file\n({:s})".format(os.path.basename(alcib.edct_file)))
     else:
         messagebox.showinfo("Parsing completed", "File: {:s}\nFound:\n  {:d} traits\n  {:d} triggers".format(os.path.basename(alcib.edct_file), alcib.traits.N, alcib.triggers.N))
-
-def wfix(wid):
-    wx=wid.winfo_x()
-    wy=wid.winfo_y()
-    ww=wid.winfo_width()
-    wh=wid.winfo_height()
-    wid.place_forget()
-    print(wx, wy, wh, ww)
-    wid.place(x=wx, y=wy, height=wh, width=ww, bordermode='ignore')
     
 
 if __name__ == '__main__':
