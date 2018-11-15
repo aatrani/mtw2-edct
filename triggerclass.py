@@ -11,9 +11,10 @@ class Trigger():
         self.conditions = []         
         self.affects = []    # required (only in edct), maximum 9
         
-        self.comment_head = ''
+        self.comment_head = ""
         self.comment_dict = {}        
         if(incom): self.comment_dict["Trigger"] = incom
+        self.commflag = "aTrigger"
        
     def parse_line(self, l):
         if(fulcom_re.match(l)):
@@ -81,9 +82,12 @@ class Trigger():
         return base
     
     def as_string(self):
-        base = "Trigger {:s}".format(self.name) + self.comment_dict.get("Trigger", "")  + "\n"
+        base = self.comment_head
+        base = base + "Trigger {:s}".format(self.name) + self.comment_dict.get("Trigger", "")  + "\n"
+        base = base + self.comment_dict.get("aTrigger", "")
         base = base + "  WhenToTest {:s}".format(self.when) + "\n\n"
-        
+        base = base + self.comment_dict.get("aWhenToTest", "")
+
         if(self.conditions):
             base = base + self.conditions[0].as_string(first=True)
             for cond in self.conditions[1:]:

@@ -14,6 +14,7 @@ class Trait():
         self.anti = []
         self.levels = strlist()     # required, min 1 max 9
         
+        self.comment_head = ""
         self.comment_dict = {}
         if(incom): self.comment_dict["Trait"] = incom
         self.commflag = "aTrait"
@@ -119,7 +120,8 @@ class Trait():
         return base
                     
     def as_string(self):
-        base = "Trait {:s}".format(self.name) + self.comment_dict.get("Trait", "") + "\n"
+        base = self.comment_head
+        base = base + "Trait {:s}".format(self.name) + self.comment_dict.get("Trait", "") + "\n"
         base = base + self.comment_dict.get("aTrait", "")
         base = base + "    Characters "+", ".join(self.characters) + self.comment_dict.get("Characters", "") + "\n"
         base = base + self.comment_dict.get("aCharacters", "")

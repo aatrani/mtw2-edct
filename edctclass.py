@@ -2,7 +2,7 @@ import os
 from reprlib import recursive_repr
 from traitclass import Trait, TraitLevel, TraitLevelEffect
 from triggerclass import Trigger, TriggerAffect
-from utils import strlist, fulcom_re, whitel_re, trait_re, trigg_re
+from utils import strlist, fulcom_re, whitel_re, trait_re, trigg_re, closing_re
         
 class EDCT():
     EDCT_fname = "export_descr_character_traits.txt"
@@ -17,7 +17,7 @@ class EDCT():
         self.triggers = strlist()
         self.current_view = strlist()
         self.edct_file = None
-        self.comment_header = ""
+        self.comment_tail = ""
         
     @recursive_repr()
     def __repr__(self):
@@ -35,6 +35,8 @@ class EDCT():
         parseTrait = False
         parseTrigg = False
 
+        buffercom = ""
+        fulcom_as_head = True
         for l in edct:
             self.Ntot+=1
             if(fulcom_re.match(l)):
@@ -44,12 +46,18 @@ class EDCT():
                 self.Nwhite+=1
                 continue
 
-            if((not parseTrait) and (not parseTrigg)):
+            if(fulcom_as_head):
                 if(fulcom_re.match(l)):
                     # add full lines to fulcom
-                    self.comment_header = self.comment_header + l
+                    buffercom = buffercom + l
+                    #self.comment_header = self.comment_header + l
                     continue
-            
+
+            if(closing_re.match(l)):
+                buffercom = buffercom + l
+                fulcom_as_head = True
+                continue
+                
             trait_ma = trait_re.match(l)
             
             if(trait_ma):
@@ -57,6 +65,11 @@ class EDCT():
                 parseTrigg = False
                 self.Ntraits+=1
                 newtrait = Trait(trait_ma.group(1), trait_ma.group(2))
+
+                newtrait.comment_head = buffercom
+                buffercom = ""
+                fulcom_as_head = False
+                
                 self.traits.append(newtrait)
                 continue
                 
@@ -71,6 +84,11 @@ class EDCT():
                 self.Ntriggers+=1
                 #if(self.Ntriggers >1): print(newtrigg)
                 newtrigg = Trigger(trigg_ma.group(1), trigg_ma.group(2))
+
+                newtrigg.comment_head = buffercom
+                buffercom = ""
+                fulcom_as_head = False
+
                 self.triggers.append(newtrigg)
                 continue
                 
@@ -80,8 +98,11 @@ class EDCT():
 
             # if we are here, something is wrong
             print("ERROR: can't parse line\n{:s}".format(l))
-                
-        
+
+        # final comments in after closure of last trigger ;----------
+        if(buffercom):
+            self.comment_tail = buffercom
+            
         self.update_names()
         print("-- Total lines {:d}".format(self.Ntot))
         print("-- White lines skipped: {:d}".format(self.Nwhite))
@@ -181,11 +202,12 @@ class EDCT():
 
     def save(self, fname):
         f = open(fname, "w")
-        f.write(self.comment_header)
         for tt in edcteb2.traits:
             f.write(tt.as_string())
         for tt in edcteb2.triggers:
             f.write(tt.as_string())
+        f.write(self.comment_tail)
+
         f.close()
 
 
