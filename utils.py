@@ -29,3 +29,4 @@ def remove_from_list(list_in, indices):
         i = j + 1
     result += list_in[i:]
     return result
+
