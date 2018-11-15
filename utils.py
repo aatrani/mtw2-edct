@@ -6,7 +6,8 @@ fulcom_re = re.compile('^\s*;.*')
 whitel_re = re.compile('^\s*$')
 trait_re = re.compile("^\s*Trait\s+(\S+)([ \t]*;?.*)") #re.compile("^\s*Trait\s+(\S+)")
 trigg_re = re.compile("^\s*Trigger\s+(\S+)([ \t]*;?.*)")
-    
+closing_re = re.compile("^;-{30,}")
+
 class strlist(list):
     @recursive_repr()
     def __repr__(self):
