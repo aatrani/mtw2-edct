@@ -11,7 +11,7 @@
 ;	Section 4.0 - Faction Specific Traits	- special, faction-specific mechanisms and foreign-language traits					-
 ;	Section 5.0 - Agent Traits				- traits related to agents: diplomats, spies, assassins, admirals					-
 ;	Section 6.0 - Ancillary Traits			- traits related to the acquisition of ancillaries									-
-;	Section 7.0 - Religion Traits			- religion-related traits, temple-based, generated from JMRC¬¥s spreadsheet			-
+;	Section 7.0 - Religion Traits			- religion-related traits, temple-based, generated from JMRC¥s spreadsheet			-
 ;	Section 8.0 - Strabo Traits				- traits that drop historical information message upon conquest						-
 ;	Section 9.0 - Game Mechanics traits		- royal family, loyalty, seasons, biographies, ageing, miscellaneous				-
 ;	Section 10.0 - Orphaned Traits			- traits that were removed, but might be referenced by other files, no triggers		-
@@ -5320,7 +5320,7 @@ Trait BaktriaSogdios
 ;------------------------------------------------------------------------------------
 ; Section 2.9 - Ethnicity Traits - HAYASDAN
 ;------------------------------------------------------------------------------------
-; Foot¬¥s post on Hay noble clans - see here: http://forums.totalwar.org/vb/showthread.php?39860-Hayasdan-Groups&p=1110353#post1110353  - Hayasdan group, p.14, pp. 392
+; Foot¥s post on Hay noble clans - see here: http://forums.totalwar.org/vb/showthread.php?39860-Hayasdan-Groups&p=1110353#post1110353  - Hayasdan group, p.14, pp. 392
 ; TO DO: add levels to show gradual assimilation, add levels to form "council of noble clans"
 ;------------------------------------------
 Trait AzatYervanduni
@@ -6258,7 +6258,7 @@ Trait ImmobileTribesmanOn
         Effect  MovementPoints -200
 
 ;------------------------------------------
-; o Kembrom\n(kemb-r-OM, "Of the Kembrozez")\nThis man is a member of the Kembrozez (possibly ‚ÄúOnes who live along the ‚ÄòRim,‚Äô‚Äù more commonly known as the ‚ÄòCimbri‚Äô), a tribe who are situated in the northern Jutland and known for their ferocity and skill in battle. They are a large, rugged, and warlike people that believe the natural order of nature demands that the strongest should rule. The Kembrozez have good relationships with the Theudonez (Teutons), although both tribes are growing and soon need to find more fertile lands or some other solution for their increasing numbers. The Kembrozez produce men of good fighting quality and this man should be no exception.
+; o Kembrom\n(kemb-r-OM, "Of the Kembrozez")\nThis man is a member of the Kembrozez (possibly ìOnes who live along the ëRim,íî more commonly known as the ëCimbrií), a tribe who are situated in the northern Jutland and known for their ferocity and skill in battle. They are a large, rugged, and warlike people that believe the natural order of nature demands that the strongest should rule. The Kembrozez have good relationships with the Theudonez (Teutons), although both tribes are growing and soon need to find more fertile lands or some other solution for their increasing numbers. The Kembrozez produce men of good fighting quality and this man should be no exception.
 Trait SwebozEthnicT11
     Characters family
 
@@ -6268,7 +6268,7 @@ Trait SwebozEthnicT11
         Threshold 1
 
 ;------------------------------------------
-; o Heriskom\n(cher-isk-OM, "Of the Heriskozez")\nThis man is a member of the Heriskozez (possibly ‚Äú‚ÄòSword-ish‚Äô Ones,‚Äù more commonly known as the ‚ÄòCherusci‚Äô), a tribe living between the German rivers Weser and Elbe. The Heriskozez, who have the Deer/Stag as a tribe totem, are a numerous people, who are known for their honest dealings and diplomatic skill with other tribes. Their inactivity and slow response to the aggressive actions of others have however earned them a reputation for laziness. Whilst some believe this, others less naive, know that they are gathering their forces in order to one day rise up as a mighty power and rally leadership of the Germanic tribes away from the Swebozez. Nevertheless this cunning man will be a good addition to our ranks as war-leader and administrator, but should be watched carefully.
+; o Heriskom\n(cher-isk-OM, "Of the Heriskozez")\nThis man is a member of the Heriskozez (possibly ìëSword-ishí Ones,î more commonly known as the ëCheruscií), a tribe living between the German rivers Weser and Elbe. The Heriskozez, who have the Deer/Stag as a tribe totem, are a numerous people, who are known for their honest dealings and diplomatic skill with other tribes. Their inactivity and slow response to the aggressive actions of others have however earned them a reputation for laziness. Whilst some believe this, others less naive, know that they are gathering their forces in order to one day rise up as a mighty power and rally leadership of the Germanic tribes away from the Swebozez. Nevertheless this cunning man will be a good addition to our ranks as war-leader and administrator, but should be watched carefully.
 Trait SwebozEthnicT12
     Characters family
 
@@ -6278,7 +6278,7 @@ Trait SwebozEthnicT12
         Threshold 1
 
 ;------------------------------------------
-; o Hobukom\n(hov-uk-OM, "Of the Hobukozez")\nThis man is a member of the Hobukozez (possibly ‚ÄúHawks,‚Äù more commonly known as the ‚ÄòChauci‚Äô), a tribe living between the mouths of the German rivers Ems and Elbe. The Hobukozez are a huge tribe that is renowned for their noble character and fair dealings with other tribes. They have never been known to provoke war, nor rob or plunder their neighbors, although they have the power to do so, and so are trusted and highly respected by all. Thus this man is likely to be better suited to administration and management rather than dubious warlike pursuits.
+; o Hobukom\n(hov-uk-OM, "Of the Hobukozez")\nThis man is a member of the Hobukozez (possibly ìHawks,î more commonly known as the ëChaucií), a tribe living between the mouths of the German rivers Ems and Elbe. The Hobukozez are a huge tribe that is renowned for their noble character and fair dealings with other tribes. They have never been known to provoke war, nor rob or plunder their neighbors, although they have the power to do so, and so are trusted and highly respected by all. Thus this man is likely to be better suited to administration and management rather than dubious warlike pursuits.
 Trait SwebozEthnicT13
     Characters family
 
@@ -6290,7 +6290,7 @@ Trait SwebozEthnicT13
         Effect  Piety 2
 
 ;------------------------------------------
-; o Hathinom\n(chath-in-OM, "Of the Hathinez")\nThis man is a member of the Hathinez (possibly ‚ÄúOnes who ‚ÄòBattle,‚Äô‚Äù more commonly known as the ‚ÄòChatti‚Äô), a tribe situated in the dales of the German rivers Eder, Fulda and upper reaches of the Lahn. The Hathinez are extremely warlike and excel in the training, discipline and tactical prowess of their infantry. They believe that humanity is born through blood, and blood must be shed before one can become a true warrior, and again before they pass to the after life. Due to the warlike nature of the tribe, the skill of the war leader is essential. As such, this man is likely exhibit traits that will be best used to lead armies on campaign or raids, rather than left to manage regions, if others are available.
+; o Hathinom\n(chath-in-OM, "Of the Hathinez")\nThis man is a member of the Hathinez (possibly ìOnes who ëBattle,íî more commonly known as the ëChattií), a tribe situated in the dales of the German rivers Eder, Fulda and upper reaches of the Lahn. The Hathinez are extremely warlike and excel in the training, discipline and tactical prowess of their infantry. They believe that humanity is born through blood, and blood must be shed before one can become a true warrior, and again before they pass to the after life. Due to the warlike nature of the tribe, the skill of the war leader is essential. As such, this man is likely exhibit traits that will be best used to lead armies on campaign or raids, rather than left to manage regions, if others are available.
 Trait SwebozEthnicT14
     Characters family
 
@@ -6302,7 +6302,7 @@ Trait SwebozEthnicT14
         Effect  Piety 1
 
 ;------------------------------------------
-; o Somonajonom\n(som-on-a-jon-OM, "Of the Somonajonez")\nThis man is a member of the Somonajonez (possibly ‚ÄúThose who ‚ÄòGather,‚Äô‚Äù more commonly known as the ‚ÄòSemnones‚Äô), a large tribe who occupies the area between the German rivers Elbe and Oder to the Havel. They consider themselves the foremost tribe of the Swebozez, the oldest and most numerous of the alliance. They have come to dominate the politics of the Swebozez and through that influence have come to control almost all religious function amongst the Swebozez. They also exploit their position amongst the tribes to control much of the trade within the territory of the Swebozez. The prosperity this trade brings to the tribe only further increases their prestige amongst their brethren, but also sparks jealousy amongst their neighbors.
+; o Somonajonom\n(som-on-a-jon-OM, "Of the Somonajonez")\nThis man is a member of the Somonajonez (possibly ìThose who ëGather,íî more commonly known as the ëSemnonesí), a large tribe who occupies the area between the German rivers Elbe and Oder to the Havel. They consider themselves the foremost tribe of the Swebozez, the oldest and most numerous of the alliance. They have come to dominate the politics of the Swebozez and through that influence have come to control almost all religious function amongst the Swebozez. They also exploit their position amongst the tribes to control much of the trade within the territory of the Swebozez. The prosperity this trade brings to the tribe only further increases their prestige amongst their brethren, but also sparks jealousy amongst their neighbors.
 Trait SwebozEthnicT21
     Characters family
 
@@ -6314,7 +6314,7 @@ Trait SwebozEthnicT21
         Effect  Piety 2
 
 ;------------------------------------------
-; o Irminungdurom\nThis man is a member of the Irminungoz (more commonly known as the ‚ÄòHerminones‚Äô).
+; o Irminungdurom\nThis man is a member of the Irminungoz (more commonly known as the ëHerminonesí).
 Trait SwebozEthnicT22
     Characters family
 
@@ -6324,7 +6324,7 @@ Trait SwebozEthnicT22
         Threshold 1
 
 ;------------------------------------------
-; o Nurdungom\nThis man is a member of the Nurdungoz (more commonly known as the ‚ÄòNuithones‚Äô).
+; o Nurdungom\nThis man is a member of the Nurdungoz (more commonly known as the ëNuithonesí).
 Trait SwebozEthnicT23
     Characters family
 
@@ -6334,7 +6334,7 @@ Trait SwebozEthnicT23
         Threshold 1
 
 ;------------------------------------------
-; o Ermenthuronom\n(ER-men-thur-on-OM, "Of the Ermenthuronez")\nThis man is a member of the Ermenthuronez (possibly ‚Äú‚ÄòGreatly Rich‚Äô Ones,‚Äù more commonly known as the ‚ÄòHermunduri,‚Äô and later ‚ÄòThuringi‚Äô), one of the major tribes of the Swebozez, and located at the upper reaches of the German river Elbe. The Ermenthuronez are known to be great tradesmen, attracted by Southern riches and having an affinity to go their own ways within the Swebozez. Their interest in expanding trade, even with hostile tribes, sometimes causes tension amongst their allies, while their close contact with other civilizations creates even more suspicion against them. This man will be useful as administrator in a valuable, but peaceful area.
+; o Ermenthuronom\n(ER-men-thur-on-OM, "Of the Ermenthuronez")\nThis man is a member of the Ermenthuronez (possibly ìëGreatly Richí Ones,î more commonly known as the ëHermunduri,í and later ëThuringií), one of the major tribes of the Swebozez, and located at the upper reaches of the German river Elbe. The Ermenthuronez are known to be great tradesmen, attracted by Southern riches and having an affinity to go their own ways within the Swebozez. Their interest in expanding trade, even with hostile tribes, sometimes causes tension amongst their allies, while their close contact with other civilizations creates even more suspicion against them. This man will be useful as administrator in a valuable, but peaceful area.
 Trait SwebozEthnicT24
     Characters family
 
@@ -6346,7 +6346,7 @@ Trait SwebozEthnicT24
         Effect  Piety 1
 
 ;------------------------------------------
-; o Markomannom\n(MARK-o-mann-OM, "Of the Markomannez")\nThis man is a member of the Markomannez (‚ÄúBorder-Men,‚Äù more commonly known as the ‚ÄòMarcomanni‚Äô), a tribe of the Swebozez. The Markomannez are a large warlike tribe that seeks its fortune at the expense of others. If wealth can‚Äôt be sufficiently attained through trade, they have no problem acquiring it through bloodshed. Besides their ambition and skill as brave warriors, they are also known for their impressive handcrafts. Situated on the southeastern borders of the Swebozez, their leaders tend to gain considerable experience through trade and even more through incessant warfare. As such this man is likely to be a great asset, although the Markomannez have a strong affinity towards autonomy and perhaps they will usurp power within the Swebozez in order to create their own kingdom of incorporated tribes some day.
+; o Markomannom\n(MARK-o-mann-OM, "Of the Markomannez")\nThis man is a member of the Markomannez (ìBorder-Men,î more commonly known as the ëMarcomannií), a tribe of the Swebozez. The Markomannez are a large warlike tribe that seeks its fortune at the expense of others. If wealth canít be sufficiently attained through trade, they have no problem acquiring it through bloodshed. Besides their ambition and skill as brave warriors, they are also known for their impressive handcrafts. Situated on the southeastern borders of the Swebozez, their leaders tend to gain considerable experience through trade and even more through incessant warfare. As such this man is likely to be a great asset, although the Markomannez have a strong affinity towards autonomy and perhaps they will usurp power within the Swebozez in order to create their own kingdom of incorporated tribes some day.
 Trait SwebozEthnicT25
     Characters family
 
@@ -6358,7 +6358,7 @@ Trait SwebozEthnicT25
         Effect  Piety 1
 
 ;------------------------------------------
-; o Gautom\n(gaut-OM, "of the Gautozez")\nThis man is a member of the Gautozez (possibly ‚ÄúOnes who 'Pour Out,‚Äô‚Äù more commonly known as the ‚ÄòGauts‚Äô or 'Geats'), a powerful and warlike tribe inhabiting the southeastern edge of modern Sweden, the Swedish island Gotland, and have even spread out to the mouth of the river Weichsel. The Gautozez are a growing force, more and more restless, who need to move out from time to time in order to find more fertile lands. They are pragmatists and tend to integrate defeated yet useful people into their ranks and therefore may one day lose their ethnic integrity. Tensions are already high between the tribesmen of Scandinavia, who begin to call themselves Gautozez, and the Gutonez who first settled on the mainland, having begun to mix with the natives and claiming superior lineage. Nevertheless this man will be a good asset as warrior and raider, although he may have ulterior motives.
+; o Gautom\n(gaut-OM, "of the Gautozez")\nThis man is a member of the Gautozez (possibly ìOnes who 'Pour Out,íî more commonly known as the ëGautsí or 'Geats'), a powerful and warlike tribe inhabiting the southeastern edge of modern Sweden, the Swedish island Gotland, and have even spread out to the mouth of the river Weichsel. The Gautozez are a growing force, more and more restless, who need to move out from time to time in order to find more fertile lands. They are pragmatists and tend to integrate defeated yet useful people into their ranks and therefore may one day lose their ethnic integrity. Tensions are already high between the tribesmen of Scandinavia, who begin to call themselves Gautozez, and the Gutonez who first settled on the mainland, having begun to mix with the natives and claiming superior lineage. Nevertheless this man will be a good asset as warrior and raider, although he may have ulterior motives.
 Trait SwebozEthnicT26
     Characters family
 
@@ -6368,7 +6368,7 @@ Trait SwebozEthnicT26
         Threshold 1
 
 ;------------------------------------------
-; o Swebungom\nThis man is a member of the Swebungoz (more commonly known as the ‚ÄòSvebi‚Äô).
+; o Swebungom\nThis man is a member of the Swebungoz (more commonly known as the ëSvebií).
 Trait SwebozEthnicT31
     Characters family
 
@@ -6378,7 +6378,7 @@ Trait SwebozEthnicT31
         Threshold 1
 
 ;------------------------------------------
-; o Kadom\nThis man is a member of the Kadoz (more commonly known as the ‚ÄòQuadi‚Äô).
+; o Kadom\nThis man is a member of the Kadoz (more commonly known as the ëQuadií).
 Trait SwebozEthnicT32
     Characters family
 
@@ -6388,7 +6388,7 @@ Trait SwebozEthnicT32
         Threshold 1
 
 ;------------------------------------------
-; o Anglom\nThis man is a member of the Angloz (more commonly known as the ‚ÄòAngli‚Äô).
+; o Anglom\nThis man is a member of the Angloz (more commonly known as the ëAnglií).
 Trait SwebozEthnicT33
     Characters family
 
@@ -6398,7 +6398,7 @@ Trait SwebozEthnicT33
         Threshold 1
 
 ;------------------------------------------
-; o Rugjom\n(rug-j-OM, "of the Rugejez")\nThis man is a member of the Rugejez (possibly ‚ÄúOnes who grow ‚ÄòRye,‚Äô‚Äù more commonly known as the ‚ÄòRugi‚Äô), a tribe who like most maritime peoples place a great deal of importance on trade and commerce. They are located on the German island R√ºgen and are currently expanding into the area between the rivers Oder and Weichsel. Whilst the Rugejez try to generate wealth for the tribe, it comes at a cost to security as neighbors and raiders from across the waters seek to pillage and plunder hard earned gains. As such, the tribe has had to learn to defend itself and all who display acts of bravery in these circumstances are praised. This man is likely to exhibit such traits.
+; o Rugjom\n(rug-j-OM, "of the Rugejez")\nThis man is a member of the Rugejez (possibly ìOnes who grow ëRye,íî more commonly known as the ëRugií), a tribe who like most maritime peoples place a great deal of importance on trade and commerce. They are located on the German island R¸gen and are currently expanding into the area between the rivers Oder and Weichsel. Whilst the Rugejez try to generate wealth for the tribe, it comes at a cost to security as neighbors and raiders from across the waters seek to pillage and plunder hard earned gains. As such, the tribe has had to learn to defend itself and all who display acts of bravery in these circumstances are praised. This man is likely to exhibit such traits.
 Trait SwebozEthnicT34
     Characters family
 
@@ -6408,7 +6408,7 @@ Trait SwebozEthnicT34
         Threshold 1
 
 ;------------------------------------------
-; o Wandelom\nThis man is a member of the Wandeloz (more commonly known as the ‚ÄòVandali‚Äô).
+; o Wandelom\nThis man is a member of the Wandeloz (more commonly known as the ëVandalií).
 Trait SwebozEthnicT35
     Characters family
 
@@ -23920,7 +23920,7 @@ Trait Carthage_Previously_Held_Office
         Threshold 1
 
 ;------------------------------------------
-;Trait: ≈°pt. "shafot/suffete"
+;Trait: öpt. "shafot/suffete"
 ; - Eligible_for_spt (1): none
 ; - Office_of_spt (2): +3 influence, +1 law, +2 personal security, +1 authority, -70% movement, +10% trade income, +1 Farming income
 ; - Ex_spt (3): +1 influence
@@ -24026,7 +24026,7 @@ Trait Mshtr
         Effect  MovementPoints 5
 
 ;------------------------------------------
-;Trait: ≈°l≈°m '≈°m 'l hm≈° 'tt. "the 30 men in charge of taxes"
+;Trait: ölöm 'öm 'l hmö 'tt. "the 30 men in charge of taxes"
 ; - Eligible_for_slsm_sm_l_hms_tt (1):  none
 ; - Office_of_slsm_sm_l_hms_tt (2):  +1 influence, +5% tax collection
 Trait slsm_sm_l_hms_tt
@@ -24047,7 +24047,7 @@ Trait slsm_sm_l_hms_tt
         Effect  TaxCollection 5
 
 ;------------------------------------------
-;Trait: mh≈°bm. "accountants/administrators"
+;Trait: mhöbm. "accountants/administrators"
 ; - Eligible_for_mhsbm (1):  none
 ; - Office_of_mhsbm (2):  +1 influence + 5% tax
 Trait Mhsbm
@@ -24068,7 +24068,7 @@ Trait Mhsbm
         Effect  TaxCollection 5
 
 ;------------------------------------------
-;Trait: ≈°ql. "the one who collects shekels"
+;Trait: öql. "the one who collects shekels"
 ; - Eligible_for_sql (1):  none
 ; - Office_of_sql (2):  +10% tax, -3 personal security
 Trait Sql
@@ -24198,7 +24198,7 @@ Trait Rb_mhnt
         Effect  TroopMorale 1
 
 ;------------------------------------------
-;Trait: rb ≈°ny. "2nd general of the army"
+;Trait: rb öny. "2nd general of the army"
 ; - Eligible_for_rb_sny (1):  none
 ; - Office_of_rb_sny (2):  +1 command, +1 morale
 Trait Rb_sny
@@ -24413,7 +24413,7 @@ Trait MalkSaba
         Effect  PersonalSecurity 2
         Effect  Law 1
         Effect  Command 1
-;Mukarib trait to be added as well, will be gained when Malk trait has been gained but only when the federation includes the provinces of Qatab√¢n and Hadramawt.
+;Mukarib trait to be added as well, will be gained when Malk trait has been gained but only when the federation includes the provinces of Qatab‚n and Hadramawt.
 
 ;------------------------------------------------------------------------------------
 ; Section 4.31 - Faction Specific Traits - GANDHARA
@@ -30437,7 +30437,7 @@ Trait SlavePahlavaModel
 ;    Section 4.0 - Faction Specific Triggers    - SLOWLY WORKIN' ON IT; SKHAN 2017                                                        =
 ;    Section 5.0 - Agent Triggers            - traits related to agents: diplomats, spies, assassins, admirals - MOSTLY DONE        =
 ;    Section 6.0 - Ancillary Triggers        - traits related to the acquisition of ancillaries - DONE                            =
-;    Section 7.0 - Religion Triggers            - religion-related traits, generated from JMRC¬¥s spreadsheet - EMPTY                =
+;    Section 7.0 - Religion Triggers            - religion-related traits, generated from JMRC¥s spreadsheet - EMPTY                =
 ;    Section 8.0 - Strabo Triggers            - EMPTY                                                                                =
 ;    Section 9.0 - Game Mechanics Triggers    - royal family, seasons, biographies, aging, miscelaneous    Triggers for 9.1,9.2 DONE
 ;    Section 10.0 - EDCT Trunk                - the left-over from 2012 EDCT, contains unrevised traits and triggers - EMPTY        =

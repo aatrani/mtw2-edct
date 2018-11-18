@@ -1,5 +1,6 @@
 import tkinter as tk
 import tkinter.ttk as ttk
+from math import floor
 
 ######################################################
 ###    GUI overrides for traitedit_support.py      ###
@@ -16,15 +17,27 @@ class Resizer() :
         self.root = root
 
     def resize(self):
-        self.after = self.root.after(10, self.empty_after)
-
-    def empty_after(self):
-        self.root.after(10, self.resize_after)
+        self.after = self.root.after(50, self.empty_after_resize)
+        
+    def empty_after_resize(self):
+        self.root.after(50, self.resize_after)
         
     def resize_after(self):
         self.wfix()
+        self.wgrid_single()
         self.root.after_cancel(self.after)
 
+    def resize_and_grid(self):
+        self.after = self.root.after(50, self.empty_after_grid)
+
+    def empty_after_grid(self):
+        self.root.after(50, self.grid_after)
+        
+    def grid_after(self):
+        self.wfix()
+        self.wgrid_double()
+        self.root.after_cancel(self.after)
+        
     def wfix(self):
         wx=self.ButtFrame.winfo_x()
         wy=self.ButtFrame.winfo_y()
@@ -34,12 +47,57 @@ class Resizer() :
         self.ButtFrame.place_forget()
         self.ButtFrame.config(height=wh, borderwidth=1, relief="flat")
         self.ButtFrame.pack(side="top", fill="x") 
-        self.ButtFrame.pack_propagate(0)
+        #self.ButtFrame.pack_propagate(0)
     
         self.ListFrame.place_forget()
         self.ListFrame.pack(side="bottom", fill="both", expand=True) 
 
+    def wgrid_double(self):
+        ch=self.ButtFrame.winfo_children()
+        for w in ch:
+            w.place_forget()
 
+        #print(ch[5].winfo_x())
+        #print(ch[5].winfo_y())
+        #print(ch[5].winfo_width())
+        #print(ch[5].winfo_height())
+        #print("frame:", self.ButtFrame.winfo_width())
+        # top row
+        ch[0].grid(row=0, column=0, columnspan=2, sticky="w") # find all
+        ch[1].grid(row=0, column=2, columnspan=2, sticky="e") # check case
+        ch[2].grid(row=0, column=30, columnspan=2) # invert
+        ch[3].grid(row=0, column=50, sticky="we") # hide
+        ch[4].grid(row=0, column=60, sticky="we") # reload
+
+        #print(floor(self.ButtFrame.winfo_width()))
+        #ch[5].grid_propagate(0)
+        ch[5].configure(width = 32)
+        #print(ch[5].winfo_width())
+        
+        # bottom row
+        ch[5].grid(row=1, column=0, columnspan=4, sticky="we") # entry
+        ch[6].grid(row=1, column=30) # previous
+        ch[7].grid(row=1, column=31) # next
+        ch[8].grid(row=1, column=50, sticky="we") # add
+        ch[9].grid(row=1, column=60, sticky="we") # delete
+ 
+        self.ButtFrame.columnconfigure(0, weight=3)
+        self.ButtFrame.columnconfigure(2, weight=3)
+        #self.ButtFrame.columnconfigure(2, weight=1)
+        self.ButtFrame.columnconfigure(30, weight=5)
+        self.ButtFrame.columnconfigure(31, weight=5)
+        self.ButtFrame.columnconfigure(50, weight=4)
+        self.ButtFrame.columnconfigure(60, weight=4)
+
+    def wgrid_single(self):
+        ch=self.ButtFrame.winfo_children()
+        for w in ch:
+            w.place_forget()
+
+        for i, w in enumerate(ch):
+            w.grid(row=0, column=i)
+            self.ButtFrame.columnconfigure(i, weight=1)
+ 
 class Tooltip():
     '''
     It creates a tooltip for a given widget as the mouse goes on it.

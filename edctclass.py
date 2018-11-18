@@ -207,7 +207,6 @@ class EDCT():
         for tt in edcteb2.triggers:
             f.write(tt.as_string())
         f.write(self.comment_tail)
-
         f.close()
 
 

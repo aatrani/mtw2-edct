@@ -44,7 +44,7 @@ def set_Tk_var():
 
 def OpenFile(filename=None):
     if(not filename):
-        filename = askopenfilename()
+        filename = askopenfilename(parent=root)
         if(not filename):
             print("ERROR: please choose a file")
             return
@@ -82,7 +82,7 @@ def ReloadFile():
     alcib.reload()
     TraitList.set(alcib.traits.names)
     TriggerList.set(alcib.triggers.names)
-    w.Viewer.delete('1.0', END)
+    ClearEdit()
     afterparse()
     sys.stdout.flush()
 
@@ -193,6 +193,8 @@ def ReloadTraitList():
     
 def ReloadEdit():
     print('traitedit_support.ReloadEdit')
+    TResize = Resizer(w.TraitButtonFrame, w.TraitListt, root)
+    TResize.wgrid_double()
     sys.stdout.flush()
 
 def SaveEdit():
@@ -247,13 +249,13 @@ def init(top, gui, *args, **kwargs):
     w.Viewer.config(undo=True)
 
     traitsearched.trace("w", reload_tregex)
-
     
-    TResize = Resizer(w.TraitButtonFrame, w.TraitListt, top)
-    TResize.resize()
+    TResize = Resizer(w.TraitButtonFrame, w.TraitListt, root)
+    TResize.resize_and_grid()
     EResize = Resizer(w.EditButtonFrame, w.Viewer, top)
     EResize.resize()
 
+    w.TraitCaseSensitive.config(command=reload_tregex)
     #w.TraitSensLabel.config(font=("DejaVu Sans Mono", 7))
     #print(w.menubar.self.TraitSensLabelentryconfig(0))
     Tooltip(w.TraitCaseSensitive, text="Enables case sensitive search.")
@@ -261,6 +263,7 @@ def init(top, gui, *args, **kwargs):
     ### OPEN IMMEDIATELY FOR TESTING ###
     filename = "export_descr_character_traits.txt"
     OpenFile(filename)
+    root.focus_force() # fix for windows not taking focus of entry widget
     
 def destroy_window():
     # Function which closes the window.
@@ -270,9 +273,9 @@ def destroy_window():
 
 def afterparse():
     if(not (alcib.traits.N + alcib.triggers.N)):
-        messagebox.showwarning("Parsing completed", "No triggers or traits found\n\n Please check your file\n({:s})".format(os.path.basename(alcib.edct_file)))
+        messagebox.showwarning("Parsing completed", "No triggers or traits found\n\n Please check your file\n({:s})".format(os.path.basename(alcib.edct_file)), parent=root)
     else:
-        messagebox.showinfo("Parsing completed", "File: {:s}\nFound:\n  {:d} traits\n  {:d} triggers".format(os.path.basename(alcib.edct_file), alcib.traits.N, alcib.triggers.N))
+        messagebox.showinfo("Parsing completed", "File: {:s}\nFound:\n  {:d} traits\n  {:d} triggers".format(os.path.basename(alcib.edct_file), alcib.traits.N, alcib.triggers.N), parent=root)
 
 def reload_tregex(*args):
     global tregex
