@@ -7,6 +7,7 @@
 #    Nov 15, 2018 12:24:43 PM JST  platform: Linux
 #    Nov 15, 2018 02:35:51 PM JST  platform: Linux
 #    Nov 15, 2018 02:59:24 PM JST  platform: Linux
+#    Nov 21, 2018 11:25:53 PM JST  platform: Windows NT
 
 import edctclass
 from utils import strlist, remove_from_list
@@ -31,12 +32,17 @@ except ImportError:
 def set_Tk_var():
     global TraitList
     TraitList = StringVar()
-    global traitsearched
-    traitsearched = StringVar()
     global TriggerList
     TriggerList = StringVar()
+    global traitsearched
+    traitsearched = StringVar()
+    global triggersearched
+    triggersearched = StringVar()
     global TraitCaseSens
     TraitCaseSens = IntVar()
+    global TriggCaseSens
+    TriggCaseSens = StringVar()
+
 
 ######################################################
 ###                 FILE MENU                      ###
@@ -205,6 +211,42 @@ def ReloadTraitList():
     sys.stdout.flush()
 
 ######################################################
+###                TRIGGER BUTTONS                 ###
+######################################################
+
+def FindAllTriggers():
+    print('traitedit_support.FindAllTriggers')
+    sys.stdout.flush()
+
+def TriggGoToNext():
+    print('traitedit_support.TriggGoToNext')
+    sys.stdout.flush()
+
+def TriggGoToPrev():
+    print('traitedit_support.TriggGoToPrev')
+    sys.stdout.flush()    
+
+def InvertTriggerSelection():
+    print('traitedit_support.InvertTriggerSelection')
+    sys.stdout.flush()
+
+def HideTrigger():
+    print('traitedit_support.HideTrigger')
+    sys.stdout.flush()
+
+def AddTrigger():
+    print('traitedit_support.AddTrigger')
+    sys.stdout.flush()
+
+def DeleteTrigger():
+    print('traitedit_support.DeleteTrigger')
+    sys.stdout.flush()
+
+def ReloadTriggerList():
+    print('traitedit_support.ReloadTriggerList')
+    sys.stdout.flush()
+
+######################################################
 ###              WORKSPACE BUTTONS                 ###
 ######################################################
     
@@ -223,8 +265,8 @@ def ValidEdit():
     sys.stdout.flush()
 
 def ClearEdit():
-    print('traitedit_support.ClearEdit')
-    print("was text modified?", w.Viewer.edit_modified())
+    #print('traitedit_support.ClearEdit')
+    #print("was text modified?", w.Viewer.edit_modified())
     if(w.Viewer.edit_modified()):
         savebol=messagebox.askyesnocancel("Save workspace?", "Save changes before changing workspace?", default=messagebox.CANCEL)
         if(savebol==True): SaveEdit()
@@ -249,11 +291,6 @@ def ExportEdit():
         return
     
     exptext = w.Viewer.get("1.0",END)
-
-    #if(os.path.isfile(filename)):
-    #    overbol=messagebox.askokcancel("Overwrite?", "File {:s} already exists. Overwrite?".format(os.path.basename(filename)), default=messagebox.OK)
-    #    if(overbol==False): return
-    #    elif(overbol==True): pass
     
     outf = open(filename, "w")
     outf.write(exptext)
@@ -289,11 +326,13 @@ def init(top, gui, *args, **kwargs):
 
     traitsearched.trace("w", reload_tregex)
     
-    TResize = Resizer(w.TraitButtonFrame, w.TraitListt, root)
-    TResize.resize_double_grid()
+    TTResize = Resizer(w.TraitButtonFrame, w.TraitListt, root)
+    TTResize.resize_double_grid()
     EResize = Resizer(w.EditButtonFrame, w.Viewer, top)
     EResize.resize_single_grid()
-
+    TGResize = Resizer(w.TriggerButtonFrame, w.TriggerListt, root)
+    TGResize.resize_double_grid()
+    
     w.TraitCaseSensitive.config(command=reload_tregex)
 
     ### Menu Button Highlight fix for linux
@@ -311,8 +350,6 @@ def init(top, gui, *args, **kwargs):
     Tooltip(w.TraitGoToNext, text="Find next.")
     Tooltip(w.AddTrait, text="Add selected trait to current workspace.")
     Tooltip(w.DeleteTrait, text="Delete selected traits.")
-
-    
     
     ### OPEN IMMEDIATELY FOR TESTING ###
     filename = "export_descr_character_traits.txt"
@@ -347,6 +384,9 @@ def reload_tregex(*args):
 if __name__ == '__main__':
     import traitedit
     traitedit.vp_start_gui()
+
+
+
 
 
 

@@ -17,10 +17,10 @@ class Resizer() :
         self.root = root
 
     def resize_single_grid(self):
-        self.after = self.root.after(50, self.empty_after_single)
+        self.after = self.root.after_idle(self.empty_after_single)
         
     def empty_after_single(self):
-        self.root.after(50, self.after_single)
+        self.root.after_idle(self.after_single)
         
     def after_single(self):
         self.wfix()
@@ -29,10 +29,10 @@ class Resizer() :
 
 
     def resize_double_grid(self):
-        self.after = self.root.after(50, self.empty_after_double)
+        self.after = self.root.after_idle(self.empty_after_double)
 
     def empty_after_double(self):
-        self.root.after(50, self.after_double)
+        self.root.after_idle(self.after_double)
         
     def after_double(self):
         self.wfix()
