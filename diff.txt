@@ -1,24 +1,4 @@
 30652d30426
-<         Effect Level 10
+< 		Effect Level 10
 30653a30428
 >         Effect  Level 10
-76939d76680
-< Trigger HellenicLeaderBecomesBasileus
-76940a76682
-> Trigger HellenicLeaderBecomesBasileus
-76955d76695
-< Trigger HellenicLeaderIsBasileus
-76956a76697
-> Trigger HellenicLeaderIsBasileus
-76973d76712
-< Trigger HellenicHeirBecomesKleronomos
-76974a76714
-> Trigger HellenicHeirBecomesKleronomos
-76989d76727
-< Trigger HellenicHeirIsKleronomos
-76990a76729
-> Trigger HellenicHeirIsKleronomos
-77007d76744
-< Trigger HellenicHeirCeasesKleronomos
-77008a76746
-> Trigger HellenicHeirCeasesKleronomos

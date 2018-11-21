@@ -16,28 +16,30 @@ class Resizer() :
         self.ListFrame = ListFrame
         self.root = root
 
-    def resize(self):
-        self.after = self.root.after(50, self.empty_after_resize)
+    def resize_single_grid(self):
+        self.after = self.root.after(50, self.empty_after_single)
         
-    def empty_after_resize(self):
-        self.root.after(50, self.resize_after)
+    def empty_after_single(self):
+        self.root.after(50, self.after_single)
         
-    def resize_after(self):
+    def after_single(self):
         self.wfix()
         self.wgrid_single()
         self.root.after_cancel(self.after)
 
-    def resize_and_grid(self):
-        self.after = self.root.after(50, self.empty_after_grid)
 
-    def empty_after_grid(self):
-        self.root.after(50, self.grid_after)
+    def resize_double_grid(self):
+        self.after = self.root.after(50, self.empty_after_double)
+
+    def empty_after_double(self):
+        self.root.after(50, self.after_double)
         
-    def grid_after(self):
+    def after_double(self):
         self.wfix()
         self.wgrid_double()
         self.root.after_cancel(self.after)
-        
+
+    
     def wfix(self):
         wx=self.ButtFrame.winfo_x()
         wy=self.ButtFrame.winfo_y()
@@ -57,47 +59,48 @@ class Resizer() :
         for w in ch:
             w.place_forget()
 
-        #print(ch[5].winfo_x())
-        #print(ch[5].winfo_y())
-        #print(ch[5].winfo_width())
-        #print(ch[5].winfo_height())
-        #print("frame:", self.ButtFrame.winfo_width())
-        # top row
-        ch[0].grid(row=0, column=0, columnspan=2, sticky="w") # find all
-        ch[1].grid(row=0, column=2, columnspan=2, sticky="e") # check case
-        ch[2].grid(row=0, column=30, columnspan=2) # invert
-        ch[3].grid(row=0, column=50, sticky="we") # hide
-        ch[4].grid(row=0, column=60, sticky="we") # reload
-
-        #print(floor(self.ButtFrame.winfo_width()))
-        #ch[5].grid_propagate(0)
-        ch[5].configure(width = 32)
-        #print(ch[5].winfo_width())
+        #self.ButtFrame.grid_propagate(0)
         
-        # bottom row
-        ch[5].grid(row=1, column=0, columnspan=4, sticky="we") # entry
-        ch[6].grid(row=1, column=30) # previous
-        ch[7].grid(row=1, column=31) # next
-        ch[8].grid(row=1, column=50, sticky="we") # add
-        ch[9].grid(row=1, column=60, sticky="we") # delete
- 
-        self.ButtFrame.columnconfigure(0, weight=3)
-        self.ButtFrame.columnconfigure(2, weight=3)
-        #self.ButtFrame.columnconfigure(2, weight=1)
-        self.ButtFrame.columnconfigure(30, weight=5)
-        self.ButtFrame.columnconfigure(31, weight=5)
-        self.ButtFrame.columnconfigure(50, weight=4)
-        self.ButtFrame.columnconfigure(60, weight=4)
+        # top row
+        ch[0].grid(row=0, column=0, columnspan=1, sticky="w") # find all
+        ch[1].grid(row=0, column=1, columnspan=1) # check case
 
+        ch[2].grid(row=0, column=2, columnspan=2, sticky="we") # invert
+
+        ch[3].grid(row=0, column=4, columnspan=1, sticky="e") # hide
+        ch[4].grid(row=0, column=5, columnspan=1, sticky="e") # reload
+
+        # bottom row
+        ch[5].grid(row=1, column=0, columnspan=2, sticky="we") # entry
+        ch[6].grid(row=1, column=2, sticky="we") # previous
+        ch[7].grid(row=1, column=3, sticky="we") # next
+
+        ch[8].grid(row=1, column=4, columnspan=1, sticky="e") # add
+        ch[9].grid(row=1, column=5, columnspan=1, sticky="e") # delete
+        
+        self.ButtFrame.columnconfigure(0, weight=10, uniform="but")
+        self.ButtFrame.columnconfigure(1, weight=10, uniform="but")
+                
+        self.ButtFrame.columnconfigure(2, weight=3,  uniform="but")
+        self.ButtFrame.columnconfigure(3, weight=3,  uniform="but")
+        
+        self.ButtFrame.columnconfigure(4, weight=6,  uniform="but")
+        self.ButtFrame.columnconfigure(5, weight=6,  uniform="but")
+        
     def wgrid_single(self):
         ch=self.ButtFrame.winfo_children()
         for w in ch:
             w.place_forget()
 
         for i, w in enumerate(ch):
-            w.grid(row=0, column=i)
+            w.grid(row=0, column=i, sticky="we")
             self.ButtFrame.columnconfigure(i, weight=1)
- 
+
+def menubar_highlight_linuxfix(menubar):
+    tot = menubar.index("last")
+    for i in range(1, tot+1):
+        menubar.entryconfigure(i, activebackground="#ececec")
+            
 class Tooltip():
     '''
     It creates a tooltip for a given widget as the mouse goes on it.

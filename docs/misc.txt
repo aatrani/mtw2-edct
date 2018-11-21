@@ -1,5 +1,7 @@
-+ All comments preceeding Trait/Trigger entry are associated with the previous Trait/Trigger
++ All comments after the Trait/Trigger closure (;----------) are associated with the next Trait/Trigger. If there is no Trait/Trigger, they will be put at the end of the document
 
 + To compare files:
      	     diff -w -E -b -B -t --ignore-all-space --strip-trailing-cr   --tabsize=4 export_descr_character_traits.txt test.txt  > diff.txt
 
+	     
+	     diff   -B  --ignore-all-space --strip-trailing-cr   --tabsize=4 export_descr_character_traits.txt test.txt  > diff.txt

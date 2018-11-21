@@ -14,7 +14,7 @@ import os
 import sys
 from tkinter.filedialog import askopenfilename
 from tkinter import messagebox
-from overrides import Resizer, Tooltip
+from overrides import Resizer, Tooltip, menubar_highlight_linuxfix
 
 try:
     from Tkinter import *
@@ -90,28 +90,6 @@ def ReloadFile():
 ###                  TRAIT BUTTONS                 ###
 ######################################################
     
-def AddTrait(clear=False):
-    sel = w.TraitListt.curselection()
-    print("selection:", sel)
-    strat = [w.TraitListt.get(s) for s in sel]
-    print("traits:", strat)
-    if(clear):
-        # Clear Workspace
-        ClearEdit()
-    
-    #alcib.current_view = strlist()    
-    for tt in strat:
-        seltrait = alcib.get_trait(tt)
-        if(seltrait in alcib.current_view):
-            print("WARN: Trait {:s} already present".format(seltrait.name))
-            continue
-        w.Viewer.insert(END, seltrait.as_string())
-        alcib.current_view.append(seltrait)
-        
-    w.Viewer.edit_modified(False)
-    w.Viewer.edit_reset()
-    sys.stdout.flush()
-
 def FindAllTraits():
     if(not tregex):
         return
@@ -178,9 +156,48 @@ def HideTrait():
     nlist = remove_from_list(clist, sel)
     TraitList.set(nlist)
     sys.stdout.flush()
+
+def AddTrait(clear=False):
+    sel = w.TraitListt.curselection()
+    #print("selection:", sel)
+    strat = [w.TraitListt.get(s) for s in sel]
+    #print("traits:", strat)
+    if(clear):
+        # Clear Workspace
+        ClearEdit()
+    
+    #alcib.current_view = strlist()    
+    for tt in strat:
+        seltrait = alcib.get_trait(tt)
+        if(seltrait in alcib.current_view):
+            print("WARN: Trait {:s} already present".format(seltrait.name))
+            continue
+        w.Viewer.insert(END, seltrait.as_string())
+        alcib.current_view.append(seltrait)
+        
+    w.Viewer.edit_modified(False)
+    w.Viewer.edit_reset()
+    sys.stdout.flush()
     
 def DeleteTrait():
-    print('traitedit_support.DeleteTrait')
+    sel = w.TraitListt.curselection()
+    strat = [w.TraitListt.get(s) for s in sel]
+    if(len(sel)>1): ent = "traits"
+    elif(len(sel)==1): ent = "trait"
+    else: return
+    tlist = ""
+    for t in strat:
+        tlist = tlist + t + "\n"
+    
+    delebol=messagebox.askokcancel("Delete the following {:s}?".format(ent), "{:s}".format(tlist), default=messagebox.CANCEL)
+
+    if(delebol==False): return
+    elif(delebol==True): pass
+
+    for tt in strat:
+        alcib.delete_trait(tt)
+
+    ReloadTraitList()
     sys.stdout.flush()
 
 def ReloadTraitList():
@@ -211,8 +228,9 @@ def ClearEdit():
     if(w.Viewer.edit_modified()):
         savebol=messagebox.askyesnocancel("Save workspace?", "Save changes before changing workspace?", default=messagebox.CANCEL)
         if(savebol==True): SaveEdit()
+        elif(savebol==None): return
         elif(savebol==False): pass
-
+        
     w.Viewer.delete('1.0', END)
     alcib.current_view = strlist()
     w.Viewer.edit_modified(False)
@@ -251,15 +269,30 @@ def init(top, gui, *args, **kwargs):
     traitsearched.trace("w", reload_tregex)
     
     TResize = Resizer(w.TraitButtonFrame, w.TraitListt, root)
-    TResize.resize_and_grid()
+    TResize.resize_double_grid()
     EResize = Resizer(w.EditButtonFrame, w.Viewer, top)
-    EResize.resize()
+    EResize.resize_single_grid()
 
     w.TraitCaseSensitive.config(command=reload_tregex)
-    #w.TraitSensLabel.config(font=("DejaVu Sans Mono", 7))
-    #print(w.menubar.self.TraitSensLabelentryconfig(0))
-    Tooltip(w.TraitCaseSensitive, text="Enables case sensitive search.")
 
+    ### Menu Button Highlight fix for linux
+    if sys.platform.startswith("linux"):
+        menubar_highlight_linuxfix(w.menubar)
+
+    ### TOOLTIPS ###
+    Tooltip(w.TraitCaseSensitive, text="Enables case sensitive search.")
+    Tooltip(w.FindAllTrait, text="Selects all traits with matching pattern.")
+    Tooltip(w.InvertTraitSelection, text="Invert the current selection.")
+    Tooltip(w.HideTrait, text="Hides selected traits from the list.")
+    Tooltip(w.ReloadTraitList, text="Reloads the trait list.")
+    Tooltip(w.TraitSearchEntry, text="Text or regex pattern to search for.")
+    Tooltip(w.TraitGoToPrev, text="Find previous.")
+    Tooltip(w.TraitGoToNext, text="Find next.")
+    Tooltip(w.AddTrait, text="Add selected trait to current workspace.")
+    Tooltip(w.DeleteTrait, text="Delete selected traits.")
+
+    
+    
     ### OPEN IMMEDIATELY FOR TESTING ###
     filename = "export_descr_character_traits.txt"
     OpenFile(filename)

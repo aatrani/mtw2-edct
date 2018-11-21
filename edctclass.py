@@ -26,24 +26,34 @@ class EDCT():
     def update_names(self):
         self.traits.update_names()
         self.triggers.update_names()
-        
+
+    ###########################################################################
+    ###                            Input / Output                           ###
+    ###########################################################################
+
     def parse_edct(self, folder):
         self.__init__()
-        
+                
         self.edct_file = folder
         edct = open(folder, "r",   encoding="utf8")
+
+        self.parse_buffer(edct, edctclass=self)
+
+        edct.close()
+        
+    def parse_buffer(self, txtbuffer, edctclass):
         parseTrait = False
         parseTrigg = False
 
         buffercom = ""
         fulcom_as_head = True
-        for l in edct:
-            self.Ntot+=1
+        for l in txtbuffer:
+            edctclass.Ntot+=1
             if(fulcom_re.match(l)):
-                self.Nfulcom+=1
+                edctclass.Nfulcom+=1
             if(whitel_re.match(l)):
                 # skip whitelines
-                self.Nwhite+=1
+                edctclass.Nwhite+=1
                 continue
 
             if(fulcom_as_head):
@@ -63,14 +73,14 @@ class EDCT():
             if(trait_ma):
                 parseTrait = True
                 parseTrigg = False
-                self.Ntraits+=1
+                edctclass.Ntraits+=1
                 newtrait = Trait(trait_ma.group(1), trait_ma.group(2))
 
                 newtrait.comment_head = buffercom
                 buffercom = ""
                 fulcom_as_head = False
                 
-                self.traits.append(newtrait)
+                edctclass.traits.append(newtrait)
                 continue
                 
             if(parseTrait):
@@ -81,7 +91,7 @@ class EDCT():
             if(trigg_ma):
                 parseTrait = False
                 parseTrigg = True
-                self.Ntriggers+=1
+                edctclass.Ntriggers+=1
                 #if(self.Ntriggers >1): print(newtrigg)
                 newtrigg = Trigger(trigg_ma.group(1), trigg_ma.group(2))
 
@@ -89,7 +99,7 @@ class EDCT():
                 buffercom = ""
                 fulcom_as_head = False
 
-                self.triggers.append(newtrigg)
+                edctclass.triggers.append(newtrigg)
                 continue
                 
             if(parseTrigg):
@@ -101,15 +111,32 @@ class EDCT():
 
         # final comments in after closure of last trigger ;----------
         if(buffercom):
-            self.comment_tail = buffercom
+            edctclass.comment_tail = buffercom
             
-        self.update_names()
-        print("-- Total lines {:d}".format(self.Ntot))
-        print("-- White lines skipped: {:d}".format(self.Nwhite))
-        print("-- Full line comments found: {:d}".format(self.Nfulcom))
-        print("-- Traits recorded: {:d}".format(self.Ntraits))
-        print("-- Triggers recorded: {:d}".format(self.Ntriggers))
-        edct.close()
+        edctclass.update_names()
+        print("-- Total lines {:d}".format(edctclass.Ntot))
+        print("-- White lines skipped: {:d}".format(edctclass.Nwhite))
+        print("-- Full line comments found: {:d}".format(edctclass.Nfulcom))
+        print("-- Traits recorded: {:d}".format(edctclass.Ntraits))
+        print("-- Triggers recorded: {:d}".format(edctclass.Ntriggers)) 
+        
+    def reload(self):
+        if(not self.edct_file):
+            print("ERROR: file not specified")
+            return
+        if(not os.path.isfile(self.edct_file)):
+            print("ERROR: file not found")
+            return
+        self.parse_edct(self.edct_file)
+
+    def save(self, fname):
+        f = open(fname, "w")
+        for tt in edcteb2.traits:
+            f.write(tt.as_string())
+        for tt in edcteb2.triggers:
+            f.write(tt.as_string())
+        f.write(self.comment_tail)
+        f.close()
     
     ###########################################################################
     ###                                 Filters                             ###
@@ -181,7 +208,7 @@ class EDCT():
         return affected
     
     ###########################################################################
-    ###                            END  Filters                             ###
+    ###                              Operations                             ###
     ###########################################################################
     
     def get_trait(self, name):
@@ -191,25 +218,19 @@ class EDCT():
         except ValueError:
             print("ERROR: not present")
 
-    def reload(self):
-        if(not self.edct_file):
-            print("ERROR: file not specified")
-            return
-        if(not os.path.isfile(self.edct_file)):
-            print("ERROR: file not found")
-            return
-        self.parse_edct(self.edct_file)
+    def add_trait(self, trait):
+        pass
 
-    def save(self, fname):
-        f = open(fname, "w")
-        for tt in edcteb2.traits:
-            f.write(tt.as_string())
-        for tt in edcteb2.triggers:
-            f.write(tt.as_string())
-        f.write(self.comment_tail)
-        f.close()
+    def delete_trait(self, name):
+        try:
+            it = self.traits.names.index(name)
+            self.traits.pop(it)
+            self.update_names()
+            
+        except ValueError:
+            print("ERROR: not present")
 
-
+    
 
 if __name__ == "__main__":
     edcteb2 = EDCT()
