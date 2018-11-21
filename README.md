@@ -23,6 +23,10 @@
 - [ ] Show comments in workspace
 - [ ] Show keybindings
 - [ ] Validate before exporting
+- [ ] Lookup table / automatic sobstitution for regions ids
+
+### Other features
+- [ ] Search function in workspace
 
 ### Keybindings
 - Ctrl+MouseScroll: change font in workspace
