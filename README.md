@@ -3,6 +3,7 @@
 ### Filters
 - [x] Traits and Triggers affected by specific Trait
 - [x] Traits and Triggers affecting a specific Trait
+- [x] Trait affected by specific Trigger
 - [ ] Orphaned Traits
 - [ ] Traits/Triggers having a specific attribute:
      - Hidden
@@ -20,4 +21,10 @@
 
 ### Options
 - [ ] Show comments in workspace
-- [ ] forgot
+- [ ] Show keybindings
+- [ ] Validate before exporting
+
+### Keybindings
+- Ctrl+MouseScroll: change font in workspace
+- Double click on Trait/Trigger: clear workspace and add selected
+
