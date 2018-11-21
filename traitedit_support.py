@@ -12,7 +12,7 @@ import edctclass
 from utils import strlist, remove_from_list
 import os
 import sys
-from tkinter.filedialog import askopenfilename
+from tkinter.filedialog import askopenfilename, asksaveasfilename
 from tkinter import messagebox
 from overrides import Resizer, Tooltip, menubar_highlight_linuxfix
 
@@ -240,6 +240,27 @@ def ClearEdit():
 
 def ExportEdit():
     print('traitedit_support.ExportEdit')
+    ValidateBeforeExport=False
+    if(ValidateBeforeExport):
+        ValidEdit()
+    filename = asksaveasfilename(parent=root)
+    if(not filename):
+        print("ERROR: please choose a file")
+        return
+    
+    exptext = w.Viewer.get("1.0",END)
+
+    #if(os.path.isfile(filename)):
+    #    overbol=messagebox.askokcancel("Overwrite?", "File {:s} already exists. Overwrite?".format(os.path.basename(filename)), default=messagebox.OK)
+    #    if(overbol==False): return
+    #    elif(overbol==True): pass
+    
+    outf = open(filename, "w")
+    outf.write(exptext)
+    outf.close()
+
+    messagebox.showinfo("Workspace exported", "Current workspace successfully exported to\n{:s}".format(filename), parent=root)
+    
     sys.stdout.flush()
 
 def ImportEdit():
