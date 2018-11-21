@@ -3,7 +3,7 @@
 ### Filters
 - [x] Traits and Triggers affected by specific Trait
 - [x] Traits and Triggers affecting a specific Trait
-- [x] Trait affected by specific Trigger
+- [x] Traits affected by specific Trigger
 - [ ] Orphaned Traits
 - [ ] Traits/Triggers having a specific attribute:
      - Hidden
