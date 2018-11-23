@@ -70,6 +70,21 @@ def SaveFile():
 
 def SaveFileAs():
     print('traitedit_support.SaveFileAs')
+    UnsavedChanges = False #TODO
+    if(UnsavedChanges):
+        savebol=messagebox.askokcancel("Unsaved changes", "You have unsaved changes in the workspace. Do you want to validate and save them, before saving to file?", default=messagebox.YES)
+        if(savebol==True): SaveEdit()
+        elif(delebol==True): pass
+
+    filename = asksaveasfilename(parent=root)
+    if(not filename):
+        print("ERROR: please choose a file")
+        return
+    
+    alcib.save(filename)
+
+    messagebox.showinfo("File saved", "Traits and triggers saved to to\n{:s}".format(filename), parent=root)
+    
     sys.stdout.flush()
 
 def FilterWin():
@@ -196,7 +211,6 @@ def DeleteTrait():
         tlist = tlist + t + "\n"
     
     delebol=messagebox.askokcancel("Delete the following {:s}?".format(ent), "{:s}".format(tlist), default=messagebox.CANCEL)
-
     if(delebol==False): return
     elif(delebol==True): pass
 
@@ -282,7 +296,7 @@ def ClearEdit():
 
 def ExportEdit():
     print('traitedit_support.ExportEdit')
-    ValidateBeforeExport=False
+    ValidateBeforeExport=False #TODO
     if(ValidateBeforeExport):
         ValidEdit()
     filename = asksaveasfilename(parent=root)

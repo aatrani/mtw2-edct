@@ -35,7 +35,7 @@ class EDCT():
         self.__init__()
                 
         self.edct_file = folder
-        edct = open(folder, "r",   encoding="utf8")
+        edct = open(folder, "r", encoding="utf8")
 
         self.parse_buffer(edct, edctclass=self)
 
@@ -49,6 +49,7 @@ class EDCT():
         fulcom_as_head = True
         for l in txtbuffer:
             edctclass.Ntot+=1
+
             if(fulcom_re.match(l)):
                 edctclass.Nfulcom+=1
             if(whitel_re.match(l)):
@@ -130,10 +131,10 @@ class EDCT():
         self.parse_edct(self.edct_file)
 
     def save(self, fname):
-        f = open(fname, "w")
-        for tt in edcteb2.traits:
+        f = open(fname, "w", encoding="utf8")
+        for tt in self.traits:
             f.write(tt.as_string())
-        for tt in edcteb2.triggers:
+        for tt in self.triggers:
             f.write(tt.as_string())
         f.write(self.comment_tail)
         f.close()
