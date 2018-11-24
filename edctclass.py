@@ -37,24 +37,24 @@ class EDCT():
         self.edct_file = folder
         edct = open(folder, "r", encoding="utf8")
 
-        self.parse_buffer(edct, edctclass=self)
+        self.parse_buffer(edct)
 
         edct.close()
         
-    def parse_buffer(self, txtbuffer, edctclass):
+    def parse_buffer(self, txtbuffer):
         parseTrait = False
         parseTrigg = False
 
         buffercom = ""
         fulcom_as_head = True
         for l in txtbuffer:
-            edctclass.Ntot+=1
+            self.Ntot+=1
 
             if(fulcom_re.match(l)):
-                edctclass.Nfulcom+=1
+                self.Nfulcom+=1
             if(whitel_re.match(l)):
                 # skip whitelines
-                edctclass.Nwhite+=1
+                self.Nwhite+=1
                 continue
 
             if(fulcom_as_head):
@@ -74,14 +74,14 @@ class EDCT():
             if(trait_ma):
                 parseTrait = True
                 parseTrigg = False
-                edctclass.Ntraits+=1
+                self.Ntraits+=1
                 newtrait = Trait(trait_ma.group(1), trait_ma.group(2))
 
                 newtrait.comment_head = buffercom
                 buffercom = ""
                 fulcom_as_head = False
                 
-                edctclass.traits.append(newtrait)
+                self.traits.append(newtrait)
                 continue
                 
             if(parseTrait):
@@ -92,7 +92,7 @@ class EDCT():
             if(trigg_ma):
                 parseTrait = False
                 parseTrigg = True
-                edctclass.Ntriggers+=1
+                self.Ntriggers+=1
                 #if(self.Ntriggers >1): print(newtrigg)
                 newtrigg = Trigger(trigg_ma.group(1), trigg_ma.group(2))
 
@@ -100,7 +100,7 @@ class EDCT():
                 buffercom = ""
                 fulcom_as_head = False
 
-                edctclass.triggers.append(newtrigg)
+                self.triggers.append(newtrigg)
                 continue
                 
             if(parseTrigg):
@@ -112,14 +112,14 @@ class EDCT():
 
         # final comments in after closure of last trigger ;----------
         if(buffercom):
-            edctclass.comment_tail = buffercom
+            self.comment_tail = buffercom
             
-        edctclass.update_names()
-        print("-- Total lines {:d}".format(edctclass.Ntot))
-        print("-- White lines skipped: {:d}".format(edctclass.Nwhite))
-        print("-- Full line comments found: {:d}".format(edctclass.Nfulcom))
-        print("-- Traits recorded: {:d}".format(edctclass.Ntraits))
-        print("-- Triggers recorded: {:d}".format(edctclass.Ntriggers)) 
+        self.update_names()
+        print("-- Total lines {:d}".format(self.Ntot))
+        print("-- White lines skipped: {:d}".format(self.Nwhite))
+        print("-- Full line comments found: {:d}".format(self.Nfulcom))
+        print("-- Traits recorded: {:d}".format(self.Ntraits))
+        print("-- Triggers recorded: {:d}".format(self.Ntriggers)) 
         
     def reload(self):
         if(not self.edct_file):

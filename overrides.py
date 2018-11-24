@@ -1,6 +1,7 @@
 import tkinter as tk
 import tkinter.ttk as ttk
-from math import floor
+from tkinter import font
+import sys
 
 ######################################################
 ###    GUI overrides for traitedit_support.py      ###
@@ -10,7 +11,7 @@ from math import floor
 ######################################################
 ######################################################
 
-class Resizer() :
+class Resizer:
     def __init__(self, ButtonFrame, ListFrame, root):
         self.ButtFrame = ButtonFrame
         self.ListFrame = ListFrame
@@ -100,8 +101,41 @@ def menubar_highlight_linuxfix(menubar):
     tot = menubar.index("last")
     for i in range(1, tot+1):
         menubar.entryconfigure(i, activebackground="#ececec")
-            
-class Tooltip():
+
+class FontScroll:
+    def __init__(self, TextWid):
+        self.TextWid = TextWid
+        self.font = font.Font(family='Courier New', size=10, weight="normal")
+
+    def increase(self):
+        ii=int(self.font.cget("size"))
+        ii+=1
+        ii = min(ii, 50)
+        #print(ii)
+        self.font.configure(size=ii)
+
+    def decrease(self):
+        ii=int(self.font.cget("size"))
+        ii-=1
+        ii = max(ii, 2)
+        #print(ii)
+        self.font.configure(size=ii)
+        
+    def on_mousewheel(self, event):
+        ca = event.delta/120
+        if(ca>0): self.increase(self.font)
+        elif(ca<0): self.decrease(self.font)
+        
+    def set(self):
+        self.TextWid.config(font=self.font)
+        if(sys.platform.startswith("linux")):
+            self.TextWid.bind('<Control-Button-4>', lambda x: self.increase())
+            self.TextWid.bind('<Control-Button-5>', lambda x: self.decrease())
+        elif(sys.platform=="win32"):
+            self.TextWid.bind('<Control-MouseWheel>', lambda event: on_mousewheel(event))
+    
+        
+class Tooltip:
     '''
     It creates a tooltip for a given widget as the mouse goes on it.
 

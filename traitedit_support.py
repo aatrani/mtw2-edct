@@ -15,7 +15,7 @@ import os
 import sys
 from tkinter.filedialog import askopenfilename, asksaveasfilename
 from tkinter import messagebox
-from overrides import Resizer, Tooltip, menubar_highlight_linuxfix
+from overrides import Resizer, Tooltip, FontScroll, menubar_highlight_linuxfix
 
 try:
     from Tkinter import *
@@ -61,34 +61,34 @@ def OpenFile(filename=None):
     TraitList.set(alcib.traits.names)
     TriggerList.set(alcib.triggers.names)
     w.Viewer.delete('1.0', END)
+    root.title(alcib.edct_file)
     afterparse()
+    #w.menubar.entryconfigure(3, state=DISABLED)    
     sys.stdout.flush()
 
 def SaveFile():
-    print('traitedit_support.SaveFile')
+    SaveFileAs(filename=alcib.edct_file)
     sys.stdout.flush()
 
-def SaveFileAs():
-    print('traitedit_support.SaveFileAs')
+def SaveFileAs(filename=None):
     UnsavedChanges = False #TODO
     if(UnsavedChanges):
         savebol=messagebox.askokcancel("Unsaved changes", "You have unsaved changes in the workspace. Do you want to validate and save them, before saving to file?", default=messagebox.YES)
         if(savebol==True): SaveEdit()
         elif(delebol==True): pass
 
-    filename = asksaveasfilename(parent=root)
     if(not filename):
-        print("ERROR: please choose a file")
-        return
+        filename = asksaveasfilename(parent=root)
+        if(not filename):
+            print("ERROR: please choose a file")
+            return
     
     alcib.save(filename)
-
-    messagebox.showinfo("File saved", "Traits and triggers saved to to\n{:s}".format(filename), parent=root)
+    alcib.edct_file = filename
+    root.title(alcib.edct_file)
     
-    sys.stdout.flush()
-
-def FilterWin():
-    print('traitedit_support.FilterWin')
+    messagebox.showinfo("File saved", "Traits and triggers saved to to\n{:s}".format(filename), parent=root)
+    #w.menubar.entryconfigure(3, state=DISABLED)
     sys.stdout.flush()
 
 def ValidateFile():
@@ -107,6 +107,10 @@ def ReloadFile():
     afterparse()
     sys.stdout.flush()
 
+def FilterWin():
+    print('traitedit_support.FilterWin')
+    sys.stdout.flush()
+    
 ######################################################
 ###                  TRAIT BUTTONS                 ###
 ######################################################
@@ -218,6 +222,8 @@ def DeleteTrait():
         alcib.delete_trait(tt)
 
     ReloadTraitList()
+    
+    #w.menubar.entryconfigure(3, state=NORMAL)
     sys.stdout.flush()
 
 def ReloadTraitList():
@@ -272,6 +278,8 @@ def ReloadEdit():
 
 def SaveEdit():
     print('traitedit_support.SaveEdit')
+
+    #w.menubar.entryconfigure(3, state=NORMAL)
     sys.stdout.flush()
 
 def ValidEdit():
@@ -353,6 +361,11 @@ def init(top, gui, *args, **kwargs):
     if sys.platform.startswith("linux"):
         menubar_highlight_linuxfix(w.menubar)
 
+    ### FONT SIZE SCROLL ###
+    scroller = FontScroll(w.Viewer)
+    scroller.set()
+    w.Viewer.config(wrap="char")
+    
     ### TOOLTIPS ###
     Tooltip(w.TraitCaseSensitive, text="Enables case sensitive search.")
     Tooltip(w.FindAllTrait, text="Selects all traits with matching pattern.")
@@ -398,35 +411,3 @@ def reload_tregex(*args):
 if __name__ == '__main__':
     import traitedit
     traitedit.vp_start_gui()
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
