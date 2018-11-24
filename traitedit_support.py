@@ -13,6 +13,7 @@ import edctclass
 from utils import strlist, remove_from_list
 import os
 import sys
+import io
 from tkinter.filedialog import askopenfilename, asksaveasfilename
 from tkinter import messagebox
 from overrides import Resizer, Tooltip, FontScroll, menubar_highlight_linuxfix
@@ -191,17 +192,24 @@ def AddTrait(clear=False):
         # Clear Workspace
         ClearEdit()
     
-    #alcib.current_view = strlist()    
+    #alcib.current_view = strlist()
+    with io.StringIO(w.Viewer.get("1.0",END)) as text:
+        current_trait, _ = alcib.quicksearch(text)
+    already = []
     for tt in strat:
         seltrait = alcib.get_trait(tt)
-        if(seltrait in alcib.current_view):
+        if(seltrait.name in current_trait):
+            already.append(seltrait.name)
             print("WARN: Trait {:s} already present".format(seltrait.name))
             continue
         w.Viewer.insert(END, seltrait.as_string())
-        alcib.current_view.append(seltrait)
-        
+        #alcib.current_view.append(seltrait)
+    
     w.Viewer.edit_modified(False)
     w.Viewer.edit_reset()
+    if(already):
+        messagebox.showwarning("Already in workspace", "The following traits were not added, since they were found in the current workspace:\n  "+"  \n".join(already), parent=root)
+
     sys.stdout.flush()
     
 def DeleteTrait():
@@ -272,8 +280,10 @@ def ReloadTriggerList():
     
 def ReloadEdit():
     print('traitedit_support.ReloadEdit')
-    TResize = Resizer(w.TraitButtonFrame, w.TraitListt, root)
-    TResize.wgrid_double()
+    print(w.EditPane.winfo_width())
+    print(w.TraitPane.winfo_width())
+    print(w.TriggerPane.winfo_width())
+    #w.EditPane.config(width=900)
     sys.stdout.flush()
 
 def SaveEdit():
@@ -296,7 +306,7 @@ def ClearEdit():
         elif(savebol==False): pass
         
     w.Viewer.delete('1.0', END)
-    alcib.current_view = strlist()
+    #alcib.current_view = strlist()
     w.Viewer.edit_modified(False)
     w.Viewer.edit_reset()
     
@@ -346,8 +356,12 @@ def init(top, gui, *args, **kwargs):
     w.TraitListt.config(selectmode=EXTENDED, activestyle=UNDERLINE)
     w.Viewer.config(undo=True)
 
+    # Regex loading
     traitsearched.trace("w", reload_tregex)
-    
+    w.TraitCaseSensitive.config(command=reload_tregex)
+
+
+    ### Resizing menus
     TTResize = Resizer(w.TraitButtonFrame, w.TraitListt, root)
     TTResize.resize_double_grid()
     EResize = Resizer(w.EditButtonFrame, w.Viewer, top)
@@ -355,8 +369,14 @@ def init(top, gui, *args, **kwargs):
     TGResize = Resizer(w.TriggerButtonFrame, w.TriggerListt, root)
     TGResize.resize_double_grid()
     
-    w.TraitCaseSensitive.config(command=reload_tregex)
-
+    ### Fixing side panes
+    w.PaneWin.forget(w.TraitPane)
+    w.PaneWin.forget(w.EditPane)
+    w.PaneWin.forget(w.TriggerPane)
+    w.PaneWin.add(w.TraitPane, weight=0)
+    w.PaneWin.add(w.EditPane, weight=1)
+    w.PaneWin.add(w.TriggerPane, weight=0)
+    
     ### Menu Button Highlight fix for linux
     if sys.platform.startswith("linux"):
         menubar_highlight_linuxfix(w.menubar)

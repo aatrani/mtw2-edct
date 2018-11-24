@@ -15,7 +15,6 @@ class EDCT():
         self.Ntot = 0
         self.traits = strlist()
         self.triggers = strlist()
-        self.current_view = strlist()
         self.edct_file = None
         self.comment_tail = ""
         
@@ -120,7 +119,21 @@ class EDCT():
         print("-- Full line comments found: {:d}".format(self.Nfulcom))
         print("-- Traits recorded: {:d}".format(self.Ntraits))
         print("-- Triggers recorded: {:d}".format(self.Ntriggers)) 
-        
+
+    def quicksearch(self, txtbuffer):
+        ltrait = []
+        ltrigg = []
+        for l in txtbuffer:
+            trait_ma = trait_re.match(l)
+            if(trait_ma):
+                ltrait.append(trait_ma.group(1))
+                continue
+            trigg_ma = trigg_re.match(l)
+            if(trigg_ma):
+                ltrigg.append(trigg_ma.group(1))
+                continue
+        return ltrait, ltrigg
+            
     def reload(self):
         if(not self.edct_file):
             print("ERROR: file not specified")
